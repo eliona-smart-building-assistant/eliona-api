@@ -27,3 +27,4 @@ jobs:
   - template: "steps/docker-build-push-docker-hub.yml@pipeline"
     parameters:
       repository: db-mock
+      file: ./mock/db/Dockerfile
