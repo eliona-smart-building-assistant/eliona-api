@@ -5,10 +5,10 @@ get:
   description: Gets information about data for assets.
   operationId: getData
   parameters:
-    - $ref: '../parameters/assetId.yaml'
-    - $ref: '../parameters/parentAssetId.yaml'
-    - $ref: '../parameters/dataSubtype.yaml'
-    - $ref: '../parameters/assetTypeName.yaml'
+    - $ref: "../parameters/assetId.yaml"
+    - $ref: "../parameters/parentAssetId.yaml"
+    - $ref: "../parameters/dataSubtype.yaml"
+    - $ref: "../parameters/assetTypeName.yaml"
   responses:
     200:
       description: Successfully returned data for assets
@@ -17,7 +17,7 @@ get:
           schema:
             type: array
             items:
-              $ref: '../schemas/Data.yaml'
+              $ref: "../schemas/Data.yaml"
 
 put:
   tags:
@@ -30,9 +30,20 @@ put:
     content:
       application/json:
         schema:
-          $ref: '../schemas/Data.yaml'
+          title: DataExperiment
+          type: object
+          description: Data for assets
+          required:
+            - assetId
+          properties:
+            assetId:
+              type: integer
+              description: ID of the corresponding asset
+              example: 4711
+        example:
+          assetId: 4711
   parameters:
-    - $ref: '../parameters/directMode.yaml'
+    - $ref: "../parameters/directMode.yaml"
   responses:
     201:
       description: Successfully created a new or updated existing asset data
