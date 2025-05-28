@@ -31,6 +31,12 @@ jobs:
           echo "RELEASE_NAME=${{ github.event.release.name }}" >> $GITHUB_OUTPUT
           echo "RELEASE_DESCRIPTION=${{ github.event.release.body }}" >> $GITHUB_OUTPUT
 
+      - name: Extract Version
+        id: extract_version
+        run: |
+          VERSION=$(grep -m 1 'version:' openapi.yaml | awk '{print $2}')
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+
       - name: Regenerate Go API Client
         run: |
           git clone https://github.com/eliona-smart-building-assistant/go-eliona-api-client.git
@@ -54,6 +60,10 @@ jobs:
           git clone https://github.com/eliona-smart-building-assistant/python-eliona-api-client2.git
           cd python-eliona-api-client2
           chmod +x generate.sh
+          # Update generate.sh with the latest version
+          sed -i "s/packageVersion=[0-9.]\+/packageVersion=${{ steps.extract_version.outputs.VERSION }}/g" generate.sh
+          # Update generate.cmd with the latest version
+          sed -i "s/packageVersion=[0-9.]\+/packageVersion=${{ steps.extract_version.outputs.VERSION }}/g" generate.cmd
           ./generate.sh
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
