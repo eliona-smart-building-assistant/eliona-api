@@ -1,0 +1,16 @@
+type: object
+description: A property for asset type categories
+required:
+  - name
+properties:
+  name:
+    type: string
+    description: The unique name for this asset type category property
+    example: longitude
+  translation:
+    $ref: 'Translation.yaml'
+  unit:
+    type: string
+    description: Unit of data
+    example: °C
+    nullable: true

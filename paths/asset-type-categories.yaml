@@ -1,0 +1,35 @@
+get:
+  tags:
+    - Asset types
+  summary: List of asset type categories
+  description: Returns a list of asset type categories
+  operationId: getAssetTypeCategories
+  responses:
+    200:
+      description: Successfully returned a list of asset type categories
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../schemas/AssetTypeCategory.yaml'
+
+put:
+  tags:
+    - Asset types
+  summary: Create or update an asset type categories
+  description: Create a new asset type categories or update an asset type categories if already exists. Uses the unique name for updating.
+  operationId: putAssetTypeCategory
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/AssetTypeCategory.yaml'
+  responses:
+    200:
+      description: Successfully created a new or updated an existing asset type category
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/AssetTypeCategory.yaml'

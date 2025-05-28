@@ -16,7 +16,7 @@ openapi: 3.0.3
 #  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 info:
-  version: 2.9.1
+  version: 2.9.2
   title: Eliona REST API
   description:
     The Eliona REST API enables unified access to the resources and data of an Eliona environment.
@@ -76,6 +76,12 @@ paths:
 
   /asset-types/{asset-type-name}/attributes:
     $ref: './paths/asset-types-name-attributes.yaml'
+
+  /asset-type-categories:
+    $ref: './paths/asset-type-categories.yaml'
+
+  /asset-type-categories/{asset-type-category-name}:
+      $ref: './paths/asset-type-category-name.yaml'
 
   # Not yet implemented
   #  /asset-types/{asset-type-name}/attributes/{asset-type-attribute-name}:

@@ -1,0 +1,18 @@
+type: object
+description: A category for asset types
+required:
+  - name
+properties:
+  name:
+    type: string
+    description: The unique name for this asset type category
+    example: location
+  translation:
+    $ref: 'Translation.yaml'
+  properties:
+    type: array
+    description: List of asset type category properties
+    nullable: true
+    items:
+      $ref: 'AssetTypeCategoryProperty.yaml'
+

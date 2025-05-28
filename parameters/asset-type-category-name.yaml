@@ -1,0 +1,7 @@
+name: asset-type-category-name
+in: path
+description: The name of the asset type category
+example: location
+required: true
+schema:
+  type: string

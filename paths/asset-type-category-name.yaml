@@ -1,0 +1,13 @@
+delete:
+  tags:
+    - Asset types
+  summary: Delete an asset type category
+  description: Deletes an asset type category
+  operationId: deleteAssetTypeCategoryByName
+  parameters:
+    - $ref: '../parameters/asset-type-category-name.yaml'
+  responses:
+    204:
+      description: Successfully deleted the asset type category
+    404:
+      description: Asset type category with name not found

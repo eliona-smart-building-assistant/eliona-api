@@ -157,3 +157,8 @@ properties:
     type: boolean
     description: is attribute digital
     nullable: true
+  categoryName:
+    type: string
+    description: a reference to a asset type category
+    nullable: true
+    example: location
