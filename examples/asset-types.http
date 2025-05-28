@@ -35,7 +35,8 @@ Content-Type: application/json
       "translation": {
         "en": "Temperature",
         "de": "Temperatur"
-      }
+      },
+      "categoryName": "test"
     },
     {
       "name": "humidity",
@@ -56,7 +57,7 @@ Content-Type: application/json
 }
 
 ### [Asset types] Get an asset type by name with expansions (read-only)
-GET {{api-server}}/v2/asset-types/weather_location?expansions=attributes HTTP/1.1
+GET {{api-server}}/v2/asset-types/weather_location2?expansions=AssetType.attributes HTTP/1.1
 X-Api-Key: {{read-only-token}}
 
 ### [Asset types] Delete an asset type by name (read–write)
@@ -106,3 +107,46 @@ Content-Type: application/json
   },
   "formula": "value * 1.0"
 }
+
+### [Asset type categories] List all asset type categories (read-only)
+GET {{api-server}}/v2/asset-type-categories HTTP/1.1
+X-Api-Key: {{read-only-token}}
+
+### [Asset types] Update an asset type category (read–write)
+PUT {{api-server}}/v2/asset-type-categories HTTP/1.1
+X-Api-Key: {{read-write-token}}
+Content-Type: application/json
+
+{
+    "name": "test",
+    "translation": {
+      "de": "Test de",
+      "en": "Test en"
+    },
+    "properties": [
+      {
+        "name": "test_p1",
+        "translation": {
+          "de": "Test P1 de",
+          "en": "Test P1 en"
+        },
+        "unit": "p1"
+      },
+      {
+        "name": "test_p2",
+        "translation": {
+          "de": "Test P2 de",
+          "en": "Test P2 en"
+        },
+        "unit": "p2"
+      },
+      {
+        "name": "test_p3"
+      }
+    ]
+}
+
+### [Asset types] Update an asset type category (read–write)
+DELETE {{api-server}}/v2/asset-type-categories/test HTTP/1.1
+X-Api-Key: {{read-write-token}}
+Content-Type: application/json
