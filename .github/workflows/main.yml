@@ -82,7 +82,7 @@ jobs:
           gh release create "${{ steps.release_info.outputs.RELEASE_NAME }}" \
             --title "${{ steps.release_info.outputs.RELEASE_NAME }}" \
             --notes-file release_description.txt \
-            --repo zdevaty/go-eliona-api-client
+            --repo eliona-smart-building-assistant/go-eliona-api-client
         env:
           GITHUB_TOKEN: ${{ secrets.CLIENT_GENERATION_PAT }}
 
@@ -112,6 +112,6 @@ jobs:
           gh release create "${{ steps.release_info.outputs.RELEASE_NAME }}" \
             --title "${{ steps.release_info.outputs.RELEASE_NAME }}" \
             --notes-file release_description.txt \
-            --repo zdevaty/python-eliona-api-client2
+            --repo eliona-smart-building-assistant/python-eliona-api-client2
         env:
           GITHUB_TOKEN: ${{ secrets.CLIENT_GENERATION_PAT }}
