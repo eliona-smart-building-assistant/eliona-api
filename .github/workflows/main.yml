@@ -28,8 +28,14 @@ jobs:
       - name: Get Release Info
         id: release_info
         run: |
-          echo "RELEASE_NAME=${{ github.event.release.name }}" >> $GITHUB_OUTPUT
-          echo "RELEASE_DESCRIPTION=${{ github.event.release.body }}" >> $GITHUB_OUTPUT
+          # Use a delimiter that won't appear in the release description
+          echo "RELEASE_NAME<<EOF" >> $GITHUB_OUTPUT
+          echo "${{ github.event.release.name }}" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+          echo "RELEASE_DESCRIPTION<<EOF" >> $GITHUB_OUTPUT
+          echo "${{ github.event.release.body }}" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Extract Version
         id: extract_version
@@ -51,7 +57,13 @@ jobs:
           git remote set-url origin https://zdevaty:${{ secrets.CLIENT_GENERATION_PAT }}@github.com/eliona-smart-building-assistant/go-eliona-api-client.git
           git push
           git push --tags
-          gh release create ${{ steps.release_info.outputs.RELEASE_NAME }} --title "${{ steps.release_info.outputs.RELEASE_NAME }}" --notes "${{ steps.release_info.outputs.RELEASE_DESCRIPTION }}" --repo zdevaty/go-eliona-api-client
+
+          # Create a temporary file for the release description
+          echo "${{ steps.release_info.outputs.RELEASE_DESCRIPTION }}" > release_description.txt
+          gh release create "${{ steps.release_info.outputs.RELEASE_NAME }}" \
+            --title "${{ steps.release_info.outputs.RELEASE_NAME }}" \
+            --notes-file release_description.txt \
+            --repo zdevaty/go-eliona-api-client
         env:
           GITHUB_TOKEN: ${{ secrets.CLIENT_GENERATION_PAT }}
 
@@ -60,10 +72,12 @@ jobs:
           git clone https://github.com/eliona-smart-building-assistant/python-eliona-api-client2.git
           cd python-eliona-api-client2
           chmod +x generate.sh
+
           # Update generate.sh with the latest version
           sed -i "s/packageVersion=[0-9.]\+/packageVersion=${{ steps.extract_version.outputs.VERSION }}/g" generate.sh
           # Update generate.cmd with the latest version
           sed -i "s/packageVersion=[0-9.]\+/packageVersion=${{ steps.extract_version.outputs.VERSION }}/g" generate.cmd
+
           ./generate.sh
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
@@ -73,6 +87,12 @@ jobs:
           git remote set-url origin https://zdevaty:${{ secrets.CLIENT_GENERATION_PAT }}@github.com/eliona-smart-building-assistant/python-eliona-api-client2.git
           git push
           git push --tags
-          gh release create ${{ steps.release_info.outputs.RELEASE_NAME }} --title "${{ steps.release_info.outputs.RELEASE_NAME }}" --notes "${{ steps.release_info.outputs.RELEASE_DESCRIPTION }}" --repo zdevaty/python-eliona-api-client2
+
+          # Create a temporary file for the release description
+          echo "${{ steps.release_info.outputs.RELEASE_DESCRIPTION }}" > release_description.txt
+          gh release create "${{ steps.release_info.outputs.RELEASE_NAME }}" \
+            --title "${{ steps.release_info.outputs.RELEASE_NAME }}" \
+            --notes-file release_description.txt \
+            --repo zdevaty/python-eliona-api-client2
         env:
           GITHUB_TOKEN: ${{ secrets.CLIENT_GENERATION_PAT }}
