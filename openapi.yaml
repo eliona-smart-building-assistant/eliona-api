@@ -576,7 +576,6 @@ paths:
         name: projectId
         required: false
         schema:
-          nullable: true
           type: string
       - description: "List of referenced data to load, insert or update. Each entry\
           \ defines the full qualified name of the field to be expanded as follows\
@@ -2582,7 +2581,6 @@ paths:
         name: projectId
         required: false
         schema:
-          nullable: true
           type: string
       - description: Filter by lower date time (RFC3339) limit inclusive
         example: 2020-01-01T09:00:00.000Z
@@ -2748,7 +2746,6 @@ paths:
         name: projectId
         required: false
         schema:
-          nullable: true
           type: string
       - description: Filter by lower date time (RFC3339) limit inclusive
         example: 2020-01-01T09:00:00.000Z
@@ -2872,7 +2869,6 @@ paths:
         name: projectId
         required: false
         schema:
-          nullable: true
           type: string
       - description: Filter by lower date time (RFC3339) limit inclusive
         example: 2020-01-01T09:00:00.000Z
@@ -4036,7 +4032,6 @@ components:
       name: projectId
       required: false
       schema:
-        nullable: true
         type: string
     assetIdentifyBy:
       description: |
@@ -4904,7 +4899,6 @@ components:
         isTracker: false
         projectId: "99"
         longitude: 8.55
-      nullable: true
       properties:
         resourceId:
           description: "A custom identifier for the resource, which can be utilized\
@@ -6013,7 +6007,6 @@ components:
           isTracker: false
           projectId: "99"
           longitude: 8.55
-      nullable: true
       properties:
         id:
           description: The id of the rule
@@ -6131,7 +6124,6 @@ components:
         formula: "{seconds} * 60"
         id: 123
         attribute: temperature
-      nullable: true
       properties:
         id:
           description: The id of the rule
@@ -6305,7 +6297,6 @@ components:
           projectId: "99"
           longitude: 8.55
         timestamp: 2000-01-23T04:56:07.000+00:00
-      nullable: true
       properties:
         ruleId:
           description: The id of the corresponding rule
@@ -6541,7 +6532,6 @@ components:
         description: Node east plant
         model: model
         id: "1234"
-      nullable: true
       properties:
         id:
           description: Unique id for the edge node
@@ -6593,7 +6583,6 @@ components:
         nodeId: "1234"
         class: iosys
         config: {}
-      nullable: true
       properties:
         id:
           description: Unique id for the agent
@@ -6769,7 +6758,6 @@ components:
         id: "123"
         email: peter.fox@example.com
         lastname: Fox
-      nullable: true
       properties:
         id:
           description: The internal ID of user
@@ -6806,7 +6794,6 @@ components:
         - roleName: readonly
           userName: peter.fox@example.com
           enabled: true
-      nullable: true
       properties:
         id:
           description: The internal ID of the project
@@ -6831,7 +6818,6 @@ components:
       example:
         name: readonly
         id: 4711
-      nullable: true
       properties:
         id:
           description: The internal Id of role
@@ -6852,7 +6838,6 @@ components:
         colorId: 3
         custom: true
         name: Support
-      nullable: true
       properties:
         name:
           description: The name of the tag
