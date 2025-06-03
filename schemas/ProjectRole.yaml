@@ -1,6 +1,5 @@
 type: object
 description: A role that can assigned to users within a project
-nullable: true
 required:
   - name
 properties:

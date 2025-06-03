@@ -1,6 +1,5 @@
 type: object
 description: A tag
-nullable: true
 required:
   - name
 properties:

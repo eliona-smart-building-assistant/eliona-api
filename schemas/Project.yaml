@@ -1,6 +1,5 @@
 type: object
 description: A project
-nullable: true
 properties:
   id:
     type: string

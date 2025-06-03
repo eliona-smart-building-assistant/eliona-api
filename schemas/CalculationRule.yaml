@@ -1,6 +1,5 @@
 type: object
 description: Calculation rule to calculate asset attribute data
-nullable: true
 required:
   - assetId
   - subtype

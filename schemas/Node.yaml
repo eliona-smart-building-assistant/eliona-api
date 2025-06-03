@@ -1,6 +1,5 @@
 type: object
 description: An edge node
-nullable: true
 properties:
   id:
     type: string

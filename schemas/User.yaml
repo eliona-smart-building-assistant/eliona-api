@@ -1,6 +1,5 @@
 type: object
 description: An user
-nullable: true
 required:
   - email
 properties:

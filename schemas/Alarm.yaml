@@ -1,6 +1,5 @@
 type: object
 description: An alarm
-nullable: true
 required:
   - ruleId
   - message
