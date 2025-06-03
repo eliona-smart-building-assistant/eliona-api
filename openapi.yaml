@@ -6279,8 +6279,86 @@ components:
           description: "Weather station Zurich, Swiss"
           parentFunctionalIdentifier: "4712"
           childrenInfo:
-          - null
-          - null
+          - globalAssetIdentifier: zurich_swiss
+            functionalAssetIdPath:
+            - 0
+            - 0
+            resourceId: 123e4567-e89b-12d3-a456-426655440000
+            deviceIds:
+            - XYZ0123
+            - 13:23:12:34:32
+            parentLocationalIdentifier: "4712"
+            attachments:
+            - name: example.gif
+              encoding: base64
+              contentType: image/png
+              content: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=
+            - name: example.gif
+              encoding: base64
+              contentType: image/png
+              content: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=
+            allowedInactivity: 0 hours 5 mins
+            latitude: 47.3667
+            description: "Weather station Zurich, Swiss"
+            parentFunctionalIdentifier: "4712"
+            childrenInfo:
+            - null
+            - null
+            assetType: assetType
+            parentLocationalAssetId: 4712
+            tags:
+            - weather
+            - location
+            locationalAssetIdPath:
+            - 6
+            - 6
+            trackerId: 4711
+            name: Station Zurich
+            parentFunctionalAssetId: 4712
+            id: 4711
+            isTracker: false
+            projectId: "99"
+            longitude: 8.55
+          - globalAssetIdentifier: zurich_swiss
+            functionalAssetIdPath:
+            - 0
+            - 0
+            resourceId: 123e4567-e89b-12d3-a456-426655440000
+            deviceIds:
+            - XYZ0123
+            - 13:23:12:34:32
+            parentLocationalIdentifier: "4712"
+            attachments:
+            - name: example.gif
+              encoding: base64
+              contentType: image/png
+              content: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=
+            - name: example.gif
+              encoding: base64
+              contentType: image/png
+              content: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=
+            allowedInactivity: 0 hours 5 mins
+            latitude: 47.3667
+            description: "Weather station Zurich, Swiss"
+            parentFunctionalIdentifier: "4712"
+            childrenInfo:
+            - null
+            - null
+            assetType: assetType
+            parentLocationalAssetId: 4712
+            tags:
+            - weather
+            - location
+            locationalAssetIdPath:
+            - 6
+            - 6
+            trackerId: 4711
+            name: Station Zurich
+            parentFunctionalAssetId: 4712
+            id: 4711
+            isTracker: false
+            projectId: "99"
+            longitude: 8.55
           assetType: assetType
           parentLocationalAssetId: 4712
           tags:
@@ -6379,9 +6457,9 @@ components:
         acknowledgeUserInfo:
           $ref: '#/components/schemas/User'
         assetInfo:
-          $ref: '#/components/schemas/Asset'
+          $ref: '#/components/schemas/Alarm_assetInfo'
         ruleInfo:
-          $ref: '#/components/schemas/AlarmRule'
+          $ref: '#/components/schemas/Alarm_ruleInfo'
       required:
       - message
       - ruleId
@@ -6502,8 +6580,86 @@ components:
           description: "Weather station Zurich, Swiss"
           parentFunctionalIdentifier: "4712"
           childrenInfo:
-          - null
-          - null
+          - globalAssetIdentifier: zurich_swiss
+            functionalAssetIdPath:
+            - 0
+            - 0
+            resourceId: 123e4567-e89b-12d3-a456-426655440000
+            deviceIds:
+            - XYZ0123
+            - 13:23:12:34:32
+            parentLocationalIdentifier: "4712"
+            attachments:
+            - name: example.gif
+              encoding: base64
+              contentType: image/png
+              content: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=
+            - name: example.gif
+              encoding: base64
+              contentType: image/png
+              content: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=
+            allowedInactivity: 0 hours 5 mins
+            latitude: 47.3667
+            description: "Weather station Zurich, Swiss"
+            parentFunctionalIdentifier: "4712"
+            childrenInfo:
+            - null
+            - null
+            assetType: assetType
+            parentLocationalAssetId: 4712
+            tags:
+            - weather
+            - location
+            locationalAssetIdPath:
+            - 6
+            - 6
+            trackerId: 4711
+            name: Station Zurich
+            parentFunctionalAssetId: 4712
+            id: 4711
+            isTracker: false
+            projectId: "99"
+            longitude: 8.55
+          - globalAssetIdentifier: zurich_swiss
+            functionalAssetIdPath:
+            - 0
+            - 0
+            resourceId: 123e4567-e89b-12d3-a456-426655440000
+            deviceIds:
+            - XYZ0123
+            - 13:23:12:34:32
+            parentLocationalIdentifier: "4712"
+            attachments:
+            - name: example.gif
+              encoding: base64
+              contentType: image/png
+              content: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=
+            - name: example.gif
+              encoding: base64
+              contentType: image/png
+              content: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=
+            allowedInactivity: 0 hours 5 mins
+            latitude: 47.3667
+            description: "Weather station Zurich, Swiss"
+            parentFunctionalIdentifier: "4712"
+            childrenInfo:
+            - null
+            - null
+            assetType: assetType
+            parentLocationalAssetId: 4712
+            tags:
+            - weather
+            - location
+            locationalAssetIdPath:
+            - 6
+            - 6
+            trackerId: 4711
+            name: Station Zurich
+            parentFunctionalAssetId: 4712
+            id: 4711
+            isTracker: false
+            projectId: "99"
+            longitude: 8.55
           assetType: assetType
           parentLocationalAssetId: 4712
           tags:
@@ -7336,6 +7492,199 @@ components:
       - attribute
       - subtype
       type: object
+    Alarm_assetInfo:
+      allOf:
+      - $ref: '#/components/schemas/Asset'
+      - nullable: true
+        type: object
+      example:
+        globalAssetIdentifier: zurich_swiss
+        functionalAssetIdPath:
+        - 0
+        - 0
+        resourceId: 123e4567-e89b-12d3-a456-426655440000
+        deviceIds:
+        - XYZ0123
+        - 13:23:12:34:32
+        parentLocationalIdentifier: "4712"
+        attachments:
+        - name: example.gif
+          encoding: base64
+          contentType: image/png
+          content: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=
+        - name: example.gif
+          encoding: base64
+          contentType: image/png
+          content: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=
+        allowedInactivity: 0 hours 5 mins
+        latitude: 47.3667
+        description: "Weather station Zurich, Swiss"
+        parentFunctionalIdentifier: "4712"
+        childrenInfo:
+        - globalAssetIdentifier: zurich_swiss
+          functionalAssetIdPath:
+          - 0
+          - 0
+          resourceId: 123e4567-e89b-12d3-a456-426655440000
+          deviceIds:
+          - XYZ0123
+          - 13:23:12:34:32
+          parentLocationalIdentifier: "4712"
+          attachments:
+          - name: example.gif
+            encoding: base64
+            contentType: image/png
+            content: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=
+          - name: example.gif
+            encoding: base64
+            contentType: image/png
+            content: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=
+          allowedInactivity: 0 hours 5 mins
+          latitude: 47.3667
+          description: "Weather station Zurich, Swiss"
+          parentFunctionalIdentifier: "4712"
+          childrenInfo:
+          - null
+          - null
+          assetType: assetType
+          parentLocationalAssetId: 4712
+          tags:
+          - weather
+          - location
+          locationalAssetIdPath:
+          - 6
+          - 6
+          trackerId: 4711
+          name: Station Zurich
+          parentFunctionalAssetId: 4712
+          id: 4711
+          isTracker: false
+          projectId: "99"
+          longitude: 8.55
+        - globalAssetIdentifier: zurich_swiss
+          functionalAssetIdPath:
+          - 0
+          - 0
+          resourceId: 123e4567-e89b-12d3-a456-426655440000
+          deviceIds:
+          - XYZ0123
+          - 13:23:12:34:32
+          parentLocationalIdentifier: "4712"
+          attachments:
+          - name: example.gif
+            encoding: base64
+            contentType: image/png
+            content: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=
+          - name: example.gif
+            encoding: base64
+            contentType: image/png
+            content: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=
+          allowedInactivity: 0 hours 5 mins
+          latitude: 47.3667
+          description: "Weather station Zurich, Swiss"
+          parentFunctionalIdentifier: "4712"
+          childrenInfo:
+          - null
+          - null
+          assetType: assetType
+          parentLocationalAssetId: 4712
+          tags:
+          - weather
+          - location
+          locationalAssetIdPath:
+          - 6
+          - 6
+          trackerId: 4711
+          name: Station Zurich
+          parentFunctionalAssetId: 4712
+          id: 4711
+          isTracker: false
+          projectId: "99"
+          longitude: 8.55
+        assetType: assetType
+        parentLocationalAssetId: 4712
+        tags:
+        - weather
+        - location
+        locationalAssetIdPath:
+        - 6
+        - 6
+        trackerId: 4711
+        name: Station Zurich
+        parentFunctionalAssetId: 4712
+        id: 4711
+        isTracker: false
+        projectId: "99"
+        longitude: 8.55
+    Alarm_ruleInfo:
+      allOf:
+      - $ref: '#/components/schemas/AlarmRule'
+      - nullable: true
+        type: object
+      example:
+        checkType: limits
+        requiresAcknowledge: false
+        subject: subject
+        urldoc: urldoc
+        priority: 2
+        message:
+          come:
+            en: AC fan defect
+        params: {}
+        tags:
+        - tags
+        - tags
+        equal: 38.7
+        high: 38.7
+        subtype: input
+        low: 38.7
+        assetId: 4711
+        enable: true
+        notifyOn: R
+        dontMask: false
+        id: 123
+        attribute: temperature
+        assetInfo:
+          globalAssetIdentifier: zurich_swiss
+          functionalAssetIdPath:
+          - 0
+          - 0
+          resourceId: 123e4567-e89b-12d3-a456-426655440000
+          deviceIds:
+          - XYZ0123
+          - 13:23:12:34:32
+          parentLocationalIdentifier: "4712"
+          attachments:
+          - name: example.gif
+            encoding: base64
+            contentType: image/png
+            content: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=
+          - name: example.gif
+            encoding: base64
+            contentType: image/png
+            content: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=
+          allowedInactivity: 0 hours 5 mins
+          latitude: 47.3667
+          description: "Weather station Zurich, Swiss"
+          parentFunctionalIdentifier: "4712"
+          childrenInfo:
+          - null
+          - null
+          assetType: assetType
+          parentLocationalAssetId: 4712
+          tags:
+          - weather
+          - location
+          locationalAssetIdPath:
+          - 6
+          - 6
+          trackerId: 4711
+          name: Station Zurich
+          parentFunctionalAssetId: 4712
+          id: 4711
+          isTracker: false
+          projectId: "99"
+          longitude: 8.55
   securitySchemes:
     ApiKeyAuth:
       description: Use the API key as a secret for authorizing and identifying an
