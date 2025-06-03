@@ -6,6 +6,5 @@ style: form
 explode: false
 schema:
   type: array
-  nullable: true
   items:
     type: integer

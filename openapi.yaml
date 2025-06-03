@@ -9,7 +9,7 @@ info:
   license:
     name: MIT License
   title: Eliona REST API
-  version: 2.9.2
+  version: 2.9.3
 externalDocs:
   description: Find out more about Eliona App SDK
   url: https://github.com/eliona-smart-building-assistant
@@ -260,10 +260,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       responses:
@@ -288,10 +288,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       requestBody:
@@ -323,10 +323,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       requestBody:
@@ -382,10 +382,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       responses:
@@ -417,10 +417,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       requestBody:
@@ -584,10 +584,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       responses:
@@ -633,10 +633,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       requestBody:
@@ -694,10 +694,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       requestBody:
@@ -759,10 +759,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       responses:
@@ -796,10 +796,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       requestBody:
@@ -851,10 +851,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       requestBody:
@@ -910,10 +910,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       requestBody:
@@ -979,10 +979,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       requestBody:
@@ -1048,10 +1048,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       requestBody:
@@ -1106,10 +1106,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       requestBody:
@@ -1164,10 +1164,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       requestBody:
@@ -1204,10 +1204,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       responses:
@@ -1933,10 +1933,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       responses:
@@ -1961,10 +1961,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       requestBody:
@@ -1996,10 +1996,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       requestBody:
@@ -2055,10 +2055,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       responses:
@@ -2090,10 +2090,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       requestBody:
@@ -2125,10 +2125,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       responses:
@@ -2153,10 +2153,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       requestBody:
@@ -2193,10 +2193,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       responses:
@@ -2229,10 +2229,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       responses:
@@ -2264,10 +2264,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       requestBody:
@@ -2297,7 +2297,6 @@ paths:
         schema:
           items:
             type: integer
-          nullable: true
           type: array
         style: form
       - description: Filter for a specific asset id
@@ -2313,10 +2312,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       responses:
@@ -2408,10 +2407,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       responses:
@@ -2468,7 +2467,6 @@ paths:
         schema:
           items:
             type: integer
-          nullable: true
           type: array
         style: form
       responses:
@@ -2605,10 +2603,10 @@ paths:
         explode: false
         in: query
         name: tags
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       - description: "List of referenced data to load, insert or update. Each entry\
@@ -2617,10 +2615,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       responses:
@@ -2691,10 +2689,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       responses:
@@ -2771,10 +2769,10 @@ paths:
         explode: false
         in: query
         name: tags
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       - description: "List of referenced data to load, insert or update. Each entry\
@@ -2783,10 +2781,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       responses:
@@ -2833,10 +2831,10 @@ paths:
         explode: false
         in: query
         name: tags
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       - description: "List of referenced data to load, insert or update. Each entry\
@@ -2845,10 +2843,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       responses:
@@ -2895,10 +2893,10 @@ paths:
         explode: false
         in: query
         name: tags
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       - description: "List of referenced data to load, insert or update. Each entry\
@@ -2907,10 +2905,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       responses:
@@ -2937,10 +2935,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       responses:
@@ -3752,10 +3750,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       responses:
@@ -3781,10 +3779,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       requestBody:
@@ -3821,10 +3819,10 @@ paths:
         explode: false
         in: query
         name: expansions
+        required: false
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
       responses:
@@ -4002,10 +4000,10 @@ components:
       explode: false
       in: query
       name: expansions
+      required: false
       schema:
         items:
           type: string
-        nullable: true
         type: array
       style: form
     asset-type-name:
@@ -4295,7 +4293,6 @@ components:
       schema:
         items:
           type: integer
-        nullable: true
         type: array
       style: form
     alarm-rule-id:
@@ -4315,7 +4312,6 @@ components:
       schema:
         items:
           type: integer
-        nullable: true
         type: array
       style: form
     calculation-rule-id:
@@ -4332,10 +4328,10 @@ components:
       explode: false
       in: query
       name: tags
+      required: false
       schema:
         items:
           type: string
-        nullable: true
         type: array
       style: form
     node-ident:
