@@ -84,6 +84,8 @@ properties:
   acknowledgeUserInfo:
     $ref: 'User.yaml'
   assetInfo:
-    $ref: 'Asset.yaml'
+    nullable: true
+    allOf:
+      - $ref: 'Asset.yaml'
   ruleInfo:
     $ref: 'AlarmRule.yaml'
