@@ -82,10 +82,14 @@ properties:
     description: Message.yaml texts for alarm
     example: {}
   acknowledgeUserInfo:
-    $ref: 'User.yaml'
+    nullable: true
+    allOf:
+      - $ref: 'User.yaml'
   assetInfo:
     nullable: true
     allOf:
       - $ref: 'Asset.yaml'
   ruleInfo:
-    $ref: 'AlarmRule.yaml'
+    nullable: true
+    allOf:
+      - $ref: 'AlarmRule.yaml'

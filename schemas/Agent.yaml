@@ -18,7 +18,9 @@ properties:
     example: 4711
     nullable: true
   class:
-    $ref: 'AgentClass.yaml'
+    nullable: true
+    allOf:
+      - $ref: 'AgentClass.yaml'
   description:
     type: string
     nullable: true

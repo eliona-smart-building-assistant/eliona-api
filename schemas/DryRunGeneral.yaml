@@ -1,6 +1,5 @@
 type: object
 description: Information about dry run the operation
-nullable: true
 properties:
   identifier:
     $ref: 'Identifier.yaml'

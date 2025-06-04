@@ -1,12 +1,13 @@
 type: object
 description: A general mapping of attributes for an agent
-nullable: true
 required:
   - subtype
   - attribute
 properties:
   class:
-    $ref: 'AgentClass.yaml'
+    nullable: true
+    allOf:
+      - $ref: 'AgentClass.yaml'
   id:
     type: integer
     description: Unique id for the mapping

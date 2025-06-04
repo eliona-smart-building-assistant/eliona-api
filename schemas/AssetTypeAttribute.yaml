@@ -25,7 +25,9 @@ properties:
     default: false
     description: Is data active or not
   translation:
-    $ref: 'Translation.yaml'
+    nullable: true
+    allOf:
+      - $ref: 'Translation.yaml'
   unit:
     type: string
     description: Physical unit of numeric data

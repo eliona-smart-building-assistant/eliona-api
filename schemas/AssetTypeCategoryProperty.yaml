@@ -8,7 +8,9 @@ properties:
     description: The unique name for this asset type category property
     example: longitude
   translation:
-    $ref: 'Translation.yaml'
+    nullable: true
+    allOf:
+      - $ref: 'Translation.yaml'
   unit:
     type: string
     description: Unit of data

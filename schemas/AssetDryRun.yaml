@@ -8,6 +8,10 @@ allOf:
       identifiedBy:
         $ref: 'AssetIdentifyBy.yaml'
       before:
-        $ref: 'Asset.yaml'
+        nullable: true
+        allOf:
+          - $ref: 'Asset.yaml'
       after:
-        $ref: 'Asset.yaml'
+        nullable: true
+        allOf:
+          - $ref: 'Asset.yaml'

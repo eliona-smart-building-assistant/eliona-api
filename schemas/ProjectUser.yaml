@@ -1,6 +1,5 @@
 type: object
 description: A project user
-nullable: true
 required:
   - userName
   - roleName

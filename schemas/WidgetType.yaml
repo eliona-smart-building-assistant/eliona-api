@@ -20,7 +20,9 @@ properties:
     default: true
     description: Is this a customer created type or not
   translation:
-    $ref: 'Translation.yaml'
+    nullable: true
+    allOf:
+      - $ref: 'Translation.yaml'
   icon:
     type: string
     description: Icon name corresponding to assets used in this widget

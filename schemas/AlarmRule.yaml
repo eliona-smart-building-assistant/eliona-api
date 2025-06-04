@@ -101,4 +101,6 @@ properties:
       - aggregate
       - external
   assetInfo:
-    $ref: 'Asset.yaml'
+    nullable: true
+    allOf:
+      - $ref: 'Asset.yaml'

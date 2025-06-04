@@ -1,9 +1,10 @@
 type: object
 description: A general device for an agent
-nullable: true
 properties:
   class:
-    $ref: 'AgentClass.yaml'
+    nullable: true
+    allOf:
+      - $ref: 'AgentClass.yaml'
   id:
     type: integer
     description: Unique id for the device

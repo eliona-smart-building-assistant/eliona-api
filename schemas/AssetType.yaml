@@ -20,7 +20,9 @@ properties:
     description: The specific model of assets of this type
     nullable: true
   translation:
-    $ref: 'Translation.yaml'
+    nullable: true
+    allOf:
+      - $ref: 'Translation.yaml'
   urldoc:
     type: string
     description: The url describing assets of this type
