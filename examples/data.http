@@ -21,11 +21,11 @@ Content-Type: application/json
 }
 
 ### [Data] Get trend of historical data for an asset (data-trend)
-GET {{api-server}}/v2/data-trend/4711?dataSubtype=input&attributeName=temperature&fromDate=2020-01-01T09:00:00.000Z&toDate=2021-12-31T23:00:00.000Z&offset=0&size=20 HTTP/1.1
+GET {{api-server}}/v2/data-trend/64609?dataSubtype=input&attributeName=Counter&fromDate=2025-03-25T13:13:00.000Z&toDate=2025-03-25T14:13:14.000Z&offset=0&size=20 HTTP/1.1
 X-Api-Key: {{read-only-token}}
 
 ### [Data] Get aggregated trend of historical data for an asset (data-trend-aggregated)
-GET {{api-server}}/v2/data-trend-aggregated/4711?dataSubtype=input&attributeName=temperature&aggregationRaster=1d&sumMethod=sum&fromDate=2020-01-01T09:00:00.000Z&toDate=2021-12-31T23:00:00.000Z&offset=0&size=20 HTTP/1.1
+GET {{api-server}}/v2/data-trend-aggregated/64609?dataSubtype=input&attributeName=Counter&aggregationRaster=1s&sumMethod=sum&fromDate=2025-03-25T13:13:00.000Z&toDate=2025-03-25T14:13:14.000Z&offset=0&size=20 HTTP/1.1
 X-Api-Key: {{read-only-token}}
 
 ### [Data] Put historical data for an asset (data-trend)
@@ -37,8 +37,8 @@ Content-Type: application/json
   "assetId": 64609,
   "subtype": "input",
   "data": {
-    "Counter": 678
+    "Counter": 680
   },
-  "timestamp": "2025-03-25T13:13:14.000Z",
+  "timestamp": "2025-03-25T13:13:14.001Z",
   "clientReference": "ABC123"
 }
