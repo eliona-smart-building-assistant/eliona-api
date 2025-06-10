@@ -5286,6 +5286,7 @@ components:
             temperature: 42
           type: object
         assetTypeName:
+          deprecated: true
           description: The name of the corresponding asset type
           example: weather_location
           nullable: true

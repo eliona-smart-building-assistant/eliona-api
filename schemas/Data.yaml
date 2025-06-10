@@ -23,6 +23,7 @@ properties:
       "temperature": 42
     }
   assetTypeName:
+    deprecated: true
     type: string
     description: The name of the corresponding asset type
     readOnly: true
