@@ -1443,6 +1443,8 @@ paths:
         name: offset
         required: false
         schema:
+          format: int64
+          nullable: true
           type: integer
       - description: |
           Specifies the number of items per page for pagination.
@@ -1451,6 +1453,8 @@ paths:
         name: size
         required: false
         schema:
+          format: int64
+          nullable: true
           type: integer
       responses:
         "200":
@@ -1544,6 +1548,8 @@ paths:
         name: offset
         required: false
         schema:
+          format: int64
+          nullable: true
           type: integer
       - description: |
           Specifies the number of items per page for pagination.
@@ -1552,6 +1558,8 @@ paths:
         name: size
         required: false
         schema:
+          format: int64
+          nullable: true
           type: integer
       responses:
         "200":
@@ -4148,6 +4156,8 @@ components:
       name: offset
       required: false
       schema:
+        format: int64
+        nullable: true
         type: integer
     size:
       description: |
@@ -4157,6 +4167,8 @@ components:
       name: size
       required: false
       schema:
+        format: int64
+        nullable: true
         type: integer
     aggregationRasterRequired:
       description: Aggregation calculation period
