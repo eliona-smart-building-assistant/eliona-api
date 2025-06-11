@@ -4,6 +4,9 @@ get:
   summary: Information about agents
   description: Gets information about agents.
   operationId: getAgents
+  parameters:
+    - $ref: '../parameters/offset.yaml'
+    - $ref: '../parameters/size.yaml'
   responses:
     200:
       description: Successfully returned a list of agents

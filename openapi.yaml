@@ -266,6 +266,26 @@ paths:
             type: string
           type: array
         style: form
+      - description: |
+          Specifies the starting point for pagination by indicating the number of items to skip.
+        example: 3
+        in: query
+        name: offset
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: |
+          Specifies the number of items per page for pagination.
+        example: 10
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
       responses:
         "200":
           content:
@@ -509,6 +529,27 @@ paths:
     get:
       description: Returns a list of asset type categories
       operationId: getAssetTypeCategories
+      parameters:
+      - description: |
+          Specifies the starting point for pagination by indicating the number of items to skip.
+        example: 3
+        in: query
+        name: offset
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: |
+          Specifies the number of items per page for pagination.
+        example: 10
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
       responses:
         "200":
           content:
@@ -583,6 +624,26 @@ paths:
         required: false
         schema:
           type: string
+      - description: |
+          Specifies the starting point for pagination by indicating the number of items to skip.
+        example: 3
+        in: query
+        name: offset
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: |
+          Specifies the number of items per page for pagination.
+        example: 10
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
       - description: "List of referenced data to load, insert or update. Each entry\
           \ defines the full qualified name of the field to be expanded as follows\
           \ 'ObjectName.fieldName'."
@@ -1233,12 +1294,35 @@ paths:
       description: Gets information about how attributes for specific assets are displayed
         in frontend.
       operationId: getAttributeDisplay
+      parameters:
+      - description: |
+          Specifies the starting point for pagination by indicating the number of items to skip.
+        example: 3
+        in: query
+        name: offset
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: |
+          Specifies the number of items per page for pagination.
+        example: 10
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AttributeDisplay'
+                items:
+                  $ref: '#/components/schemas/AttributeDisplay'
+                type: array
             application/x-ndjson:
               schema:
                 $ref: '#/components/schemas/AttributeDisplay'
@@ -1305,6 +1389,26 @@ paths:
         required: false
         schema:
           type: string
+      - description: |
+          Specifies the starting point for pagination by indicating the number of items to skip.
+        example: 3
+        in: query
+        name: offset
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: |
+          Specifies the number of items per page for pagination.
+        example: 10
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
       responses:
         "200":
           content:
@@ -1952,6 +2056,26 @@ paths:
       description: Returns a list of widget types
       operationId: getWidgetTypes
       parameters:
+      - description: |
+          Specifies the starting point for pagination by indicating the number of items to skip.
+        example: 3
+        in: query
+        name: offset
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: |
+          Specifies the number of items per page for pagination.
+        example: 10
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
       - description: "List of referenced data to load, insert or update. Each entry\
           \ defines the full qualified name of the field to be expanded as follows\
           \ 'ObjectName.fieldName'."
@@ -2147,6 +2271,26 @@ paths:
       description: Gets a list of dashboards
       operationId: getDashboards
       parameters:
+      - description: |
+          Specifies the starting point for pagination by indicating the number of items to skip.
+        example: 3
+        in: query
+        name: offset
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: |
+          Specifies the number of items per page for pagination.
+        example: 10
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
       - description: "List of referenced data to load, insert or update. Each entry\
           \ defines the full qualified name of the field to be expanded as follows\
           \ 'ObjectName.fieldName'."
@@ -2337,6 +2481,26 @@ paths:
         required: false
         schema:
           type: integer
+      - description: |
+          Specifies the starting point for pagination by indicating the number of items to skip.
+        example: 3
+        in: query
+        name: offset
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: |
+          Specifies the number of items per page for pagination.
+        example: 10
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
       - description: "List of referenced data to load, insert or update. Each entry\
           \ defines the full qualified name of the field to be expanded as follows\
           \ 'ObjectName.fieldName'."
@@ -2503,6 +2667,26 @@ paths:
             type: integer
           type: array
         style: form
+      - description: |
+          Specifies the starting point for pagination by indicating the number of items to skip.
+        example: 3
+        in: query
+        name: offset
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: |
+          Specifies the number of items per page for pagination.
+        example: 10
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
       responses:
         "200":
           content:
@@ -2645,6 +2829,26 @@ paths:
             type: string
           type: array
         style: form
+      - description: |
+          Specifies the starting point for pagination by indicating the number of items to skip.
+        example: 3
+        in: query
+        name: offset
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: |
+          Specifies the number of items per page for pagination.
+        example: 10
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
       - description: "List of referenced data to load, insert or update. Each entry\
           \ defines the full qualified name of the field to be expanded as follows\
           \ 'ObjectName.fieldName'."
@@ -2813,6 +3017,26 @@ paths:
             type: string
           type: array
         style: form
+      - description: |
+          Specifies the starting point for pagination by indicating the number of items to skip.
+        example: 3
+        in: query
+        name: offset
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: |
+          Specifies the number of items per page for pagination.
+        example: 10
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
       - description: "List of referenced data to load, insert or update. Each entry\
           \ defines the full qualified name of the field to be expanded as follows\
           \ 'ObjectName.fieldName'."
@@ -2939,6 +3163,26 @@ paths:
             type: string
           type: array
         style: form
+      - description: |
+          Specifies the starting point for pagination by indicating the number of items to skip.
+        example: 3
+        in: query
+        name: offset
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: |
+          Specifies the number of items per page for pagination.
+        example: 10
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
       - description: "List of referenced data to load, insert or update. Each entry\
           \ defines the full qualified name of the field to be expanded as follows\
           \ 'ObjectName.fieldName'."
@@ -2998,6 +3242,27 @@ paths:
     get:
       description: Gets information about nodes.
       operationId: getNodes
+      parameters:
+      - description: |
+          Specifies the starting point for pagination by indicating the number of items to skip.
+        example: 3
+        in: query
+        name: offset
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: |
+          Specifies the number of items per page for pagination.
+        example: 10
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
       responses:
         "200":
           content:
@@ -3112,6 +3377,27 @@ paths:
     get:
       description: Gets information about agents.
       operationId: getAgents
+      parameters:
+      - description: |
+          Specifies the starting point for pagination by indicating the number of items to skip.
+        example: 3
+        in: query
+        name: offset
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: |
+          Specifies the number of items per page for pagination.
+        example: 10
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
       responses:
         "200":
           content:
@@ -3732,6 +4018,27 @@ paths:
     get:
       description: Gets a list of users
       operationId: getUsers
+      parameters:
+      - description: |
+          Specifies the starting point for pagination by indicating the number of items to skip.
+        example: 3
+        in: query
+        name: offset
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: |
+          Specifies the number of items per page for pagination.
+        example: 10
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
       responses:
         "200":
           content:
@@ -3796,6 +4103,26 @@ paths:
       description: Gets a list of projects
       operationId: getProjects
       parameters:
+      - description: |
+          Specifies the starting point for pagination by indicating the number of items to skip.
+        example: 3
+        in: query
+        name: offset
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: |
+          Specifies the number of items per page for pagination.
+        example: 10
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
       - description: "List of referenced data to load, insert or update. Each entry\
           \ defines the full qualified name of the field to be expanded as follows\
           \ 'ObjectName.fieldName'."
@@ -3897,6 +4224,27 @@ paths:
       description: Retrieves a list of roles that can be assigned to users within
         projects
       operationId: getProjectRoles
+      parameters:
+      - description: |
+          Specifies the starting point for pagination by indicating the number of items to skip.
+        example: 3
+        in: query
+        name: offset
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: |
+          Specifies the number of items per page for pagination.
+        example: 10
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
       responses:
         "200":
           content:
@@ -3960,6 +4308,27 @@ paths:
     get:
       description: Gets a list of tags
       operationId: getTags
+      parameters:
+      - description: |
+          Specifies the starting point for pagination by indicating the number of items to skip.
+        example: 3
+        in: query
+        name: offset
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: |
+          Specifies the number of items per page for pagination.
+        example: 10
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
       responses:
         "200":
           content:
@@ -4049,6 +4418,28 @@ components:
           type: string
         type: array
       style: form
+    offset:
+      description: |
+        Specifies the starting point for pagination by indicating the number of items to skip.
+      example: 3
+      in: query
+      name: offset
+      required: false
+      schema:
+        format: int64
+        nullable: true
+        type: integer
+    size:
+      description: |
+        Specifies the number of items per page for pagination.
+      example: 10
+      in: query
+      name: size
+      required: false
+      schema:
+        format: int64
+        nullable: true
+        type: integer
     asset-type-name:
       description: The name of the asset type
       example: weather_location
@@ -4173,28 +4564,6 @@ components:
       required: false
       schema:
         type: string
-    offset:
-      description: |
-        Specifies the starting point for pagination by indicating the number of items to skip.
-      example: 3
-      in: query
-      name: offset
-      required: false
-      schema:
-        format: int64
-        nullable: true
-        type: integer
-    size:
-      description: |
-        Specifies the number of items per page for pagination.
-      example: 10
-      in: query
-      name: size
-      required: false
-      schema:
-        format: int64
-        nullable: true
-        type: integer
     dataSubtypeRequired:
       description: Type of asset data
       example: input

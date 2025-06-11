@@ -4,6 +4,9 @@ get:
   summary: Information about nodes
   description: Gets information about nodes.
   operationId: getNodes
+  parameters:
+    - $ref: '../parameters/offset.yaml'
+    - $ref: '../parameters/size.yaml'
   responses:
     200:
       description: Successfully returned a list of nodes

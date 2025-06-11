@@ -4,6 +4,8 @@ get:
   summary: Information about dashboards
   description: Gets a list of dashboards
   parameters:
+    - $ref: '../parameters/offset.yaml'
+    - $ref: '../parameters/size.yaml'
     - $ref: '../parameters/expansions.yaml'
   operationId: getDashboards
   responses:

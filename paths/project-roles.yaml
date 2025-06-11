@@ -4,6 +4,9 @@ get:
   summary: Information about project roles
   description: Retrieves a list of roles that can be assigned to users within projects
   operationId: getProjectRoles
+  parameters:
+    - $ref: '../parameters/offset.yaml'
+    - $ref: '../parameters/size.yaml'
   responses:
     "200":
       description: Successfully returned the list of project roles

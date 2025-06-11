@@ -22,6 +22,7 @@ Content-Type: application/json
 
 ### [Data] Get trend of historical data for an asset (data-trend)
 GET {{api-server}}/v2/data-trend/64609?dataSubtype=input&attributeName=Counter&fromDate=2025-03-25T13:13:00.000Z&toDate=2025-03-25T14:13:14.000Z&offset=0&size=20 HTTP/1.1
+Accept: application/x-ndjson
 X-Api-Key: {{read-only-token}}
 
 ### [Data] Get aggregated trend of historical data for an asset (data-trend-aggregated)

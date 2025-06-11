@@ -6,6 +6,8 @@ get:
   operationId: getCalculationRules
   parameters:
     - $ref: '../parameters/calculationRuleIds.yaml'
+    - $ref: '../parameters/offset.yaml'
+    - $ref: '../parameters/size.yaml'
   responses:
     200:
       description: Successfully returned a list of calculation rules

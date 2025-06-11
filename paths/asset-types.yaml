@@ -6,6 +6,8 @@ get:
   operationId: getAssetTypes
   parameters:
     - $ref: '../parameters/expansions.yaml'
+    - $ref: '../parameters/offset.yaml'
+    - $ref: '../parameters/size.yaml'
   responses:
     200:
       description: Successfully returned a list of asset types

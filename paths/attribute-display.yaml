@@ -4,13 +4,18 @@ get:
   summary: How attributes are displayed
   description: Gets information about how attributes for specific assets are displayed in frontend.
   operationId: getAttributeDisplay
+  parameters:
+    - $ref: '../parameters/offset.yaml'
+    - $ref: '../parameters/size.yaml'
   responses:
     200:
       description: Successfully returned display information for attributes
       content:
         application/json:
           schema:
-            $ref: '../schemas/AttributeDisplay.yaml'
+            type: array
+            items:
+              $ref: '../schemas/AttributeDisplay.yaml'
         application/x-ndjson:
           schema:
             $ref: "../schemas/AttributeDisplay.yaml"

@@ -4,6 +4,9 @@ get:
   summary: List of asset type categories
   description: Returns a list of asset type categories
   operationId: getAssetTypeCategories
+  parameters:
+    - $ref: '../parameters/offset.yaml'
+    - $ref: '../parameters/size.yaml'
   responses:
     200:
       description: Successfully returned a list of asset type categories

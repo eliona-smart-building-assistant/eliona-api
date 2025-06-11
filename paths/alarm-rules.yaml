@@ -7,6 +7,8 @@ get:
   parameters:
     - $ref: '../parameters/alarmRuleIds.yaml'
     - $ref: '../parameters/assetId.yaml'
+    - $ref: '../parameters/offset.yaml'
+    - $ref: '../parameters/size.yaml'
     - $ref: '../parameters/expansions.yaml'
   responses:
     200:

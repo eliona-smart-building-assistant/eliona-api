@@ -5,6 +5,8 @@ get:
   description: Returns a list of widget types
   operationId: getWidgetTypes
   parameters:
+    - $ref: '../parameters/offset.yaml'
+    - $ref: '../parameters/size.yaml'
     - $ref: '../parameters/expansions.yaml'
   responses:
     200:

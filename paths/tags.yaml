@@ -4,6 +4,9 @@ get:
   summary: Information about tags
   description: Gets a list of tags
   operationId: getTags
+  parameters:
+    - $ref: '../parameters/offset.yaml'
+    - $ref: '../parameters/size.yaml'
   responses:
     200:
       description: Successfully returned the list of tags

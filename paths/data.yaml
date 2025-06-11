@@ -9,6 +9,8 @@ get:
     - $ref: '../parameters/parentAssetId.yaml'
     - $ref: '../parameters/dataSubtype.yaml'
     - $ref: '../parameters/assetTypeName.yaml'
+    - $ref: '../parameters/offset.yaml'
+    - $ref: '../parameters/size.yaml'
   responses:
     200:
       description: Successfully returned data for assets
