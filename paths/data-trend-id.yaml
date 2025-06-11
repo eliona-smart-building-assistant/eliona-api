@@ -6,10 +6,10 @@ get:
   operationId: getDataTrendById
   parameters:
     - $ref: '../parameters/asset-id.yaml'
-    - $ref: '../parameters/dataSubtypeRequired.yaml'
-    - $ref: '../parameters/attributeNameRequired.yaml'
-    - $ref: '../parameters/fromDateRequired.yaml'
-    - $ref: '../parameters/toDateRequired.yaml'
+    - $ref: '../parameters/dataSubtype.yaml'
+    - $ref: '../parameters/attributeName.yaml'
+    - $ref: '../parameters/fromDate.yaml'
+    - $ref: '../parameters/toDate.yaml'
     - $ref: '../parameters/offset.yaml'
     - $ref: '../parameters/size.yaml'
   responses:
@@ -21,3 +21,6 @@ get:
             type: array
             items:
               $ref: '../schemas/Data.yaml'
+        application/x-ndjson:
+          schema:
+            $ref: "../schemas/Data.yaml"
