@@ -254,18 +254,6 @@ paths:
       description: Returns a list of asset types
       operationId: getAssetTypes
       parameters:
-      - description: "List of referenced data to load, insert or update. Each entry\
-          \ defines the full qualified name of the field to be expanded as follows\
-          \ 'ObjectName.fieldName'."
-        explode: false
-        in: query
-        name: expansions
-        required: false
-        schema:
-          items:
-            type: string
-          type: array
-        style: form
       - description: |
           Specifies the starting point for pagination by indicating the number of items to skip.
         example: 3
@@ -286,6 +274,18 @@ paths:
           format: int64
           nullable: true
           type: integer
+      - description: "List of referenced data to load, insert or update. Each entry\
+          \ defines the full qualified name of the field to be expanded as follows\
+          \ 'ObjectName.fieldName'."
+        explode: false
+        in: query
+        name: expansions
+        required: false
+        schema:
+          items:
+            type: string
+          type: array
+        style: form
       responses:
         "200":
           content:
@@ -4406,18 +4406,6 @@ components:
       required: true
       schema:
         type: string
-    expansions:
-      description: "List of referenced data to load, insert or update. Each entry\
-        \ defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'."
-      explode: false
-      in: query
-      name: expansions
-      required: false
-      schema:
-        items:
-          type: string
-        type: array
-      style: form
     offset:
       description: |
         Specifies the starting point for pagination by indicating the number of items to skip.
@@ -4440,6 +4428,18 @@ components:
         format: int64
         nullable: true
         type: integer
+    expansions:
+      description: "List of referenced data to load, insert or update. Each entry\
+        \ defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'."
+      explode: false
+      in: query
+      name: expansions
+      required: false
+      schema:
+        items:
+          type: string
+        type: array
+      style: form
     asset-type-name:
       description: The name of the asset type
       example: weather_location
