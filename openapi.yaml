@@ -1417,11 +1417,11 @@ paths:
         required: true
         schema:
           type: integer
-      - description: Type of asset data
+      - description: Filter for a specific type of asset data
         example: input
         in: query
         name: dataSubtype
-        required: true
+        required: false
         schema:
           enum:
           - input
@@ -1434,21 +1434,21 @@ paths:
         example: temperature
         in: query
         name: attributeName
-        required: true
+        required: false
         schema:
           type: string
-      - description: Lower date time (RFC3339) limit inclusive
+      - description: Filter by lower date time (RFC3339) limit inclusive
         example: 2020-01-01T09:00:00.000Z
         in: query
         name: fromDate
-        required: true
+        required: false
         schema:
           type: string
-      - description: Upper date time (RFC3339) limit inclusive
+      - description: Filter by upper date time (RFC3339) limit exclusive
         example: 2021-12-31T23:00:00.000Z
         in: query
         name: toDate
-        required: true
+        required: false
         schema:
           type: string
       - description: |
@@ -1479,6 +1479,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/Data'
                 type: array
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/Data'
           description: Successfully returned historical data for an asset
       summary: Get trend of historical data
       tags:
@@ -1584,9 +1587,6 @@ paths:
                 items:
                   $ref: '#/components/schemas/DataTrendAggregated'
                 type: array
-            application/x-ndjson:
-              schema:
-                $ref: '#/components/schemas/DataTrendAggregated'
           description: Successfully returned aggregated data sets for an asset
       summary: Get aggregated trend of historical data
       tags:
@@ -1684,9 +1684,6 @@ paths:
                 items:
                   $ref: '#/components/schemas/Data'
                 type: array
-            application/x-ndjson:
-              schema:
-                $ref: '#/components/schemas/Data'
           description: Successfully returned historical data for assets
       summary: Get trend of historical data
       tags:
@@ -4152,42 +4149,28 @@ components:
         - "true"
         - "false"
         type: string
-    dataSubtypeRequired:
-      description: Type of asset data
-      example: input
-      in: query
-      name: dataSubtype
-      required: true
-      schema:
-        enum:
-        - input
-        - info
-        - status
-        - output
-        - property
-        type: string
-    attributeNameRequired:
+    attributeName:
       description: Data attribute name
       example: temperature
       in: query
       name: attributeName
-      required: true
+      required: false
       schema:
         type: string
-    fromDateRequired:
-      description: Lower date time (RFC3339) limit inclusive
+    fromDate:
+      description: Filter by lower date time (RFC3339) limit inclusive
       example: 2020-01-01T09:00:00.000Z
       in: query
       name: fromDate
-      required: true
+      required: false
       schema:
         type: string
-    toDateRequired:
-      description: Upper date time (RFC3339) limit inclusive
+    toDate:
+      description: Filter by upper date time (RFC3339) limit exclusive
       example: 2021-12-31T23:00:00.000Z
       in: query
       name: toDate
-      required: true
+      required: false
       schema:
         type: string
     offset:
@@ -4212,6 +4195,28 @@ components:
         format: int64
         nullable: true
         type: integer
+    dataSubtypeRequired:
+      description: Type of asset data
+      example: input
+      in: query
+      name: dataSubtype
+      required: true
+      schema:
+        enum:
+        - input
+        - info
+        - status
+        - output
+        - property
+        type: string
+    attributeNameRequired:
+      description: Data attribute name
+      example: temperature
+      in: query
+      name: attributeName
+      required: true
+      schema:
+        type: string
     aggregationRasterRequired:
       description: Aggregation calculation period
       examples:
@@ -4240,20 +4245,20 @@ components:
         - sum
         - cusum
         type: string
-    fromDate:
-      description: Filter by lower date time (RFC3339) limit inclusive
+    fromDateRequired:
+      description: Lower date time (RFC3339) limit inclusive
       example: 2020-01-01T09:00:00.000Z
       in: query
       name: fromDate
-      required: false
+      required: true
       schema:
         type: string
-    toDate:
-      description: Filter by upper date time (RFC3339) limit exclusive
+    toDateRequired:
+      description: Upper date time (RFC3339) limit inclusive
       example: 2021-12-31T23:00:00.000Z
       in: query
       name: toDate
-      required: false
+      required: true
       schema:
         type: string
     aggregationId:
