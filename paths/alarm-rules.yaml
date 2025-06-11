@@ -17,6 +17,9 @@ get:
             type: array
             items:
               $ref: '../schemas/AlarmRule.yaml'
+        application/x-ndjson:
+          schema:
+            $ref: "../schemas/AlarmRule.yaml"
 
 put:
   deprecated: true

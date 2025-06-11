@@ -234,9 +234,6 @@ paths:
   /project-roles:
     $ref: './paths/project-roles.yaml'
 
-  /project-roles-stream:
-    $ref: './paths/project-roles-stream.yaml'
-
   /project-roles/{role-name}:
     $ref: './paths/project-roles-name.yaml'
 

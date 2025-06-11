@@ -274,6 +274,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/AssetType'
                 type: array
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/AssetType'
           description: Successfully returned a list of asset types
       summary: List of asset types
       tags:
@@ -514,6 +517,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/AssetTypeCategory'
                 type: array
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/AssetTypeCategory'
           description: Successfully returned a list of asset type categories
       summary: List of asset type categories
       tags:
@@ -597,6 +603,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/Asset'
                 type: array
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/Asset'
           description: Successfully returned the list of assets
       summary: Information about assets
       tags:
@@ -1230,6 +1239,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AttributeDisplay'
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/AttributeDisplay'
           description: Successfully returned display information for attributes
       summary: How attributes are displayed
       tags:
@@ -1301,6 +1313,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/Data'
                 type: array
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/Data'
           description: Successfully returned data for assets
       summary: Gets all data
       tags:
@@ -1569,6 +1584,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/DataTrendAggregated'
                 type: array
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/DataTrendAggregated'
           description: Successfully returned aggregated data sets for an asset
       summary: Get aggregated trend of historical data
       tags:
@@ -1666,6 +1684,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/Data'
                 type: array
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/Data'
           description: Successfully returned historical data for assets
       summary: Get trend of historical data
       tags:
@@ -1954,6 +1975,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/WidgetType'
                 type: array
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/WidgetType'
           description: Successfully returned a list of widget types
       summary: List of widget types
       tags:
@@ -2146,6 +2170,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/Dashboard'
                 type: array
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/Dashboard'
           description: Successfully returned the list of dashboards
       summary: Information about dashboards
       tags:
@@ -2333,6 +2360,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/AlarmRule'
                 type: array
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/AlarmRule'
           description: Successfully returned a list of alarm rules
       summary: Information about alarm rules
       tags:
@@ -2484,6 +2514,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/CalculationRule'
                 type: array
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/CalculationRule'
           description: Successfully returned a list of calculation rules
       summary: Information about calculation rules
       tags:
@@ -2635,6 +2668,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/Alarm'
                 type: array
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/Alarm'
           description: Successfully returned a list of alarms
       summary: Information about alarms
       tags:
@@ -2800,6 +2836,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/Alarm'
                 type: array
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/Alarm'
           description: Successfully returned a list of alarms
       summary: Information about alarms history
       tags:
@@ -2923,6 +2962,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/Alarm'
                 type: array
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/Alarm'
           description: Successfully returned a list of most prioritized alarms
       summary: Information about most prioritized alarms
       tags:
@@ -2967,6 +3009,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/Node'
                 type: array
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/Node'
           description: Successfully returned a list of nodes
       summary: Information about nodes
       tags:
@@ -3078,6 +3123,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/Agent'
                 type: array
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/Agent'
           description: Successfully returned a list of agents
       summary: Information about agents
       tags:
@@ -3695,6 +3743,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/User'
                 type: array
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/User'
           description: Successfully returned the list of users
       summary: Information about users
       tags:
@@ -3768,6 +3819,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/Project'
                 type: array
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/Project'
           description: Successfully returned the list of projects
       summary: Information about projects
       tags:
@@ -3881,21 +3935,6 @@ paths:
       summary: Create or update a project role
       tags:
       - Projects
-  /project-roles-stream:
-    get:
-      description: Retrieves a list of roles that can be assigned to users within
-        projects
-      operationId: streamProjectRoles
-      responses:
-        "200":
-          content:
-            application/x-ndjson:
-              schema:
-                $ref: '#/components/schemas/ProjectRole'
-          description: Successfully starting stream of project roles
-      summary: Information about project roles as stream
-      tags:
-      - Projects
   /project-roles/{role-name}:
     get:
       description: Gets information about a specific project role.
@@ -3932,6 +3971,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/Tag'
                 type: array
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/Tag'
           description: Successfully returned the list of tags
       summary: Information about tags
       tags:

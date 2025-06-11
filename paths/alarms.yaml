@@ -19,6 +19,9 @@ get:
             type: array
             items:
               $ref: '../schemas/Alarm.yaml'
+        application/x-ndjson:
+          schema:
+            $ref: "../schemas/Alarm.yaml"
 
 put:
   tags:

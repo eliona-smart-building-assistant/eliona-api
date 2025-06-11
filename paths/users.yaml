@@ -13,6 +13,9 @@ get:
             type: array
             items:
               $ref: '../schemas/User.yaml'
+        application/x-ndjson:
+          schema:
+            $ref: "../schemas/User.yaml"
 
 put:
   tags:

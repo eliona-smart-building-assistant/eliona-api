@@ -58,3 +58,7 @@ Content-Type: application/json
     "resourceId": "device-002"
   }
 ]
+
+### [Assets] Get attribute display (read-only)
+GET {{api-server}}/v2/attribute-display HTTP/1.1
+X-Api-Key: {{read-only-token}}

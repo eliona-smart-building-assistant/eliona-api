@@ -13,6 +13,9 @@ get:
             type: array
             items:
               $ref: '../schemas/Node.yaml'
+        application/x-ndjson:
+          schema:
+            $ref: "../schemas/Node.yaml"
 
 put:
   deprecated: true
