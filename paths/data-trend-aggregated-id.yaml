@@ -23,6 +23,3 @@ get:
             type: array
             items:
               $ref: '../schemas/DataTrendAggregated.yaml'
-        application/x-ndjson:
-          schema:
-            $ref: "../schemas/DataTrendAggregated.yaml"
