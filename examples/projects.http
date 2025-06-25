@@ -1,35 +1,46 @@
 ### [Projects] List all projects (read-only)
-GET {{api-server}}/v2/projects HTTP/1.1
+GET {{api-server}}/v2/projects?expansions=Project.users HTTP/1.1
 X-Api-Key: {{read-only-token}}
 
+### [Projects] Stream all projects (read-only)
+GET {{api-server}}/v2/projects?expansions=Project.users HTTP/1.1
+X-Api-Key: {{read-only-token}}
+Accept: application/x-ndjson
+
 ### [Projects] Create or update a project with detailed info (read–write)
-PUT {{api-server}}/v2/projects HTTP/1.1
+PUT {{api-server}}/v2/projects?expansions=Project.users HTTP/1.1
 X-Api-Key: {{read-write-token}}
 Content-Type: application/json
 
 {
-  "id": "99",
-  "title": "My Project - Updated"
+  "id": "9999",
+  "users": [
+    {
+      "userName": "john.doe@example.com",
+      "roleName": "Project user",
+      "enabled": false
+    }
+  ]
 }
 
 ### [Projects] Get project details by id (read-only)
-GET {{api-server}}/v2/projects/99 HTTP/1.1
+GET {{api-server}}/v2/projects/9999?expansions=Project.users HTTP/1.1
 X-Api-Key: {{read-only-token}}
 
-### [Projects] Get project roles
+### [Projects] Get project roles (read-only)
 GET {{api-server}}/v2/project-roles HTTP/1.1
 X-Api-Key: {{read-only-token}}
 
-### [Projects] Stream project roles
+### [Projects] Stream project roles (read-only)
 GET {{api-server}}/v2/project-roles HTTP/1.1
 Accept: application/x-ndjson
 X-Api-Key: {{read-only-token}}
 
-### [Projects] Get project role by name
+### [Projects] Get project role by name (read-only)
 GET {{api-server}}/v2/project-roles/Test HTTP/1.1
 X-Api-Key: {{read-only-token}}
 
-### [Projects] Create or update a project role
+### [Projects] Create or update a project role (read–write)
 PUT {{api-server}}/v2/project-roles HTTP/1.1
 X-Api-Key: {{read-write-token}}
 Content-Type: application/json
