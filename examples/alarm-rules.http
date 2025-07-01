@@ -2,8 +2,17 @@
 GET {{api-server}}/v2/alarm-rules?expansions=AlarmRule.assetInfo HTTP/1.1
 X-Api-Key: {{read-only-token}}
 
+### [Alarm rules] Stream alarm rules (read-only)
+GET {{api-server}}/v2/alarm-rules?expansions=AlarmRule.assetInfo HTTP/1.1
+X-Api-Key: {{read-only-token}}
+Accept: application/x-ndjson
+
 ### [Alarm rules] List alarm rules with filter parameters (read-only)
-GET {{api-server}}/v2/alarm-rules?assetId=61894&alarmRuleIds=4621,4620&expansions=AlarmRule.assetInfo HTTP/1.1
+GET {{api-server}}/v2/alarm-rules?assetId=65287&alarmRuleIds=5705,5706&expansions=AlarmRule.assetInfo HTTP/1.1
+X-Api-Key: {{read-only-token}}
+
+### [Alarm rules] List alarm rule (read-only)
+GET {{api-server}}/v2/alarm-rules/5727 HTTP/1.1
 X-Api-Key: {{read-only-token}}
 
 ### [Alarm rules] Create a new alarm rule with detailed parameters (read–write)
@@ -12,7 +21,7 @@ X-Api-Key: {{read-write-token}}
 Content-Type: application/json
 
 {
-  "assetId": 61894,
+  "assetId": 65287,
   "subtype": "input",
   "attribute": "temperature",
   "enable": true,
@@ -39,12 +48,12 @@ GET {{api-server}}/v2/alarm-rules/4623?expansions=AlarmRule.assetInfo HTTP/1.1
 X-Api-Key: {{read-only-token}}
 
 ### [Alarm rules] Update an alarm rule (read–write)
-PUT {{api-server}}/v2/alarm-rules/4623 HTTP/1.1
+PUT {{api-server}}/v2/alarm-rules/5727 HTTP/1.1
 X-Api-Key: {{read-write-token}}
 Content-Type: application/json
 
 {
-  "assetId": 61894,
+  "assetId": 65287,
   "subtype": "input",
   "attribute": "temperature",
   "enable": true,
@@ -64,5 +73,5 @@ Content-Type: application/json
 }
 
 ### [Alarm rules] Delete an alarm rule by id (read–write)
-DELETE {{api-server}}/v2/alarm-rules/4623 HTTP/1.1
+DELETE {{api-server}}/v2/alarm-rules/5729 HTTP/1.1
 X-Api-Key: {{read-write-token}}
