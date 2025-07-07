@@ -38,62 +38,10 @@ security:
 - ApiKeyAuth: []
 - BearerAuth: []
 tags:
-- description: Handle nodes
+- description: API version
   externalDocs:
     url: https://www.eliona.io
-  name: Nodes
-- description: Handle agents
-  externalDocs:
-    url: https://www.eliona.io
-  name: Agents
-- description: Handle alarms
-  externalDocs:
-    url: https://www.eliona.io
-  name: Alarms
-- description: Handle alarm rules
-  externalDocs:
-    url: https://www.eliona.io
-  name: Alarm rules
-- description: Handle apps
-  externalDocs:
-    url: https://www.eliona.io
-  name: Apps
-- description: Handle asset types
-  externalDocs:
-    url: https://www.eliona.io
-  name: Asset types
-- description: Handle assets
-  externalDocs:
-    url: https://www.eliona.io
-  name: Assets
-- description: Handle data aggregations
-  externalDocs:
-    url: https://www.eliona.io
-  name: Aggregations
-- description: Handle asset data
-  externalDocs:
-    url: https://www.eliona.io
-  name: Data
-- description: Handle calculation rules
-  externalDocs:
-    url: https://www.eliona.io
-  name: Calculation rules
-- description: Handle dashboards
-  externalDocs:
-    url: https://www.eliona.io
-  name: Dashboards
-- description: Handle widgets types for dashboards
-  externalDocs:
-    url: https://www.eliona.io
-  name: Widgets types
-- description: Handle widgets for dashboards
-  externalDocs:
-    url: https://www.eliona.io
-  name: Widgets
-- description: Communicate to peoples
-  externalDocs:
-    url: https://www.eliona.io
-  name: Communication
+  name: Version
 - description: User information
   externalDocs:
     url: https://www.eliona.io
@@ -106,14 +54,66 @@ tags:
   externalDocs:
     url: https://www.eliona.io
   name: Tags
+- description: Handle asset types
+  externalDocs:
+    url: https://www.eliona.io
+  name: Asset types
+- description: Handle assets
+  externalDocs:
+    url: https://www.eliona.io
+  name: Assets
+- description: Handle asset data
+  externalDocs:
+    url: https://www.eliona.io
+  name: Data
+- description: Handle calculation rules
+  externalDocs:
+    url: https://www.eliona.io
+  name: Calculation rules
+- description: Handle alarms
+  externalDocs:
+    url: https://www.eliona.io
+  name: Alarms
+- description: Handle alarm rules
+  externalDocs:
+    url: https://www.eliona.io
+  name: Alarm rules
+- description: Handle widgets types for dashboards
+  externalDocs:
+    url: https://www.eliona.io
+  name: Widgets types
+- description: Handle widgets for dashboards
+  externalDocs:
+    url: https://www.eliona.io
+  name: Widgets
+- description: Handle dashboards
+  externalDocs:
+    url: https://www.eliona.io
+  name: Dashboards
+- description: Communicate to peoples
+  externalDocs:
+    url: https://www.eliona.io
+  name: Communication
 - description: QR codes for frontend links
   externalDocs:
     url: https://www.eliona.io
   name: QR codes
-- description: API version
+- description: Handle apps
   externalDocs:
     url: https://www.eliona.io
-  name: Version
+  name: Apps
+- description: Handle nodes
+  externalDocs:
+    url: https://www.eliona.io
+  name: Nodes
+- description: Handle agents
+  externalDocs:
+    url: https://www.eliona.io
+  name: Agents
+- description: Handle data aggregations
+  externalDocs:
+    url: https://www.eliona.io
+  name: Aggregations
 paths:
   /version:
     get:
