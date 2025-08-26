@@ -46,10 +46,6 @@ tags:
   externalDocs:
     url: https://www.eliona.io
   name: Users
-- description: Project information
-  externalDocs:
-    url: https://www.eliona.io
-  name: Projects
 - description: Tag information
   externalDocs:
     url: https://www.eliona.io
@@ -110,6 +106,10 @@ tags:
   externalDocs:
     url: https://www.eliona.io
   name: Agents
+- description: Project information
+  externalDocs:
+    url: https://www.eliona.io
+  name: Projects
 - description: Handle data aggregations
   externalDocs:
     url: https://www.eliona.io
@@ -4102,6 +4102,7 @@ paths:
       - Users
   /projects:
     get:
+      deprecated: true
       description: Gets a list of projects
       operationId: getProjects
       parameters:
@@ -4153,6 +4154,7 @@ paths:
       tags:
       - Projects
     put:
+      deprecated: true
       description: Creates a project if no project exists or update it if already
         exists. Uses the id for updating.
       operationId: putProject
@@ -4187,6 +4189,7 @@ paths:
       - Projects
   /projects/{project-id}:
     get:
+      deprecated: true
       description: Gets information about a project.
       operationId: getProjectById
       parameters:
@@ -4223,6 +4226,7 @@ paths:
       - Projects
   /project-roles:
     get:
+      deprecated: true
       description: Retrieves a list of roles that can be assigned to users within
         projects
       operationId: getProjectRoles
@@ -4263,6 +4267,7 @@ paths:
       tags:
       - Projects
     put:
+      deprecated: true
       description: "Creates a new project role if none exists, or updates an existing\
         \ one by its name"
       operationId: putProjectRole
@@ -4284,6 +4289,7 @@ paths:
       - Projects
   /project-roles/{role-name}:
     get:
+      deprecated: true
       description: Gets information about a specific project role.
       operationId: getProjectRoleByName
       parameters:
@@ -6870,6 +6876,7 @@ components:
       - email
       type: object
     Project:
+      deprecated: true
       description: A project
       example:
         id: "99"
