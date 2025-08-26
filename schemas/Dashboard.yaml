@@ -2,7 +2,6 @@ type: object
 description: A frontend dashboard
 required:
   - name
-  - projectId
   - userId
 properties:
   id:
@@ -16,6 +15,7 @@ properties:
     description: The name for this dashboard
     example: Weather info
   projectId:
+    deprecated: true
     type: string
     description: ID of the project to which the dashboard belongs
     example: 99

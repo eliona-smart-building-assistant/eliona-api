@@ -9,6 +9,7 @@ properties:
     description: E-Mail address or internal ID of the Eliona user
     example: peter.fox@example.com
   projectId:
+    deprecated: true
     type: string
     nullable: true
     description: ID of the project the notification should appear

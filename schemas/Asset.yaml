@@ -1,7 +1,6 @@
 type: object
 description: An asset
 required:
-  - projectId
   - globalAssetIdentifier
   - assetType
 properties:
@@ -23,6 +22,7 @@ properties:
       - XYZ0123
       - 13:23:12:34:32
   projectId:
+    deprecated: true
     type: string
     description: ID of the project to which the asset belongs
     example: 99
