@@ -8,7 +8,6 @@ properties:
     type: integer
     description: The id of the corresponding rule
     example: 123
-    readOnly: true
   assetId:
     type: integer
     description: ID of the corresponding asset

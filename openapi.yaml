@@ -9,7 +9,7 @@ info:
   license:
     name: MIT License
   title: Eliona REST API
-  version: 2.9.4
+  version: 2.9.5
 externalDocs:
   description: Find out more about Eliona App SDK
   url: https://github.com/eliona-smart-building-assistant
@@ -6485,7 +6485,6 @@ components:
         ruleId:
           description: The id of the corresponding rule
           example: 123
-          readOnly: true
           type: integer
         assetId:
           description: ID of the corresponding asset
