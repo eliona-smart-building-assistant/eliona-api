@@ -160,7 +160,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/App'
+                $ref: "#/components/schemas/App"
           description: Successfully returned information about an app.
       summary: Information about an app
       tags:
@@ -213,7 +213,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Patch'
+                $ref: "#/components/schemas/Patch"
           description: Successfully returned information about a patch for an app
       summary: Information about a patch for an app
       tags:
@@ -292,11 +292,11 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/AssetType'
+                  $ref: "#/components/schemas/AssetType"
                 type: array
             application/x-ndjson:
               schema:
-                $ref: '#/components/schemas/AssetType'
+                $ref: "#/components/schemas/AssetType"
           description: Successfully returned a list of asset types
       summary: List of asset types
       tags:
@@ -321,14 +321,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AssetType'
+              $ref: "#/components/schemas/AssetType"
         required: true
       responses:
         "201":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AssetType'
+                $ref: "#/components/schemas/AssetType"
           description: Successfully created a new asset type
         "409":
           description: Asset type name already exists
@@ -356,14 +356,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AssetType'
+              $ref: "#/components/schemas/AssetType"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AssetType'
+                $ref: "#/components/schemas/AssetType"
           description: Successfully created a new or updated an existing asset type
       summary: Create or update an asset type
       tags:
@@ -416,7 +416,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AssetType'
+                $ref: "#/components/schemas/AssetType"
           description: Successfully returned an asset type by name.
         "404":
           description: Asset type with name not found
@@ -450,14 +450,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AssetType'
+              $ref: "#/components/schemas/AssetType"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AssetType'
+                $ref: "#/components/schemas/AssetType"
           description: Successfully updated an existing asset type
         "404":
           description: Asset type with name not found
@@ -480,14 +480,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AssetTypeAttribute'
+              $ref: "#/components/schemas/AssetTypeAttribute"
         required: true
       responses:
         "201":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AssetTypeAttribute'
+                $ref: "#/components/schemas/AssetTypeAttribute"
           description: Successfully created a new asset type attribute
         "409":
           description: "Combination of asset type name, subtype and attribute name\
@@ -512,14 +512,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AssetTypeAttribute'
+              $ref: "#/components/schemas/AssetTypeAttribute"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AssetTypeAttribute'
+                $ref: "#/components/schemas/AssetTypeAttribute"
           description: Successfully created a new or updated an existing asset type
             attribute
       summary: Create or update an asset type attribute
@@ -556,11 +556,11 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/AssetTypeCategory'
+                  $ref: "#/components/schemas/AssetTypeCategory"
                 type: array
             application/x-ndjson:
               schema:
-                $ref: '#/components/schemas/AssetTypeCategory'
+                $ref: "#/components/schemas/AssetTypeCategory"
           description: Successfully returned a list of asset type categories
       summary: List of asset type categories
       tags:
@@ -573,14 +573,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AssetTypeCategory'
+              $ref: "#/components/schemas/AssetTypeCategory"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AssetTypeCategory'
+                $ref: "#/components/schemas/AssetTypeCategory"
           description: Successfully created a new or updated an existing asset type
             category
       summary: Create or update an asset type categories
@@ -662,11 +662,11 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/Asset'
+                  $ref: "#/components/schemas/Asset"
                 type: array
             application/x-ndjson:
               schema:
-                $ref: '#/components/schemas/Asset'
+                $ref: "#/components/schemas/Asset"
           description: Successfully returned the list of assets
       summary: Information about assets
       tags:
@@ -712,21 +712,21 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Asset'
+              $ref: "#/components/schemas/Asset"
         required: true
       responses:
         "201":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Asset'
+                $ref: "#/components/schemas/Asset"
           description: |
             Successfully created a new asset
         "422":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorMessage422'
+                $ref: "#/components/schemas/ErrorMessage422"
           description: |
             Issues arisen during the creation or updating process.
       summary: Create an asset
@@ -773,20 +773,20 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Asset'
+              $ref: "#/components/schemas/Asset"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Asset'
+                $ref: "#/components/schemas/Asset"
           description: Successfully created a new or updated an existing asset
         "422":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorMessage422'
+                $ref: "#/components/schemas/ErrorMessage422"
           description: Issues arisen during the creation or updating process.
       summary: Create or update an asset
       tags:
@@ -839,7 +839,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Asset'
+                $ref: "#/components/schemas/Asset"
           description: Successfully returned the asset by id.
         "404":
           description: Asset with id not found
@@ -875,14 +875,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Asset'
+              $ref: "#/components/schemas/Asset"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Asset'
+                $ref: "#/components/schemas/Asset"
           description: Successfully updated an existing asset
         "404":
           description: Asset with id not found
@@ -931,7 +931,7 @@ paths:
           application/json:
             schema:
               items:
-                $ref: '#/components/schemas/Identifier'
+                $ref: "#/components/schemas/Identifier"
               type: array
         required: true
       responses:
@@ -941,7 +941,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorMessage422'
+                $ref: "#/components/schemas/ErrorMessage422"
           description: "Issues may arise during the deletion process. If at least\
             \ one asset encounters an error and cannot be deleted or is not found,\
             \ no changes will be applied to any of the assets in the list."
@@ -990,7 +990,7 @@ paths:
           application/json:
             schema:
               items:
-                $ref: '#/components/schemas/Asset'
+                $ref: "#/components/schemas/Asset"
               type: array
         required: true
       responses:
@@ -999,7 +999,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/Asset'
+                  $ref: "#/components/schemas/Asset"
                 type: array
           description: "The complete list of assets has been successfully created.\
             \ The content displays the list of assets in the same order as the initial\
@@ -1009,7 +1009,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorMessage422'
+                $ref: "#/components/schemas/ErrorMessage422"
           description: "Issues may arise during the creation process when handling\
             \ the assets in the list. In such cases, if at least one asset encounters\
             \ an error and cannot be created, no changes will be applied to any of\
@@ -1059,7 +1059,7 @@ paths:
           application/json:
             schema:
               items:
-                $ref: '#/components/schemas/Asset'
+                $ref: "#/components/schemas/Asset"
               type: array
         required: true
       responses:
@@ -1068,7 +1068,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/Asset'
+                  $ref: "#/components/schemas/Asset"
                 type: array
           description: "The complete list of assets has been successfully created\
             \ or updated. The content displays the list of assets in the same order\
@@ -1078,7 +1078,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorMessage422'
+                $ref: "#/components/schemas/ErrorMessage422"
           description: "Issues may arise during the creation or updating process when\
             \ handling the assets in the list. In such cases, if at least one asset\
             \ encounters an error and cannot be created or updated, no changes will\
@@ -1128,7 +1128,7 @@ paths:
           application/json:
             schema:
               items:
-                $ref: '#/components/schemas/Identifier'
+                $ref: "#/components/schemas/Identifier"
               type: array
         required: true
       responses:
@@ -1137,7 +1137,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/AssetDryRun'
+                  $ref: "#/components/schemas/AssetDryRun"
                 type: array
           description: The list of expected results if the request is actually performed.
             The content displays the list of expected results in the same order as
@@ -1186,7 +1186,7 @@ paths:
           application/json:
             schema:
               items:
-                $ref: '#/components/schemas/Asset'
+                $ref: "#/components/schemas/Asset"
               type: array
         required: true
       responses:
@@ -1195,7 +1195,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/AssetDryRun'
+                  $ref: "#/components/schemas/AssetDryRun"
                 type: array
           description: The list of expected results if the request is actually performed.
             The content displays the list of expected results in the same order as
@@ -1244,7 +1244,7 @@ paths:
           application/json:
             schema:
               items:
-                $ref: '#/components/schemas/Asset'
+                $ref: "#/components/schemas/Asset"
               type: array
         required: true
       responses:
@@ -1253,7 +1253,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/AssetDryRun'
+                  $ref: "#/components/schemas/AssetDryRun"
                 type: array
           description: The list of expected results if the request is actually performed.
             The content displays the list of expected results in the same order as
@@ -1284,7 +1284,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AssetListen'
+                $ref: "#/components/schemas/AssetListen"
           description: Successfully opened a connection to asset WebSocket
       summary: WebSocket connection for asset changes
       tags:
@@ -1321,11 +1321,11 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/AttributeDisplay'
+                  $ref: "#/components/schemas/AttributeDisplay"
                 type: array
             application/x-ndjson:
               schema:
-                $ref: '#/components/schemas/AttributeDisplay'
+                $ref: "#/components/schemas/AttributeDisplay"
           description: Successfully returned display information for attributes
       summary: How attributes are displayed
       tags:
@@ -1338,14 +1338,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AttributeDisplay'
+              $ref: "#/components/schemas/AttributeDisplay"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AttributeDisplay'
+                $ref: "#/components/schemas/AttributeDisplay"
           description: Successfully updated or created display information for attributes
       summary: Create or update how attributes are displayed
       tags:
@@ -1415,11 +1415,11 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/Data'
+                  $ref: "#/components/schemas/Data"
                 type: array
             application/x-ndjson:
               schema:
-                $ref: '#/components/schemas/Data'
+                $ref: "#/components/schemas/Data"
           description: Successfully returned data for assets
       summary: Gets all data
       tags:
@@ -1444,7 +1444,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Data'
+              $ref: "#/components/schemas/Data"
         required: true
       responses:
         "201":
@@ -1474,7 +1474,7 @@ paths:
           application/json:
             schema:
               items:
-                $ref: '#/components/schemas/Data'
+                $ref: "#/components/schemas/Data"
               type: array
         required: true
       responses:
@@ -1493,20 +1493,20 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Data'
+              $ref: "#/components/schemas/Data"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Data'
+                $ref: "#/components/schemas/Data"
           description: Successfully created a new or updated historical data
         "422":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorMessage422'
+                $ref: "#/components/schemas/ErrorMessage422"
           description: Issues arisen during the creation or updating
       summary: Create or update historical data
       tags:
@@ -1583,11 +1583,11 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/Data'
+                  $ref: "#/components/schemas/Data"
                 type: array
             application/x-ndjson:
               schema:
-                $ref: '#/components/schemas/Data'
+                $ref: "#/components/schemas/Data"
           description: Successfully returned historical data for an asset
       summary: Get trend of historical data
       tags:
@@ -1691,7 +1691,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/DataTrendAggregated'
+                  $ref: "#/components/schemas/DataTrendAggregated"
                 type: array
           description: Successfully returned aggregated data sets for an asset
       summary: Get aggregated trend of historical data
@@ -1728,7 +1728,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/DataListen'
+                $ref: "#/components/schemas/DataListen"
           description: Successfully opened a connection to asset data WebSocket
       summary: WebSocket connection for asset data changes
       tags:
@@ -1788,7 +1788,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/Data'
+                  $ref: "#/components/schemas/Data"
                 type: array
           description: Successfully returned historical data for assets
       summary: Get trend of historical data
@@ -1900,7 +1900,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/DataAggregated'
+                  $ref: "#/components/schemas/DataAggregated"
                 type: array
           description: Successfully returned aggregated data sets
       summary: Get aggregated data
@@ -1919,7 +1919,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/Aggregation'
+                  $ref: "#/components/schemas/Aggregation"
                 type: array
           description: Successfully returned the list of aggregations
       summary: Information about aggregations
@@ -1935,14 +1935,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Aggregation'
+              $ref: "#/components/schemas/Aggregation"
         required: true
       responses:
         "201":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Aggregation'
+                $ref: "#/components/schemas/Aggregation"
           description: Successfully created an aggregation
         "409":
           description: "Combination of asset id, subtype, attribute and raster already\
@@ -1960,14 +1960,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Aggregation'
+              $ref: "#/components/schemas/Aggregation"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Aggregation'
+                $ref: "#/components/schemas/Aggregation"
           description: Successfully created or updated an aggregation
       summary: Creates or updates an aggregation
       tags:
@@ -2014,7 +2014,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Aggregation'
+                $ref: "#/components/schemas/Aggregation"
           description: Successfully returned an aggregation by id.
         "404":
           description: Aggregation with id not found
@@ -2039,14 +2039,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Aggregation'
+              $ref: "#/components/schemas/Aggregation"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Aggregation'
+                $ref: "#/components/schemas/Aggregation"
           description: Successfully updated an aggregation
         "404":
           description: Aggregation with id not found
@@ -2096,11 +2096,11 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/WidgetType'
+                  $ref: "#/components/schemas/WidgetType"
                 type: array
             application/x-ndjson:
               schema:
-                $ref: '#/components/schemas/WidgetType'
+                $ref: "#/components/schemas/WidgetType"
           description: Successfully returned a list of widget types
       summary: List of widget types
       tags:
@@ -2125,14 +2125,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/WidgetType'
+              $ref: "#/components/schemas/WidgetType"
         required: true
       responses:
         "201":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/WidgetType'
+                $ref: "#/components/schemas/WidgetType"
           description: Successfully created widget type
         "409":
           description: Widget type name already exists
@@ -2160,14 +2160,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/WidgetType'
+              $ref: "#/components/schemas/WidgetType"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/WidgetType'
+                $ref: "#/components/schemas/WidgetType"
           description: Successfully added or updated widget type
       summary: Create or update a widget type
       tags:
@@ -2220,7 +2220,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/WidgetType'
+                $ref: "#/components/schemas/WidgetType"
           description: Successfully returned a widget type by name.
         "404":
           description: Widget type with name not found
@@ -2254,14 +2254,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/WidgetType'
+              $ref: "#/components/schemas/WidgetType"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/WidgetType'
+                $ref: "#/components/schemas/WidgetType"
           description: Successfully updated widget type
         "404":
           description: Widget type with name not found
@@ -2311,11 +2311,11 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/Dashboard'
+                  $ref: "#/components/schemas/Dashboard"
                 type: array
             application/x-ndjson:
               schema:
-                $ref: '#/components/schemas/Dashboard'
+                $ref: "#/components/schemas/Dashboard"
           description: Successfully returned the list of dashboards
       summary: Information about dashboards
       tags:
@@ -2340,14 +2340,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Dashboard'
+              $ref: "#/components/schemas/Dashboard"
         required: true
       responses:
         "201":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Dashboard'
+                $ref: "#/components/schemas/Dashboard"
           description: Successfully added a new Dashboard
       summary: Creates a new dashboard
       tags:
@@ -2381,7 +2381,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Dashboard'
+                $ref: "#/components/schemas/Dashboard"
           description: Successfully returned the the dashboard
         "404":
           description: Dashboard with id not found
@@ -2417,7 +2417,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Widget'
+                $ref: "#/components/schemas/Widget"
           description: Successfully returned the widgets for the dashboard
         "404":
           description: Dashboard with id not found
@@ -2451,7 +2451,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Widget'
+              $ref: "#/components/schemas/Widget"
         required: true
       responses:
         "201":
@@ -2521,11 +2521,11 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/AlarmRule'
+                  $ref: "#/components/schemas/AlarmRule"
                 type: array
             application/x-ndjson:
               schema:
-                $ref: '#/components/schemas/AlarmRule'
+                $ref: "#/components/schemas/AlarmRule"
           description: Successfully returned a list of alarm rules
       summary: Information about alarm rules
       tags:
@@ -2537,14 +2537,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AlarmRule'
+              $ref: "#/components/schemas/AlarmRule"
         required: true
       responses:
         "201":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AlarmRule'
+                $ref: "#/components/schemas/AlarmRule"
           description: Successfully created a new alarm rule
       summary: Create an alarm rule
       tags:
@@ -2558,14 +2558,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AlarmRule'
+              $ref: "#/components/schemas/AlarmRule"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AlarmRule'
+                $ref: "#/components/schemas/AlarmRule"
           description: Successfully created a new or updated an existing alarm rule
       summary: Create or update an alarm rule
       tags:
@@ -2618,7 +2618,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AlarmRule'
+                $ref: "#/components/schemas/AlarmRule"
           description: Successfully returned an alarm rule
         "404":
           description: Alarm rule with id not found
@@ -2640,14 +2640,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AlarmRule'
+              $ref: "#/components/schemas/AlarmRule"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AlarmRule'
+                $ref: "#/components/schemas/AlarmRule"
           description: Successfully updated an existing alarm rule
         "404":
           description: Alarm rule with id not found
@@ -2695,11 +2695,11 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/CalculationRule'
+                  $ref: "#/components/schemas/CalculationRule"
                 type: array
             application/x-ndjson:
               schema:
-                $ref: '#/components/schemas/CalculationRule'
+                $ref: "#/components/schemas/CalculationRule"
           description: Successfully returned a list of calculation rules
       summary: Information about calculation rules
       tags:
@@ -2711,14 +2711,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CalculationRule'
+              $ref: "#/components/schemas/CalculationRule"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CalculationRule'
+                $ref: "#/components/schemas/CalculationRule"
           description: Successfully created or updated a calculation rule
       summary: Creates or updates a calculation rule
       tags:
@@ -2759,7 +2759,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CalculationRule'
+                $ref: "#/components/schemas/CalculationRule"
           description: Successfully returned ancalculation rule
         "404":
           description: Calculation rule with id not found
@@ -2781,14 +2781,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CalculationRule'
+              $ref: "#/components/schemas/CalculationRule"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CalculationRule'
+                $ref: "#/components/schemas/CalculationRule"
           description: Successfully updated an existing calculation rule
         "404":
           description: Calculation rule with id not found
@@ -2869,11 +2869,11 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/Alarm'
+                  $ref: "#/components/schemas/Alarm"
                 type: array
             application/x-ndjson:
               schema:
-                $ref: '#/components/schemas/Alarm'
+                $ref: "#/components/schemas/Alarm"
           description: Successfully returned a list of alarms
       summary: Information about alarms
       tags:
@@ -2885,14 +2885,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Alarm'
+              $ref: "#/components/schemas/Alarm"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Alarm'
+                $ref: "#/components/schemas/Alarm"
           description: Successfully created a new or updated an existing alarm
       summary: Create or update an alarm
       tags:
@@ -2945,7 +2945,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Alarm'
+                $ref: "#/components/schemas/Alarm"
           description: Successfully returned an alarm
         "404":
           description: Alarm with id not found
@@ -3057,11 +3057,11 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/Alarm'
+                  $ref: "#/components/schemas/Alarm"
                 type: array
             application/x-ndjson:
               schema:
-                $ref: '#/components/schemas/Alarm'
+                $ref: "#/components/schemas/Alarm"
           description: Successfully returned a list of alarms
       summary: Information about alarms history
       tags:
@@ -3122,7 +3122,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/Alarm'
+                  $ref: "#/components/schemas/Alarm"
                 type: array
           description: Successfully returned a list of alarms
       summary: Information about alarm history
@@ -3203,11 +3203,11 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/Alarm'
+                  $ref: "#/components/schemas/Alarm"
                 type: array
             application/x-ndjson:
               schema:
-                $ref: '#/components/schemas/Alarm'
+                $ref: "#/components/schemas/Alarm"
           description: Successfully returned a list of most prioritized alarms
       summary: Information about most prioritized alarms
       tags:
@@ -3235,7 +3235,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AlarmListen'
+                $ref: "#/components/schemas/AlarmListen"
           description: Successfully opened a connection to alarm WebSocket
       summary: WebSocket connection for alarm changes
       tags:
@@ -3271,11 +3271,11 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/Node'
+                  $ref: "#/components/schemas/Node"
                 type: array
             application/x-ndjson:
               schema:
-                $ref: '#/components/schemas/Node'
+                $ref: "#/components/schemas/Node"
           description: Successfully returned a list of nodes
       summary: Information about nodes
       tags:
@@ -3287,14 +3287,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Node'
+              $ref: "#/components/schemas/Node"
         required: true
       responses:
         "201":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Node'
+                $ref: "#/components/schemas/Node"
           description: Successfully created a new node
       summary: Create a node
       tags:
@@ -3308,14 +3308,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Node'
+              $ref: "#/components/schemas/Node"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Node'
+                $ref: "#/components/schemas/Node"
           description: Successfully created a new or updated an existing node
       summary: Create or update a node
       tags:
@@ -3338,7 +3338,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Node'
+                $ref: "#/components/schemas/Node"
           description: Successfully returned a node
         "404":
           description: Node ident not found
@@ -3361,14 +3361,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Node'
+              $ref: "#/components/schemas/Node"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Node'
+                $ref: "#/components/schemas/Node"
           description: Successfully updated an existing node
         "404":
           description: Node ident not found
@@ -3406,11 +3406,11 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/Agent'
+                  $ref: "#/components/schemas/Agent"
                 type: array
             application/x-ndjson:
               schema:
-                $ref: '#/components/schemas/Agent'
+                $ref: "#/components/schemas/Agent"
           description: Successfully returned a list of agents
       summary: Information about agents
       tags:
@@ -3435,7 +3435,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/Agent'
+                  $ref: "#/components/schemas/Agent"
                 type: array
           description: Successfully returned a list of agents
       summary: Information about agents for a specific class
@@ -3458,14 +3458,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Agent'
+              $ref: "#/components/schemas/Agent"
         required: true
       responses:
         "201":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Agent'
+                $ref: "#/components/schemas/Agent"
           description: Successfully created a new agent
       summary: Create an agent
       tags:
@@ -3489,14 +3489,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Agent'
+              $ref: "#/components/schemas/Agent"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Agent'
+                $ref: "#/components/schemas/Agent"
           description: Successfully created a new or updated an existing agent
       summary: Create or update an agent
       tags:
@@ -3527,7 +3527,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Agent'
+                $ref: "#/components/schemas/Agent"
           description: Successfully returned an agent
         "404":
           description: Agent with id not found
@@ -3558,14 +3558,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Agent'
+              $ref: "#/components/schemas/Agent"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Agent'
+                $ref: "#/components/schemas/Agent"
           description: Successfully updated an existing agent
         "404":
           description: Agent with id not found
@@ -3599,7 +3599,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/AgentDevice'
+                  $ref: "#/components/schemas/AgentDevice"
                 type: array
           description: Successfully returned a list of devices
       summary: Information about agent devices
@@ -3629,14 +3629,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AgentDevice'
+              $ref: "#/components/schemas/AgentDevice"
         required: true
       responses:
         "201":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AgentDevice'
+                $ref: "#/components/schemas/AgentDevice"
           description: Successfully created a new agent device
       summary: Create an agent device
       tags:
@@ -3668,14 +3668,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AgentDevice'
+              $ref: "#/components/schemas/AgentDevice"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AgentDevice'
+                $ref: "#/components/schemas/AgentDevice"
           description: Successfully created a new or updated an existing agent device
       summary: Create or update an agent device
       tags:
@@ -3707,7 +3707,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/AgentDevice'
+                  $ref: "#/components/schemas/AgentDevice"
                 type: array
           description: Successfully returned a agent device
       summary: Information about agent device
@@ -3737,14 +3737,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AgentDevice'
+              $ref: "#/components/schemas/AgentDevice"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AgentDevice'
+                $ref: "#/components/schemas/AgentDevice"
           description: Successfully update a new agent device
       summary: Update an agent device
       tags:
@@ -3776,7 +3776,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/AgentDeviceMapping'
+                  $ref: "#/components/schemas/AgentDeviceMapping"
                 type: array
           description: Successfully returned a mapping
       summary: Information about agent device mappings
@@ -3806,14 +3806,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AgentDeviceMapping'
+              $ref: "#/components/schemas/AgentDeviceMapping"
         required: true
       responses:
         "201":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AgentDeviceMapping'
+                $ref: "#/components/schemas/AgentDeviceMapping"
           description: Successfully created a new agent device mapping
       summary: Create an agent device mapping
       tags:
@@ -3845,14 +3845,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AgentDeviceMapping'
+              $ref: "#/components/schemas/AgentDeviceMapping"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AgentDeviceMapping'
+                $ref: "#/components/schemas/AgentDeviceMapping"
           description: Successfully created a new or updated an existing agent device
             mapping
       summary: Create or update an agent device mapping
@@ -3885,7 +3885,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/AgentDeviceMapping'
+                  $ref: "#/components/schemas/AgentDeviceMapping"
                 type: array
           description: Successfully returned a agent device
       summary: Information about agent device mapping
@@ -3915,14 +3915,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AgentDeviceMapping'
+              $ref: "#/components/schemas/AgentDeviceMapping"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AgentDeviceMapping'
+                $ref: "#/components/schemas/AgentDeviceMapping"
           description: Successfully update a new agent device mapping
       summary: Update an agent device mapping
       tags:
@@ -3935,14 +3935,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Message'
+              $ref: "#/components/schemas/Message"
         required: true
       responses:
         "201":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MessageReceipt'
+                $ref: "#/components/schemas/MessageReceipt"
           description: Successfully accepted the e-mail
       summary: Send e-mail
       tags:
@@ -3955,14 +3955,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Notification'
+              $ref: "#/components/schemas/Notification"
         required: true
       responses:
         "201":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MessageReceipt'
+                $ref: "#/components/schemas/MessageReceipt"
           description: Successfully accepted the notification
       summary: Send notification
       tags:
@@ -3984,7 +3984,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MessageReceipt'
+                $ref: "#/components/schemas/MessageReceipt"
           description: Successfully returned the receipt
         "404":
           description: Message with ID not found
@@ -4047,11 +4047,11 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/User'
+                  $ref: "#/components/schemas/User"
                 type: array
             application/x-ndjson:
               schema:
-                $ref: '#/components/schemas/User'
+                $ref: "#/components/schemas/User"
           description: Successfully returned the list of users
       summary: Information about users
       tags:
@@ -4064,14 +4064,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/User'
+              $ref: "#/components/schemas/User"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                $ref: "#/components/schemas/User"
           description: Successfully created a new or updated an existing user
       summary: Create or update an user
       tags:
@@ -4093,7 +4093,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                $ref: "#/components/schemas/User"
           description: Successfully returned the user by id.
         "404":
           description: User with id not found
@@ -4143,11 +4143,11 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/Project'
+                  $ref: "#/components/schemas/Project"
                 type: array
             application/x-ndjson:
               schema:
-                $ref: '#/components/schemas/Project'
+                $ref: "#/components/schemas/Project"
           description: Successfully returned the list of projects
       summary: Information about projects
       tags:
@@ -4173,14 +4173,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Project'
+              $ref: "#/components/schemas/Project"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Project'
+                $ref: "#/components/schemas/Project"
           description: Successfully created a new or updated an existing project
       summary: Create or update a project
       tags:
@@ -4214,7 +4214,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Project'
+                $ref: "#/components/schemas/Project"
           description: Successfully returned the project by id.
         "404":
           description: Project with id not found
@@ -4253,11 +4253,11 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/ProjectRole'
+                  $ref: "#/components/schemas/ProjectRole"
                 type: array
             application/x-ndjson:
               schema:
-                $ref: '#/components/schemas/ProjectRole'
+                $ref: "#/components/schemas/ProjectRole"
           description: Successfully returned the list of project roles
       summary: Information about project roles
       tags:
@@ -4270,14 +4270,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ProjectRole'
+              $ref: "#/components/schemas/ProjectRole"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProjectRole'
+                $ref: "#/components/schemas/ProjectRole"
           description: Successfully created or updated the project role
       summary: Create or update a project role
       tags:
@@ -4299,7 +4299,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProjectRole'
+                $ref: "#/components/schemas/ProjectRole"
           description: Successfully returned the project role by name.
         "404":
           description: Project role with name not found
@@ -4337,11 +4337,11 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/Tag'
+                  $ref: "#/components/schemas/Tag"
                 type: array
             application/x-ndjson:
               schema:
-                $ref: '#/components/schemas/Tag'
+                $ref: "#/components/schemas/Tag"
           description: Successfully returned the list of tags
       summary: Information about tags
       tags:
@@ -4354,14 +4354,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Tag'
+              $ref: "#/components/schemas/Tag"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Tag'
+                $ref: "#/components/schemas/Tag"
           description: Successfully created a new or updated an existing tag
       summary: Create or update a tag
       tags:
@@ -4383,7 +4383,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Tag'
+                $ref: "#/components/schemas/Tag"
           description: Successfully returned the tag by name.
         "404":
           description: Tag with name not found
@@ -4996,7 +4996,7 @@ components:
           type: string
         translation:
           allOf:
-          - $ref: '#/components/schemas/Translation'
+          - $ref: "#/components/schemas/Translation"
           nullable: true
         urldoc:
           description: The url describing assets of this type
@@ -5028,7 +5028,7 @@ components:
         attributes:
           description: List of named attributes
           items:
-            $ref: '#/components/schemas/AssetTypeAttribute'
+            $ref: "#/components/schemas/AssetTypeAttribute"
           nullable: true
           type: array
       required:
@@ -5077,7 +5077,7 @@ components:
           example: temperature
           type: string
         subtype:
-          $ref: '#/components/schemas/DataSubtype'
+          $ref: "#/components/schemas/DataSubtype"
         type:
           description: "Name of the type for this attribute: air_quality, battery-voltage,\
             \ brightness, co2, current, device-info, device-status, energy, flow,\
@@ -5093,7 +5093,7 @@ components:
           type: boolean
         translation:
           allOf:
-          - $ref: '#/components/schemas/Translation'
+          - $ref: "#/components/schemas/Translation"
           nullable: true
         unit:
           description: Physical unit of numeric data
@@ -5254,12 +5254,12 @@ components:
           type: string
         translation:
           allOf:
-          - $ref: '#/components/schemas/Translation'
+          - $ref: "#/components/schemas/Translation"
           nullable: true
         properties:
           description: List of asset type category properties
           items:
-            $ref: '#/components/schemas/AssetTypeCategoryProperty'
+            $ref: "#/components/schemas/AssetTypeCategoryProperty"
           nullable: true
           type: array
       required:
@@ -5334,6 +5334,7 @@ components:
           nullable: true
           type: array
         projectId:
+          deprecated: true
           description: ID of the project to which the asset belongs
           example: "99"
           type: string
@@ -5433,20 +5434,19 @@ components:
         childrenInfo:
           description: List of children for this asset.
           items:
-            $ref: '#/components/schemas/Asset'
+            $ref: "#/components/schemas/Asset"
           nullable: true
           readOnly: true
           type: array
         attachments:
           description: A list of files attached to the asset
           items:
-            $ref: '#/components/schemas/Attachment'
+            $ref: "#/components/schemas/Attachment"
           nullable: true
           type: array
       required:
       - assetType
       - globalAssetIdentifier
-      - projectId
       type: object
     ErrorMessage422:
       description: An error message showing the issue occur during the operation.
@@ -5459,19 +5459,19 @@ components:
       type: string
     AssetDryRun:
       allOf:
-      - $ref: '#/components/schemas/DryRunGeneral'
+      - $ref: "#/components/schemas/DryRunGeneral"
       - description: Specific information for asset dry run
         nullable: true
         properties:
           identifiedBy:
-            $ref: '#/components/schemas/AssetIdentifyBy'
+            $ref: "#/components/schemas/AssetIdentifyBy"
           before:
             allOf:
-            - $ref: '#/components/schemas/Asset'
+            - $ref: "#/components/schemas/Asset"
             nullable: true
           after:
             allOf:
-            - $ref: '#/components/schemas/Asset'
+            - $ref: "#/components/schemas/Asset"
             nullable: true
         title: AssetDryRun
         type: object
@@ -5488,9 +5488,9 @@ components:
         nullable: true
         properties:
           statusCode:
-            $ref: '#/components/schemas/StatusCode'
+            $ref: "#/components/schemas/StatusCode"
         type: object
-      - $ref: '#/components/schemas/Asset'
+      - $ref: "#/components/schemas/Asset"
       example:
         globalAssetIdentifier: zurich_swiss
         functionalAssetIdPath:
@@ -5633,7 +5633,7 @@ components:
           example: 4711
           type: integer
         subtype:
-          $ref: '#/components/schemas/DataSubtype'
+          $ref: "#/components/schemas/DataSubtype"
         attribute:
           description: Name of the attribute of the asset type
           example: temperature
@@ -5705,7 +5705,7 @@ components:
           example: 4711
           type: integer
         subtype:
-          $ref: '#/components/schemas/DataSubtype'
+          $ref: "#/components/schemas/DataSubtype"
         timestamp:
           description: Timestamp of the latest data change
           format: date-time
@@ -5753,7 +5753,7 @@ components:
           example: 4711
           type: integer
         subtype:
-          $ref: '#/components/schemas/DataSubtype'
+          $ref: "#/components/schemas/DataSubtype"
         attribute:
           description: Name of the attribute which holds the data points
           example: temperature
@@ -5817,9 +5817,9 @@ components:
         nullable: true
         properties:
           statusCode:
-            $ref: '#/components/schemas/StatusCode'
+            $ref: "#/components/schemas/StatusCode"
         type: object
-      - $ref: '#/components/schemas/Data'
+      - $ref: "#/components/schemas/Data"
       example:
         data:
           temperature: 42
@@ -5859,7 +5859,7 @@ components:
           example: 4711
           type: integer
         subtype:
-          $ref: '#/components/schemas/DataSubtype'
+          $ref: "#/components/schemas/DataSubtype"
         attribute:
           description: Name of the attribute which holds the data points
           example: temperature
@@ -5993,7 +5993,7 @@ components:
           example: 4711
           type: integer
         subtype:
-          $ref: '#/components/schemas/DataSubtype'
+          $ref: "#/components/schemas/DataSubtype"
         attribute:
           description: Name of the attribute which holds the data points
           example: temperature
@@ -6092,7 +6092,7 @@ components:
           type: boolean
         translation:
           allOf:
-          - $ref: '#/components/schemas/Translation'
+          - $ref: "#/components/schemas/Translation"
           nullable: true
         icon:
           description: Icon name corresponding to assets used in this widget
@@ -6113,7 +6113,7 @@ components:
           description: A list of elements for this widget (order matches the order
             of elements for this type)
           items:
-            $ref: '#/components/schemas/WidgetTypeElement'
+            $ref: "#/components/schemas/WidgetTypeElement"
           type: array
       required:
       - elements
@@ -6182,6 +6182,7 @@ components:
           example: Weather info
           type: string
         projectId:
+          deprecated: true
           description: ID of the project to which the dashboard belongs
           example: "99"
           type: string
@@ -6200,7 +6201,7 @@ components:
           description: List of widgets on this dashboard (order matches the order
             of widgets on the dashboard)
           items:
-            $ref: '#/components/schemas/Widget'
+            $ref: "#/components/schemas/Widget"
           nullable: true
           type: array
         public:
@@ -6210,7 +6211,6 @@ components:
           type: boolean
       required:
       - name
-      - projectId
       - userId
       type: object
     Widget:
@@ -6266,7 +6266,7 @@ components:
         data:
           description: List of data for the elements of widget
           items:
-            $ref: '#/components/schemas/WidgetData'
+            $ref: "#/components/schemas/WidgetData"
           nullable: true
           type: array
       required:
@@ -6311,7 +6311,7 @@ components:
           example: 4711
           type: integer
         subtype:
-          $ref: '#/components/schemas/DataSubtype'
+          $ref: "#/components/schemas/DataSubtype"
         attribute:
           description: Name of the attribute of the asset type
           example: temperature
@@ -6321,7 +6321,7 @@ components:
           description: Rule enabled or not
           type: boolean
         priority:
-          $ref: '#/components/schemas/AlarmPriority'
+          $ref: "#/components/schemas/AlarmPriority"
         requiresAcknowledge:
           default: false
           description: Requires the alarm an acknowledgment
@@ -6394,7 +6394,7 @@ components:
           type: string
         assetInfo:
           allOf:
-          - $ref: '#/components/schemas/Asset'
+          - $ref: "#/components/schemas/Asset"
           nullable: true
       required:
       - assetId
@@ -6430,7 +6430,7 @@ components:
           example: 4711
           type: integer
         subtype:
-          $ref: '#/components/schemas/DataSubtype'
+          $ref: "#/components/schemas/DataSubtype"
         attribute:
           description: Name of the attribute of the asset type to be calculated
           example: temperature
@@ -6564,15 +6564,15 @@ components:
           type: object
         acknowledgeUserInfo:
           allOf:
-          - $ref: '#/components/schemas/User'
+          - $ref: "#/components/schemas/User"
           nullable: true
         assetInfo:
           allOf:
-          - $ref: '#/components/schemas/Asset'
+          - $ref: "#/components/schemas/Asset"
           nullable: true
         ruleInfo:
           allOf:
-          - $ref: '#/components/schemas/AlarmRule'
+          - $ref: "#/components/schemas/AlarmRule"
           nullable: true
       required:
       - message
@@ -6584,9 +6584,9 @@ components:
         nullable: true
         properties:
           statusCode:
-            $ref: '#/components/schemas/StatusCode'
+            $ref: "#/components/schemas/StatusCode"
         type: object
-      - $ref: '#/components/schemas/Alarm'
+      - $ref: "#/components/schemas/Alarm"
       example:
         occurrences: 1
         acknowledgeUserInfo: ""
@@ -6687,7 +6687,7 @@ components:
           type: integer
         class:
           allOf:
-          - $ref: '#/components/schemas/AgentClass'
+          - $ref: "#/components/schemas/AgentClass"
           nullable: true
         description:
           description: Descriptive text for the agent
@@ -6705,9 +6705,9 @@ components:
           type: object
       type: object
     AgentDevice:
-      $ref: '#/components/schemas/IosysAgentDevice'
+      $ref: "#/components/schemas/IosysAgentDevice"
     AgentDeviceMapping:
-      $ref: '#/components/schemas/IosysAgentDeviceMapping'
+      $ref: "#/components/schemas/IosysAgentDeviceMapping"
     Message:
       description: A message
       example:
@@ -6775,7 +6775,7 @@ components:
         attachments:
           description: A list of files attached to the message
           items:
-            $ref: '#/components/schemas/Attachment'
+            $ref: "#/components/schemas/Attachment"
           nullable: true
           type: array
       required:
@@ -6824,13 +6824,14 @@ components:
           example: peter.fox@example.com
           type: string
         projectId:
+          deprecated: true
           description: ID of the project the notification should appear
           example: "99"
           nullable: true
           type: string
         message:
           allOf:
-          - $ref: '#/components/schemas/Translation'
+          - $ref: "#/components/schemas/Translation"
           nullable: true
       required:
       - message
@@ -6894,7 +6895,7 @@ components:
         users:
           description: List of users with a project role
           items:
-            $ref: '#/components/schemas/ProjectUser'
+            $ref: "#/components/schemas/ProjectUser"
           nullable: true
           type: array
       type: object
@@ -6997,7 +6998,7 @@ components:
           type: string
         translation:
           allOf:
-          - $ref: '#/components/schemas/Translation'
+          - $ref: "#/components/schemas/Translation"
           nullable: true
         unit:
           description: Unit of data
@@ -7205,7 +7206,7 @@ components:
       - AGENT_CLASS_IOSYS
     IosysAgentDevice:
       allOf:
-      - $ref: '#/components/schemas/AgentDeviceGeneral'
+      - $ref: "#/components/schemas/AgentDeviceGeneral"
       - description: Specific device for IOSYS agents
         nullable: true
         properties:
@@ -7244,7 +7245,7 @@ components:
         timeout: 6
     IosysAgentDeviceMapping:
       allOf:
-      - $ref: '#/components/schemas/AgentDeviceMappingGeneral'
+      - $ref: "#/components/schemas/AgentDeviceMappingGeneral"
       - description: Specific mapping for IOSYS agents
         nullable: true
         properties:
@@ -7355,7 +7356,7 @@ components:
       properties:
         class:
           allOf:
-          - $ref: '#/components/schemas/AgentClass'
+          - $ref: "#/components/schemas/AgentClass"
           nullable: true
         id:
           description: Unique id for the device
@@ -7379,7 +7380,7 @@ components:
       properties:
         class:
           allOf:
-          - $ref: '#/components/schemas/AgentClass'
+          - $ref: "#/components/schemas/AgentClass"
           nullable: true
         id:
           description: Unique id for the mapping
@@ -7403,7 +7404,7 @@ components:
           nullable: true
           type: integer
         subtype:
-          $ref: '#/components/schemas/DataSubtype'
+          $ref: "#/components/schemas/DataSubtype"
         attribute:
           description: Name of the attribute to map
           example: temperature
