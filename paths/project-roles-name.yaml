@@ -1,4 +1,5 @@
 get:
+  deprecated: true
   tags:
     - Projects
   summary: Information about a project role

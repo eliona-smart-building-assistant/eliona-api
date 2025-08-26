@@ -254,11 +254,6 @@ tags:
     externalDocs:
       url: https://www.eliona.io
 
-  - name: Projects
-    description: Project information
-    externalDocs:
-      url: https://www.eliona.io
-
   - name: Tags
     description: Tag information
     externalDocs:
@@ -334,10 +329,16 @@ tags:
     externalDocs:
       url: https://www.eliona.io
 
+  - name: Projects
+    description: Project information
+    externalDocs:
+      url: https://www.eliona.io
+
   - name: Aggregations
     description: Handle data aggregations
     externalDocs:
       url: https://www.eliona.io
+
 
 components:
   securitySchemes:

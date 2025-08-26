@@ -1,4 +1,5 @@
 get:
+  deprecated: true
   tags:
     - Projects
   summary: Information about project roles
@@ -21,6 +22,7 @@ get:
             $ref: "../schemas/ProjectRole.yaml"
 
 put:
+  deprecated: true
   tags:
     - Projects
   summary: Create or update a project role

@@ -1,4 +1,5 @@
 get:
+  deprecated: true
   tags:
     - Projects
   summary: Information about projects
@@ -22,6 +23,7 @@ get:
             $ref: "../schemas/Project.yaml"
 
 put:
+  deprecated: true
   tags:
     - Projects
   summary: Create or update a project
