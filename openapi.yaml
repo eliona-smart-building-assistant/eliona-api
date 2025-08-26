@@ -1429,7 +1429,8 @@ paths:
         unique combination of asset id and subtype for updating.
       operationId: putData
       parameters:
-      - description: Executes the operation directly without using other services.
+      - deprecated: true
+        description: Executes the operation directly without using other services.
         example: true
         in: query
         name: directMode
@@ -1457,7 +1458,8 @@ paths:
         the unique combination of asset id and subtype for updating.
       operationId: putBulkData
       parameters:
-      - description: Executes the operation directly without using other services.
+      - deprecated: true
+        description: Executes the operation directly without using other services.
         example: true
         in: query
         name: directMode
@@ -4530,6 +4532,7 @@ components:
         - property
         type: string
     directMode:
+      deprecated: true
       description: Executes the operation directly without using other services.
       example: true
       in: query
