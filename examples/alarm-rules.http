@@ -8,11 +8,11 @@ X-Api-Key: {{read-only-token}}
 Accept: application/x-ndjson
 
 ### [Alarm rules] List alarm rules with filter parameters (read-only)
-GET {{api-server}}/v2/alarm-rules?assetId=65287&alarmRuleIds=5705,5706&expansions=AlarmRule.assetInfo HTTP/1.1
+GET {{api-server}}/v2/alarm-rules?assetId=452&alarmRuleIds=5705,5706&expansions=AlarmRule.assetInfo HTTP/1.1
 X-Api-Key: {{read-only-token}}
 
 ### [Alarm rules] List alarm rule (read-only)
-GET {{api-server}}/v2/alarm-rules/5727 HTTP/1.1
+GET {{api-server}}/v2/alarm-rules/376 HTTP/1.1
 X-Api-Key: {{read-only-token}}
 
 ### [Alarm rules] Create a new alarm rule with detailed parameters (read–write)
@@ -21,7 +21,7 @@ X-Api-Key: {{read-write-token}}
 Content-Type: application/json
 
 {
-  "assetId": 65287,
+  "assetId": 452,
   "subtype": "input",
   "attribute": "temperature",
   "enable": true,

@@ -3,7 +3,7 @@ description: Executes the operation directly without using other services.
 in: query
 required: false
 example: true
-default: false
+deprecated: true
 schema:
   type: string
   enum:
