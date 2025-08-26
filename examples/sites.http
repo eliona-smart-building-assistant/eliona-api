@@ -7,6 +7,10 @@ GET {{api-server}}/v2/sites HTTP/1.1
 X-Api-Key: {{read-only-token}}
 Accept: application/x-ndjson
 
+### [Projects] Get site by ID (read-only)
+GET {{api-server}}/v2/sites/b9fdae2d-a01b-4fbf-80ff-9d4fa075a5ac HTTP/1.1
+X-Api-Key: {{read-only-token}}
+
 ### [Projects] Create a site (read–write)
 PUT {{api-server}}/v2/sites HTTP/1.1
 X-Api-Key: {{read-write-token}}
