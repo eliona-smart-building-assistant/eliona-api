@@ -1,0 +1,29 @@
+### [Projects] List all sites (read-only)
+GET {{api-server}}/v2/sites HTTP/1.1
+X-Api-Key: {{read-only-token}}
+
+### [Projects] Stream all sites (read-only)
+GET {{api-server}}/v2/sites HTTP/1.1
+X-Api-Key: {{read-only-token}}
+Accept: application/x-ndjson
+
+### [Projects] Create a site (read–write)
+PUT {{api-server}}/v2/sites HTTP/1.1
+X-Api-Key: {{read-write-token}}
+Content-Type: application/json
+
+{
+  "name": "Example Site",
+  "location": "CH, Winterthur"
+}
+
+### [Projects] Create or update a site with id (read–write)
+PUT {{api-server}}/v2/sites HTTP/1.1
+X-Api-Key: {{read-write-token}}
+Content-Type: application/json
+
+{
+  "id": "291aedfd-f600-4eff-86ba-3dd2fecf24be",
+  "name": "Example Site",
+  "location": "DE, Berlin"
+}
