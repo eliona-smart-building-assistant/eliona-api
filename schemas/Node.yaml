@@ -6,8 +6,9 @@ properties:
     description: Unique id for the edge node
     nullable: true
     readOnly: true
-    example: 1234
+    example: fef0a0d3-acad-4611-ac03-1fd842d72505
   ident:
+    deprecated: true
     type: string
     description: UUID to identify the edge node
     nullable: true

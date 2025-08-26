@@ -11,7 +11,7 @@ properties:
     type: string
     description: Id of the node where the agent is installed
     nullable: true
-    example: 1234
+    example: fef0a0d3-acad-4611-ac03-1fd842d72505
   assetId:
     type: integer
     description: ID of the corresponding asset

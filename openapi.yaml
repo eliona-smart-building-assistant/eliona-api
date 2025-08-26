@@ -6616,15 +6616,16 @@ components:
         enable: false
         description: Node east plant
         model: model
-        id: "1234"
+        id: fef0a0d3-acad-4611-ac03-1fd842d72505
       properties:
         id:
           description: Unique id for the edge node
-          example: "1234"
+          example: fef0a0d3-acad-4611-ac03-1fd842d72505
           nullable: true
           readOnly: true
           type: string
         ident:
+          deprecated: true
           description: UUID to identify the edge node
           example: fef0a0d3-acad-4611-ac03-1fd842d72505
           nullable: true
@@ -6665,7 +6666,7 @@ components:
         enable: false
         description: IOSYS Agent east plant
         id: 4711
-        nodeId: "1234"
+        nodeId: fef0a0d3-acad-4611-ac03-1fd842d72505
         class: ""
         config: {}
       properties:
@@ -6677,7 +6678,7 @@ components:
           type: integer
         nodeId:
           description: Id of the node where the agent is installed
-          example: "1234"
+          example: fef0a0d3-acad-4611-ac03-1fd842d72505
           nullable: true
           type: string
         assetId:
