@@ -13,6 +13,7 @@ properties:
     example: 3
     nullable: true
   custom:
+    deprecated: true
     type: boolean
     default: true
     description: Is this a tag custom or not

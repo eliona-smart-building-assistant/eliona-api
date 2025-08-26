@@ -6937,6 +6937,7 @@ components:
           type: integer
         custom:
           default: true
+          deprecated: true
           description: Is this a tag custom or not
           nullable: true
           type: boolean
