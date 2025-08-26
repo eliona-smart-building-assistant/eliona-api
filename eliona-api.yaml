@@ -231,6 +231,12 @@ paths:
   /projects/{project-id}:
     $ref: './paths/projects-id.yaml'
 
+  /sites:
+    $ref: './paths/sites.yaml'
+
+  /sites/{site-id}:
+    $ref: './paths/sites-id.yaml'
+
   /project-roles:
     $ref: './paths/project-roles.yaml'
 
@@ -256,6 +262,11 @@ tags:
 
   - name: Tags
     description: Tag information
+    externalDocs:
+      url: https://www.eliona.io
+
+  - name: Sites
+    description: Handle sites
     externalDocs:
       url: https://www.eliona.io
 

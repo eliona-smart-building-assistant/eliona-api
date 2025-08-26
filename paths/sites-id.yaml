@@ -1,0 +1,19 @@
+get:
+  deprecated: true
+  tags:
+    - Sites
+  summary: Information about a site
+  description: Gets information about a site.
+  operationId: getSiteById
+  parameters:
+    - $ref: '../parameters/site-id.yaml'
+    - $ref: '../parameters/expansions.yaml'
+  responses:
+    200:
+      description: Successfully returned the site by id.
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Site.yaml'
+    404:
+      description: Site with id not found

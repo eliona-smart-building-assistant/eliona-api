@@ -50,6 +50,10 @@ tags:
   externalDocs:
     url: https://www.eliona.io
   name: Tags
+- description: Handle sites
+  externalDocs:
+    url: https://www.eliona.io
+  name: Sites
 - description: Handle asset types
   externalDocs:
     url: https://www.eliona.io
@@ -4224,6 +4228,130 @@ paths:
       summary: Information about a project
       tags:
       - Projects
+  /sites:
+    get:
+      deprecated: true
+      description: Gets a list of sites
+      operationId: getSites
+      parameters:
+      - description: |
+          Specifies the starting point for pagination by indicating the number of items to skip.
+        example: 3
+        in: query
+        name: offset
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: |
+          Specifies the number of items per page for pagination.
+        example: 10
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: "List of referenced data to load, insert or update. Each entry\
+          \ defines the full qualified name of the field to be expanded as follows\
+          \ 'ObjectName.fieldName'."
+        explode: false
+        in: query
+        name: expansions
+        required: false
+        schema:
+          items:
+            type: string
+          type: array
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: "#/components/schemas/Site"
+                type: array
+            application/x-ndjson:
+              schema:
+                $ref: "#/components/schemas/Site"
+          description: Successfully returned the list of sites
+      summary: Information about sites
+      tags:
+      - Sites
+    put:
+      deprecated: true
+      description: Creates a site if not exists or update it if already exists. Uses
+        the id for updating.
+      operationId: putSite
+      parameters:
+      - description: "List of referenced data to load, insert or update. Each entry\
+          \ defines the full qualified name of the field to be expanded as follows\
+          \ 'ObjectName.fieldName'."
+        explode: false
+        in: query
+        name: expansions
+        required: false
+        schema:
+          items:
+            type: string
+          type: array
+        style: form
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Site"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Site"
+          description: Successfully created a new or updated an existing site
+      summary: Create or update a site
+      tags:
+      - Sites
+  /sites/{site-id}:
+    get:
+      deprecated: true
+      description: Gets information about a site.
+      operationId: getSiteById
+      parameters:
+      - description: The id of the site
+        example: 69133767-7de1-4134-9130-5f5403e1ee98
+        in: path
+        name: site-id
+        required: true
+        schema:
+          type: string
+      - description: "List of referenced data to load, insert or update. Each entry\
+          \ defines the full qualified name of the field to be expanded as follows\
+          \ 'ObjectName.fieldName'."
+        explode: false
+        in: query
+        name: expansions
+        required: false
+        schema:
+          items:
+            type: string
+          type: array
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Site"
+          description: Successfully returned the site by id.
+        "404":
+          description: Site with id not found
+      summary: Information about a site
+      tags:
+      - Sites
   /project-roles:
     get:
       deprecated: true
@@ -4830,6 +4958,14 @@ components:
       example: 99
       in: path
       name: project-id
+      required: true
+      schema:
+        type: string
+    site-id:
+      description: The id of the site
+      example: 69133767-7de1-4134-9130-5f5403e1ee98
+      in: path
+      name: site-id
       required: true
       schema:
         type: string
@@ -6906,6 +7042,30 @@ components:
             $ref: "#/components/schemas/ProjectUser"
           nullable: true
           type: array
+      type: object
+    Site:
+      description: A site
+      example:
+        name: My Project
+        location: "CH, Winterthur"
+        id: 69133767-7de1-4134-9130-5f5403e1ee98
+      properties:
+        id:
+          description: The ID of the site
+          example: 69133767-7de1-4134-9130-5f5403e1ee98
+          nullable: true
+          type: string
+        name:
+          description: The title of the site
+          example: My Project
+          type: string
+        location:
+          description: The location of the site
+          example: "CH, Winterthur"
+          nullable: true
+          type: string
+      required:
+      - title
       type: object
     ProjectRole:
       description: A role that can assigned to users within a project

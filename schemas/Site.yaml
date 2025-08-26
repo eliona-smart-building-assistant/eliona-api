@@ -1,0 +1,19 @@
+type: object
+description: A site
+required:
+  - title
+properties:
+  id:
+    type: string
+    description: The ID of the site
+    example: 69133767-7de1-4134-9130-5f5403e1ee98
+    nullable: true
+  name:
+    type: string
+    description: The title of the site
+    example: My Project
+  location:
+    type: string
+    description: The location of the site
+    example: CH, Winterthur
+    nullable: true

@@ -1,0 +1,46 @@
+get:
+  deprecated: true
+  tags:
+    - Sites
+  summary: Information about sites
+  description: Gets a list of sites
+  operationId: getSites
+  parameters:
+    - $ref: '../parameters/offset.yaml'
+    - $ref: '../parameters/size.yaml'
+    - $ref: '../parameters/expansions.yaml'
+  responses:
+    200:
+      description: Successfully returned the list of sites
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../schemas/Site.yaml'
+        application/x-ndjson:
+          schema:
+            $ref: "../schemas/Site.yaml"
+
+put:
+  deprecated: true
+  tags:
+    - Sites
+  summary: Create or update a site
+  description: Creates a site if not exists or update it if already exists. Uses the id for updating.
+  operationId: putSite
+  parameters:
+    - $ref: '../parameters/expansions.yaml'
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/Site.yaml'
+  responses:
+    200:
+      description: Successfully created a new or updated an existing site
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Site.yaml'
