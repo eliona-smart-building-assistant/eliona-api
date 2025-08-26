@@ -73,7 +73,7 @@ jobs:
           git add .
           git commit -m "Support API version ${{ steps.release_info.outputs.RELEASE_NAME }}"
           git tag ${{ steps.release_info.outputs.RELEASE_NAME }}
-          git remote set-url origin https://zdevaty:${{ secrets.CLIENT_GENERATION_PAT }}@github.com/eliona-smart-building-assistant/go-eliona-api-client.git
+          git remote set-url origin https://x-access-token:${{ secrets.CLIENT_GENERATION_PAT }}@github.com/eliona-smart-building-assistant/go-eliona-api-client.git
           git push
           git push --tags
 
@@ -103,7 +103,7 @@ jobs:
           git add .
           git commit -m "Support API version ${{ steps.release_info.outputs.RELEASE_NAME }}"
           git tag ${{ steps.release_info.outputs.RELEASE_NAME }}
-          git remote set-url origin https://zdevaty:${{ secrets.CLIENT_GENERATION_PAT }}@github.com/eliona-smart-building-assistant/python-eliona-api-client2.git
+          git remote set-url origin https://x-access-token:${{ secrets.CLIENT_GENERATION_PAT }}@github.com/eliona-smart-building-assistant/python-eliona-api-client2.git
           git push
           git push --tags
 
