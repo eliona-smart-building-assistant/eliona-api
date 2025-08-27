@@ -21,11 +21,12 @@ properties:
     example:
       - XYZ0123
       - 13:23:12:34:32
-  projectId:
-    deprecated: true
+  siteId:
     type: string
-    description: ID of the project to which the asset belongs
-    example: 99
+    format: uuid
+    description: ID of the site to which the asset belongs
+    example: 69133767-7de1-4134-9130-5f5403e1ee98
+    nullable: true
   globalAssetIdentifier:
     type: string
     description: Unique identifier for the asset
@@ -127,3 +128,8 @@ properties:
     type: array
     items:
       $ref: 'Attachment.yaml'
+  projectId:
+    deprecated: true
+    type: string
+    description: ID of the project to which the asset belongs
+    example: 99

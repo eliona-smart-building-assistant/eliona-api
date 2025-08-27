@@ -3,6 +3,7 @@ description: An edge node
 properties:
   id:
     type: string
+    format: uuid
     description: Unique id for the edge node
     nullable: true
     readOnly: true
@@ -10,6 +11,7 @@ properties:
   ident:
     deprecated: true
     type: string
+    format: uuid
     description: UUID to identify the edge node
     nullable: true
     readOnly: true

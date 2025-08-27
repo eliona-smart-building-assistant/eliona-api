@@ -3340,6 +3340,7 @@ paths:
         required: true
         schema:
           example: fef0a0d3-acad-4611-ac03-1fd842d72505
+          format: uuid
           type: string
       responses:
         "200":
@@ -3364,6 +3365,7 @@ paths:
         required: true
         schema:
           example: fef0a0d3-acad-4611-ac03-1fd842d72505
+          format: uuid
           type: string
       requestBody:
         content:
@@ -4331,6 +4333,7 @@ paths:
         name: site-id
         required: true
         schema:
+          format: uuid
           type: string
       - description: "List of referenced data to load, insert or update. Each entry\
           \ defines the full qualified name of the field to be expanded as follows\
@@ -4946,6 +4949,7 @@ components:
       required: true
       schema:
         example: fef0a0d3-acad-4611-ac03-1fd842d72505
+        format: uuid
         type: string
     agent-class:
       description: The class of an agent
@@ -5012,6 +5016,7 @@ components:
       name: site-id
       required: true
       schema:
+        format: uuid
         type: string
     Signature-Input:
       description: "Defines what was signed (e.g. method, path, `content-digest`)\
@@ -5508,6 +5513,7 @@ components:
         - 6
         trackerId: 4711
         name: Station Zurich
+        siteId: 69133767-7de1-4134-9130-5f5403e1ee98
         parentFunctionalAssetId: 4712
         id: 4711
         isTracker: false
@@ -5538,10 +5544,11 @@ components:
             type: string
           nullable: true
           type: array
-        projectId:
-          deprecated: true
-          description: ID of the project to which the asset belongs
-          example: "99"
+        siteId:
+          description: ID of the site to which the asset belongs
+          example: 69133767-7de1-4134-9130-5f5403e1ee98
+          format: uuid
+          nullable: true
           type: string
         globalAssetIdentifier:
           description: Unique identifier for the asset
@@ -5649,6 +5656,11 @@ components:
             $ref: "#/components/schemas/Attachment"
           nullable: true
           type: array
+        projectId:
+          deprecated: true
+          description: ID of the project to which the asset belongs
+          example: "99"
+          type: string
       required:
       - assetType
       - globalAssetIdentifier
@@ -5755,6 +5767,7 @@ components:
           - 6
           trackerId: 4711
           name: Station Zurich
+          siteId: 69133767-7de1-4134-9130-5f5403e1ee98
           parentFunctionalAssetId: 4712
           id: 4711
           isTracker: false
@@ -5795,6 +5808,7 @@ components:
           - 6
           trackerId: 4711
           name: Station Zurich
+          siteId: 69133767-7de1-4134-9130-5f5403e1ee98
           parentFunctionalAssetId: 4712
           id: 4711
           isTracker: false
@@ -5810,6 +5824,7 @@ components:
         - 6
         trackerId: 4711
         name: Station Zurich
+        siteId: 69133767-7de1-4134-9130-5f5403e1ee98
         parentFunctionalAssetId: 4712
         id: 4711
         isTracker: false
@@ -6826,6 +6841,7 @@ components:
         id:
           description: Unique id for the edge node
           example: fef0a0d3-acad-4611-ac03-1fd842d72505
+          format: uuid
           nullable: true
           readOnly: true
           type: string
@@ -6833,6 +6849,7 @@ components:
           deprecated: true
           description: UUID to identify the edge node
           example: fef0a0d3-acad-4611-ac03-1fd842d72505
+          format: uuid
           nullable: true
           readOnly: true
           type: string
@@ -6884,6 +6901,7 @@ components:
         nodeId:
           description: Id of the node where the agent is installed
           example: fef0a0d3-acad-4611-ac03-1fd842d72505
+          format: uuid
           nullable: true
           type: string
         assetId:
@@ -7116,6 +7134,7 @@ components:
         id:
           description: The ID of the site
           example: 69133767-7de1-4134-9130-5f5403e1ee98
+          format: uuid
           nullable: true
           type: string
         name:
@@ -7147,6 +7166,7 @@ components:
         id:
           description: The ID of the tenant
           example: 69133767-7de1-4134-9130-5f5403e1ee98
+          format: uuid
           nullable: true
           type: string
         name:

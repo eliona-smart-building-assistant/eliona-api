@@ -9,6 +9,7 @@ properties:
     example: 4711
   nodeId:
     type: string
+    format: uuid
     description: Id of the node where the agent is installed
     nullable: true
     example: fef0a0d3-acad-4611-ac03-1fd842d72505

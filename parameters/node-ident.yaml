@@ -5,4 +5,5 @@ example: 4711
 required: true
 schema:
   type: string
+  format: uuid
   example: fef0a0d3-acad-4611-ac03-1fd842d72505
