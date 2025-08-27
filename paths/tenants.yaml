@@ -1,0 +1,24 @@
+post:
+  tags:
+    - Eliona
+  summary: Setup a new tenant
+  security:
+      - HttpSig: []
+  description: Creates a new tenant
+  operationId: postTenant
+  parameters:
+    - $ref: '../parameters/Signature-Input.yaml'
+    - $ref: '../parameters/Content-Digest.yaml'
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/Tenant.yaml'
+  responses:
+    200:
+      description: Successfully created a new or updated an existing site
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Tenant.yaml'

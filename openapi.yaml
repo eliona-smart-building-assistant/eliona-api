@@ -42,6 +42,10 @@ tags:
   externalDocs:
     url: https://www.eliona.io
   name: Version
+- description: Handle Eliona setup
+  externalDocs:
+    url: https://www.eliona.io
+  name: Eliona
 - description: User information
   externalDocs:
     url: https://www.eliona.io
@@ -4352,6 +4356,46 @@ paths:
       summary: Information about a site
       tags:
       - Sites
+  /tenants:
+    post:
+      description: Creates a new tenant
+      operationId: postTenant
+      parameters:
+      - description: "Defines what was signed (e.g. method, path, `content-digest`)\
+          \ and metadata like creation time and key ID; must match the `Signature`."
+        example: sig1=("@method" "@path" "content-digest");created=1618884473;keyid="client-key-1"
+        in: header
+        name: Signature-Input
+        required: true
+        schema:
+          type: string
+      - description: Hash of the request body; server recomputes and compares. Must
+          be included in `Signature-Input`.
+        example: "sha-256=:47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=:"
+        in: header
+        name: Content-Digest
+        required: true
+        schema:
+          pattern: ^sha-256=:.+:$
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Tenant"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Tenant"
+          description: Successfully created a new or updated an existing site
+      security:
+      - HttpSig: []
+      summary: Setup a new tenant
+      tags:
+      - Eliona
   /project-roles:
     get:
       deprecated: true
@@ -4968,6 +5012,25 @@ components:
       name: site-id
       required: true
       schema:
+        type: string
+    Signature-Input:
+      description: "Defines what was signed (e.g. method, path, `content-digest`)\
+        \ and metadata like creation time and key ID; must match the `Signature`."
+      example: sig1=("@method" "@path" "content-digest");created=1618884473;keyid="client-key-1"
+      in: header
+      name: Signature-Input
+      required: true
+      schema:
+        type: string
+    Content-Digest:
+      description: Hash of the request body; server recomputes and compares. Must
+        be included in `Signature-Input`.
+      example: "sha-256=:47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=:"
+      in: header
+      name: Content-Digest
+      required: true
+      schema:
+        pattern: ^sha-256=:.+:$
         type: string
     role-name:
       description: The name of the role
@@ -7067,6 +7130,44 @@ components:
       required:
       - title
       type: object
+    Tenant:
+      description: A tenant
+      example:
+        name: Main
+        apiKeys:
+        - validUntil: 2000-01-23T04:56:07.000+00:00
+          writeAccess: false
+          key: JHKkjk98hlkLKbkds98LKJlkg
+        - validUntil: 2000-01-23T04:56:07.000+00:00
+          writeAccess: false
+          key: JHKkjk98hlkLKbkds98LKJlkg
+        id: 69133767-7de1-4134-9130-5f5403e1ee98
+        title: Main tenant
+      properties:
+        id:
+          description: The ID of the tenant
+          example: 69133767-7de1-4134-9130-5f5403e1ee98
+          nullable: true
+          type: string
+        name:
+          description: The name of the tenant (unique)
+          example: Main
+          type: string
+        title:
+          description: The display name of the tenant
+          example: Main tenant
+          nullable: true
+          type: string
+        apiKeys:
+          description: A list of defines API Keys
+          items:
+            $ref: "#/components/schemas/ApiKey"
+          nullable: true
+          readOnly: true
+          type: array
+      required:
+      - name
+      type: object
     ProjectRole:
       description: A role that can assigned to users within a project
       example:
@@ -7520,6 +7621,30 @@ components:
       - roleName
       - userName
       type: object
+    ApiKey:
+      description: An API key
+      example:
+        validUntil: 2000-01-23T04:56:07.000+00:00
+        writeAccess: false
+        key: JHKkjk98hlkLKbkds98LKJlkg
+      properties:
+        key:
+          description: The key
+          example: JHKkjk98hlkLKbkds98LKJlkg
+          type: string
+        validUntil:
+          description: Date until the key is valid
+          format: date-time
+          nullable: true
+          type: string
+        writeAccess:
+          description: Does the key has write access
+          example: false
+          nullable: true
+          type: boolean
+      required:
+      - name
+      type: object
     AgentDeviceGeneral:
       description: A general device for an agent
       properties:
@@ -7594,3 +7719,10 @@ components:
       description: Use the Bearer for authorizing and identifying a frontend access
       scheme: bearer
       type: http
+    HttpSig:
+      description: |-
+        Cryptographic HTTP Message Signature (RFC 9421). The client signs selected request parts (method, path, headers, body digest) with its private key, and the server verifies with the registered public key. Used together with the `Signature-Input` and `Content-Digest` headers.
+        Example: Content-Digest: sha-256=:47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=: Signature-Input: sig1=("@method" "@path" "content-digest");created=1618884473;keyid="client-key-1" Signature: sig1=:c2lnbmF0dXJlYmFzZTY0dmFsdWU=:
+      in: header
+      name: Signature
+      type: apiKey

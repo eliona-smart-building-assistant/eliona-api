@@ -1,0 +1,19 @@
+type: object
+description: An API key
+required:
+  - name
+properties:
+  key:
+    type: string
+    description: The key
+    example: JHKkjk98hlkLKbkds98LKJlkg
+  validUntil:
+    type: string
+    format: date-time
+    description: Date until the key is valid
+    nullable: true
+  writeAccess:
+    type: boolean
+    description: Does the key has write access
+    example: false
+    nullable: true

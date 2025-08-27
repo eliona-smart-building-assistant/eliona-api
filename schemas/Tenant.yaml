@@ -1,0 +1,26 @@
+type: object
+description: A tenant
+required:
+  - name
+properties:
+  id:
+    type: string
+    description: The ID of the tenant
+    example: 69133767-7de1-4134-9130-5f5403e1ee98
+    nullable: true
+  name:
+    type: string
+    description: The name of the tenant (unique)
+    example: Main
+  title:
+    type: string
+    description: The display name of the tenant
+    example: Main tenant
+    nullable: true
+  apiKeys:
+    description: A list of defines API Keys
+    nullable: true
+    readOnly: true
+    type: array
+    items:
+      $ref: 'ApiKey.yaml'

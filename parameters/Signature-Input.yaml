@@ -1,0 +1,7 @@
+name: Signature-Input
+in: header
+required: true
+schema:
+  type: string
+description: Defines what was signed (e.g. method, path, `content-digest`) and metadata like creation time and key ID; must match the `Signature`.
+example: sig1=("@method" "@path" "content-digest");created=1618884473;keyid="client-key-1"

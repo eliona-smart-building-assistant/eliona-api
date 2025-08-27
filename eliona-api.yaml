@@ -237,6 +237,9 @@ paths:
   /sites/{site-id}:
     $ref: './paths/sites-id.yaml'
 
+  /tenants:
+    $ref: './paths/tenants.yaml'
+
   /project-roles:
     $ref: './paths/project-roles.yaml'
 
@@ -252,6 +255,11 @@ paths:
 tags:
   - name: Version
     description: API version
+    externalDocs:
+      url: https://www.eliona.io
+
+  - name: Eliona
+    description: Handle Eliona setup
     externalDocs:
       url: https://www.eliona.io
 
@@ -363,3 +371,17 @@ components:
       description: Use the Bearer for authorizing and identifying a frontend access
       scheme: bearer
       bearerFormat: JWT
+    HttpSig:
+      type: apiKey
+      in: header
+      name: Signature
+      description: >
+        Cryptographic HTTP Message Signature (RFC 9421). The client signs selected
+        request parts (method, path, headers, body digest) with its private key,
+        and the server verifies with the registered public key.
+        Used together with the `Signature-Input` and `Content-Digest` headers.
+        
+        Example:
+        Content-Digest: sha-256=:47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=:
+        Signature-Input: sig1=("@method" "@path" "content-digest");created=1618884473;keyid="client-key-1"
+        Signature: sig1=:c2lnbmF0dXJlYmFzZTY0dmFsdWU=:
