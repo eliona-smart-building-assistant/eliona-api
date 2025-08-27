@@ -633,6 +633,17 @@ paths:
         schema:
           format: uuid
           type: string
+      - deprecated: true
+        description: "Filter for a specific project. The project ID is deprecated\
+          \ due to the removal of projects and is broadly replaced by sites. This\
+          \ filter now uses siteId, which is internally represented as a UUID."
+        example: 79d7f1a0-0ec1-4211-8626-21f79491650a
+        in: query
+        name: projectId
+        required: false
+        schema:
+          format: uuid
+          type: string
       - description: |
           Specifies the starting point for pagination by indicating the number of items to skip.
         example: 3
@@ -665,17 +676,6 @@ paths:
             type: string
           type: array
         style: form
-      - deprecated: true
-        description: "Filter for a specific project. The project ID is deprecated\
-          \ due to the removal of projects and is broadly replaced by sites. This\
-          \ filter now uses siteId, which is internally represented as a UUID."
-        example: 79d7f1a0-0ec1-4211-8626-21f79491650a
-        in: query
-        name: projectId
-        required: false
-        schema:
-          format: uuid
-          type: string
       responses:
         "200":
           content:
@@ -2852,6 +2852,17 @@ paths:
             type: string
           type: array
         style: form
+      - deprecated: true
+        description: "Filter for a specific project. The project ID is deprecated\
+          \ due to the removal of projects and is broadly replaced by sites. This\
+          \ filter now uses siteId, which is internally represented as a UUID."
+        example: 79d7f1a0-0ec1-4211-8626-21f79491650a
+        in: query
+        name: projectId
+        required: false
+        schema:
+          format: uuid
+          type: string
       - description: |
           Specifies the starting point for pagination by indicating the number of items to skip.
         example: 3
@@ -2884,17 +2895,6 @@ paths:
             type: string
           type: array
         style: form
-      - deprecated: true
-        description: "Filter for a specific project. The project ID is deprecated\
-          \ due to the removal of projects and is broadly replaced by sites. This\
-          \ filter now uses siteId, which is internally represented as a UUID."
-        example: 79d7f1a0-0ec1-4211-8626-21f79491650a
-        in: query
-        name: projectId
-        required: false
-        schema:
-          format: uuid
-          type: string
       responses:
         "200":
           content:
@@ -3052,6 +3052,17 @@ paths:
             type: string
           type: array
         style: form
+      - deprecated: true
+        description: "Filter for a specific project. The project ID is deprecated\
+          \ due to the removal of projects and is broadly replaced by sites. This\
+          \ filter now uses siteId, which is internally represented as a UUID."
+        example: 79d7f1a0-0ec1-4211-8626-21f79491650a
+        in: query
+        name: projectId
+        required: false
+        schema:
+          format: uuid
+          type: string
       - description: |
           Specifies the starting point for pagination by indicating the number of items to skip.
         example: 3
@@ -3084,17 +3095,6 @@ paths:
             type: string
           type: array
         style: form
-      - deprecated: true
-        description: "Filter for a specific project. The project ID is deprecated\
-          \ due to the removal of projects and is broadly replaced by sites. This\
-          \ filter now uses siteId, which is internally represented as a UUID."
-        example: 79d7f1a0-0ec1-4211-8626-21f79491650a
-        in: query
-        name: projectId
-        required: false
-        schema:
-          format: uuid
-          type: string
       responses:
         "200":
           content:
@@ -3210,6 +3210,17 @@ paths:
             type: string
           type: array
         style: form
+      - deprecated: true
+        description: "Filter for a specific project. The project ID is deprecated\
+          \ due to the removal of projects and is broadly replaced by sites. This\
+          \ filter now uses siteId, which is internally represented as a UUID."
+        example: 79d7f1a0-0ec1-4211-8626-21f79491650a
+        in: query
+        name: projectId
+        required: false
+        schema:
+          format: uuid
+          type: string
       - description: |
           Specifies the starting point for pagination by indicating the number of items to skip.
         example: 3
@@ -3242,17 +3253,6 @@ paths:
             type: string
           type: array
         style: form
-      - deprecated: true
-        description: "Filter for a specific project. The project ID is deprecated\
-          \ due to the removal of projects and is broadly replaced by sites. This\
-          \ filter now uses siteId, which is internally represented as a UUID."
-        example: 79d7f1a0-0ec1-4211-8626-21f79491650a
-        in: query
-        name: projectId
-        required: false
-        schema:
-          format: uuid
-          type: string
       responses:
         "200":
           content:
@@ -4252,12 +4252,15 @@ paths:
       operationId: getProjectById
       parameters:
       - deprecated: true
-        description: The id of the project
+        description: "The id of the project.  The project ID is deprecated due to\
+          \ the removal of projects and is broadly replaced by sites. This filter\
+          \ now uses siteId, which is internally represented as a UUID."
         example: 99
         in: path
         name: project-id
         required: true
         schema:
+          format: uuid
           type: string
       - description: "List of referenced data to load, insert or update. Each entry\
           \ defines the full qualified name of the field to be expanded as follows\
@@ -5065,12 +5068,15 @@ components:
         type: string
     project-id:
       deprecated: true
-      description: The id of the project
+      description: "The id of the project.  The project ID is deprecated due to the\
+        \ removal of projects and is broadly replaced by sites. This filter now uses\
+        \ siteId, which is internally represented as a UUID."
       example: 99
       in: path
       name: project-id
       required: true
       schema:
+        format: uuid
         type: string
     site-id:
       description: The id of the site

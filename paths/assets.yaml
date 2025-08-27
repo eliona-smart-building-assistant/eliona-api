@@ -7,10 +7,10 @@ get:
   parameters:
     - $ref: '../parameters/assetTypeName.yaml'
     - $ref: '../parameters/siteId.yaml'
+    - $ref: '../parameters/projectId.yaml'
     - $ref: '../parameters/offset.yaml'
     - $ref: '../parameters/size.yaml'
     - $ref: '../parameters/expansions.yaml'
-    - $ref: '../parameters/projectId.yaml'
   responses:
     200:
       description: Successfully returned the list of assets
