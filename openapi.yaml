@@ -626,11 +626,12 @@ paths:
         required: false
         schema:
           type: string
-      - description: Filter for a specific project
+      - description: Filter for a specific site
         in: query
-        name: projectId
+        name: siteId
         required: false
         schema:
+          format: uuid
           type: string
       - description: |
           Specifies the starting point for pagination by indicating the number of items to skip.
@@ -664,6 +665,17 @@ paths:
             type: string
           type: array
         style: form
+      - deprecated: true
+        description: "Filter for a specific project. The project ID is deprecated\
+          \ due to the removal of projects and is broadly replaced by sites. This\
+          \ filter now uses siteId, which is internally represented as a UUID."
+        example: 79d7f1a0-0ec1-4211-8626-21f79491650a
+        in: query
+        name: projectId
+        required: false
+        schema:
+          format: uuid
+          type: string
       responses:
         "200":
           content:
@@ -2808,11 +2820,12 @@ paths:
       description: Gets information about alarms
       operationId: getAlarms
       parameters:
-      - description: Filter for a specific project
+      - description: Filter for a specific site
         in: query
-        name: projectId
+        name: siteId
         required: false
         schema:
+          format: uuid
           type: string
       - description: Filter by lower date time (RFC3339) limit inclusive
         example: 2020-01-01T09:00:00.000Z
@@ -2871,6 +2884,17 @@ paths:
             type: string
           type: array
         style: form
+      - deprecated: true
+        description: "Filter for a specific project. The project ID is deprecated\
+          \ due to the removal of projects and is broadly replaced by sites. This\
+          \ filter now uses siteId, which is internally represented as a UUID."
+        example: 79d7f1a0-0ec1-4211-8626-21f79491650a
+        in: query
+        name: projectId
+        required: false
+        schema:
+          format: uuid
+          type: string
       responses:
         "200":
           content:
@@ -2996,11 +3020,12 @@ paths:
         \ current alarms and alarms, which are already processed."
       operationId: getAlarmsHistory
       parameters:
-      - description: Filter for a specific project
+      - description: Filter for a specific site
         in: query
-        name: projectId
+        name: siteId
         required: false
         schema:
+          format: uuid
           type: string
       - description: Filter by lower date time (RFC3339) limit inclusive
         example: 2020-01-01T09:00:00.000Z
@@ -3059,6 +3084,17 @@ paths:
             type: string
           type: array
         style: form
+      - deprecated: true
+        description: "Filter for a specific project. The project ID is deprecated\
+          \ due to the removal of projects and is broadly replaced by sites. This\
+          \ filter now uses siteId, which is internally represented as a UUID."
+        example: 79d7f1a0-0ec1-4211-8626-21f79491650a
+        in: query
+        name: projectId
+        required: false
+        schema:
+          format: uuid
+          type: string
       responses:
         "200":
           content:
@@ -3142,11 +3178,12 @@ paths:
         each asset.
       operationId: getHighestAlarms
       parameters:
-      - description: Filter for a specific project
+      - description: Filter for a specific site
         in: query
-        name: projectId
+        name: siteId
         required: false
         schema:
+          format: uuid
           type: string
       - description: Filter by lower date time (RFC3339) limit inclusive
         example: 2020-01-01T09:00:00.000Z
@@ -3205,6 +3242,17 @@ paths:
             type: string
           type: array
         style: form
+      - deprecated: true
+        description: "Filter for a specific project. The project ID is deprecated\
+          \ due to the removal of projects and is broadly replaced by sites. This\
+          \ filter now uses siteId, which is internally represented as a UUID."
+        example: 79d7f1a0-0ec1-4211-8626-21f79491650a
+        in: query
+        name: projectId
+        required: false
+        schema:
+          format: uuid
+          type: string
       responses:
         "200":
           content:
@@ -4203,7 +4251,8 @@ paths:
       description: Gets information about a project.
       operationId: getProjectById
       parameters:
-      - description: The id of the project
+      - deprecated: true
+        description: The id of the project
         example: 99
         in: path
         name: project-id
@@ -4647,12 +4696,25 @@ components:
       required: false
       schema:
         type: string
+    siteId:
+      description: Filter for a specific site
+      in: query
+      name: siteId
+      required: false
+      schema:
+        format: uuid
+        type: string
     projectId:
-      description: Filter for a specific project
+      deprecated: true
+      description: "Filter for a specific project. The project ID is deprecated due\
+        \ to the removal of projects and is broadly replaced by sites. This filter\
+        \ now uses siteId, which is internally represented as a UUID."
+      example: 79d7f1a0-0ec1-4211-8626-21f79491650a
       in: query
       name: projectId
       required: false
       schema:
+        format: uuid
         type: string
     assetIdentifyBy:
       description: |
@@ -5002,6 +5064,7 @@ components:
       schema:
         type: string
     project-id:
+      deprecated: true
       description: The id of the project
       example: 99
       in: path
@@ -5517,7 +5580,7 @@ components:
         parentFunctionalAssetId: 4712
         id: 4711
         isTracker: false
-        projectId: "99"
+        projectId: 79d7f1a0-0ec1-4211-8626-21f79491650a
         longitude: 8.55
       properties:
         resourceId:
@@ -5658,8 +5721,13 @@ components:
           type: array
         projectId:
           deprecated: true
-          description: ID of the project to which the asset belongs
-          example: "99"
+          description: "ID of the project to which the asset belongs. The project\
+            \ ID is deprecated due to the removal of projects and is broadly replaced\
+            \ by sites. This filter now uses siteId, which is internally represented\
+            \ as a UUID."
+          example: 79d7f1a0-0ec1-4211-8626-21f79491650a
+          format: uuid
+          nullable: true
           type: string
       required:
       - assetType
@@ -5771,7 +5839,7 @@ components:
           parentFunctionalAssetId: 4712
           id: 4711
           isTracker: false
-          projectId: "99"
+          projectId: 79d7f1a0-0ec1-4211-8626-21f79491650a
           longitude: 8.55
         - globalAssetIdentifier: zurich_swiss
           functionalAssetIdPath:
@@ -5812,7 +5880,7 @@ components:
           parentFunctionalAssetId: 4712
           id: 4711
           isTracker: false
-          projectId: "99"
+          projectId: 79d7f1a0-0ec1-4211-8626-21f79491650a
           longitude: 8.55
         assetType: assetType
         parentLocationalAssetId: 4712
@@ -5828,7 +5896,7 @@ components:
         parentFunctionalAssetId: 4712
         id: 4711
         isTracker: false
-        projectId: "99"
+        projectId: 79d7f1a0-0ec1-4211-8626-21f79491650a
         statusCode: 200
         longitude: 8.55
     AttributeDisplay:
@@ -6346,6 +6414,7 @@ components:
         sequence: 1
         public: false
         name: Weather info
+        siteId: 69133767-7de1-4134-9130-5f5403e1ee98
         id: 4711
         widgets:
         - sequence: 1
@@ -6388,8 +6457,8 @@ components:
           details: {}
           id: 4711
           widgetTypeName: Weather
-        projectId: "99"
         userId: "42"
+        projectId: 79d7f1a0-0ec1-4211-8626-21f79491650a
       properties:
         id:
           description: The internal Id of dashboard
@@ -6401,14 +6470,14 @@ components:
           description: The name for this dashboard
           example: Weather info
           type: string
-        projectId:
-          deprecated: true
-          description: ID of the project to which the dashboard belongs
-          example: "99"
-          type: string
         userId:
           description: ID of the user who owns the dashboard
           example: "42"
+          type: string
+        siteId:
+          description: ID of the site to which the dashboard belongs
+          example: 69133767-7de1-4134-9130-5f5403e1ee98
+          format: uuid
           type: string
         sequence:
           default: 0
@@ -6429,8 +6498,19 @@ components:
           description: Is the dashboard public and not bound to a dedicated user
           nullable: true
           type: boolean
+        projectId:
+          deprecated: true
+          description: "ID of the project to which the dashboard belongs. The project\
+            \ ID is deprecated due to the removal of projects and is broadly replaced\
+            \ by sites. This filter now uses siteId, which is internally represented\
+            \ as a UUID."
+          example: 79d7f1a0-0ec1-4211-8626-21f79491650a
+          format: uuid
+          nullable: true
+          type: string
       required:
       - name
+      - siteId
       - userId
       type: object
     Widget:
@@ -7039,6 +7119,7 @@ components:
     Notification:
       description: A notification
       example:
+        siteId: 123e4567-e89b-12d3-a456-426655440000
         message: ""
         user: peter.fox@example.com
         projectId: "99"
@@ -7047,16 +7128,24 @@ components:
           description: E-Mail address or internal ID of the Eliona user
           example: peter.fox@example.com
           type: string
-        projectId:
-          deprecated: true
-          description: ID of the project the notification should appear
-          example: "99"
+        siteId:
+          description: ID of the site the notification should appear
+          example: 123e4567-e89b-12d3-a456-426655440000
+          format: uuid
           nullable: true
           type: string
         message:
           allOf:
           - $ref: "#/components/schemas/Translation"
           nullable: true
+        projectId:
+          deprecated: true
+          description: ID of the project the notification should appear. The project
+            ID is deprecated due to the removal of projects and is broadly replaced
+            by sites. For notifications this ID is no longer necessary.
+          example: "99"
+          nullable: true
+          type: string
       required:
       - message
       - user

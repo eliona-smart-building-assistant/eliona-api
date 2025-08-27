@@ -1,0 +1,7 @@
+name: siteId
+description: Filter for a specific site
+in: query
+required: false
+schema:
+  type: string
+  format: uuid

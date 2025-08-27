@@ -1,6 +1,9 @@
 name: projectId
-description: Filter for a specific project
+description: Filter for a specific project. The project ID is deprecated due to the removal of projects and is broadly replaced by sites. This filter now uses siteId, which is internally represented as a UUID.
 in: query
 required: false
+deprecated: true
+example: 79d7f1a0-0ec1-4211-8626-21f79491650a
 schema:
   type: string
+  format: uuid

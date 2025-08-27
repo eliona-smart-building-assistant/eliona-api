@@ -9,7 +9,7 @@ Content-Type: application/json
 
 {
   "name": "Example Dashboard",
-  "projectId": "99",
+  "siteId": "123e4567-e89b-12d3-a456-426655440000",
   "userId": "1",
   "public": true
 }

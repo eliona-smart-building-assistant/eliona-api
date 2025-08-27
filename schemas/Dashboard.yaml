@@ -3,6 +3,7 @@ description: A frontend dashboard
 required:
   - name
   - userId
+  - siteId
 properties:
   id:
     type: integer
@@ -14,15 +15,15 @@ properties:
     type: string
     description: The name for this dashboard
     example: Weather info
-  projectId:
-    deprecated: true
-    type: string
-    description: ID of the project to which the dashboard belongs
-    example: 99
   userId:
     type: string
     description: ID of the user who owns the dashboard
     example: 42
+  siteId:
+    type: string
+    format: uuid
+    description: ID of the site to which the dashboard belongs
+    example: 69133767-7de1-4134-9130-5f5403e1ee98
   sequence:
     type: integer
     description: The sequence of the dashboard
@@ -40,4 +41,11 @@ properties:
     type: boolean
     default: false
     description: Is the dashboard public and not bound to a dedicated user
+    nullable: true
+  projectId:
+    deprecated: true
+    type: string
+    format: uuid
+    description: ID of the project to which the dashboard belongs. The project ID is deprecated due to the removal of projects and is broadly replaced by sites. This filter now uses siteId, which is internally represented as a UUID.
+    example: 79d7f1a0-0ec1-4211-8626-21f79491650a
     nullable: true

@@ -212,7 +212,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"message\": {\n        \"de\": \"Das ist ein deutscher Text\",\n        \"en\": \"This is an english text\",\n        \"it\": \"Questo \\u00e8 nel testo inglese\",\n        \"fr\": \"Ceci est en texte anglais\"\n    },\n    \"user\": \"90\",\n    \"projectId\": \"10\"\n}"
+							"raw": "{\n    \"message\": {\n        \"de\": \"Das ist ein deutscher Text\",\n        \"en\": \"This is an english text\",\n        \"it\": \"Questo \\u00e8 nel testo inglese\",\n        \"fr\": \"Ceci est en texte anglais\"\n    },\n    \"user\": \"90\",\n    \"siteId\": \"79d7f1a0-0ec1-4211-8626-21f79491650a\"\n}"
 						},
 						"url": {
 							"raw": "{{api-server}}/v2/send-notification",
@@ -287,7 +287,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Example Dashboard\",\n    \"projectId\": \"99\",\n    \"userId\": \"1\",\n    \"public\": true\n}"
+							"raw": "{\n    \"name\": \"Example Dashboard\",\n    \"siteId\": \"79d7f1a0-0ec1-4211-8626-21f79491650a\",\n    \"userId\": \"1\",\n    \"public\": true\n}"
 						},
 						"url": {
 							"raw": "{{api-server}}/v2/dashboards",
@@ -1236,7 +1236,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{api-server}}/v2/alarms?projectId=99&fromDate=2025-01-01T09:00:00.000Z&toDate=2025-12-31T23:00:00.000Z&tags=critical,warning&expansions=Alarm.assetInfo",
+							"raw": "{{api-server}}/v2/alarms?siteId=79d7f1a0-0ec1-4211-8626-21f79491650a&fromDate=2025-01-01T09:00:00.000Z&toDate=2025-12-31T23:00:00.000Z&tags=critical,warning&expansions=Alarm.assetInfo",
 							"host": [
 								"{{api-server}}"
 							],
@@ -1246,8 +1246,8 @@
 							],
 							"query": [
 								{
-									"key": "projectId",
-									"value": "99"
+									"key": "siteId",
+									"value": "79d7f1a0-0ec1-4211-8626-21f79491650a"
 								},
 								{
 									"key": "fromDate",
@@ -1369,7 +1369,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"globalAssetIdentifier\": \"zurich_swiss\",\n    \"name\": \"Station Zurich\",\n    \"assetType\": \"weather_location\",\n    \"latitude\": 47.3667,\n    \"longitude\": 8.55,\n    \"projectId\": \"99\",\n    \"tags\": [\n        \"weather\",\n        \"location\"\n    ],\n    \"resourceId\": \"123e4567-e89b-12d3-a456-426655440000\"\n}"
+							"raw": "{\n    \"globalAssetIdentifier\": \"zurich_swiss\",\n    \"name\": \"Station Zurich\",\n    \"assetType\": \"weather_location\",\n    \"latitude\": 47.3667,\n    \"longitude\": 8.55,\n    \"siteId\": \"79d7f1a0-0ec1-4211-8626-21f79491650a\",\n    \"tags\": [\n        \"weather\",\n        \"location\"\n    ],\n    \"resourceId\": \"123e4567-e89b-12d3-a456-426655440000\"\n}"
 						},
 						"url": {
 							"raw": "{{api-server}}/v2/assets",
@@ -1473,7 +1473,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"globalAssetIdentifier\": \"asset_1\",\n        \"name\": \"Asset One\",\n        \"assetType\": \"weather_location\",\n        \"latitude\": 47.123,\n        \"longitude\": 8.456,\n        \"siteId\": \"123e4567-e89b-12d3-a456-426655440000\",\n        \"resourceId\": \"device-001\"\n    },\n    {\n        \"globalAssetIdentifier\": \"asset_2\",\n        \"name\": \"Asset Two\",\n        \"assetType\": \"weather_location\",\n        \"latitude\": 47.124,\n        \"longitude\": 8.457,\n        \"projectId\": \"99\",\n        \"resourceId\": \"device-002\"\n    }\n]"
+							"raw": "[\n    {\n        \"globalAssetIdentifier\": \"asset_1\",\n        \"name\": \"Asset One\",\n        \"assetType\": \"weather_location\",\n        \"latitude\": 47.123,\n        \"longitude\": 8.456,\n        \"siteId\": \"123e4567-e89b-12d3-a456-426655440000\",\n        \"resourceId\": \"device-001\"\n    },\n    {\n        \"globalAssetIdentifier\": \"asset_2\",\n        \"name\": \"Asset Two\",\n        \"assetType\": \"weather_location\",\n        \"latitude\": 47.124,\n        \"longitude\": 8.457,\n        \"siteId\": \"79d7f1a0-0ec1-4211-8626-21f79491650a\",\n        \"resourceId\": \"device-002\"\n    }\n]"
 						},
 						"url": {
 							"raw": "{{api-server}}/v2/assets-bulk?identifyBy=gai-siteId",

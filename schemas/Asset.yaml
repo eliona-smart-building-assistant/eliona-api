@@ -131,5 +131,7 @@ properties:
   projectId:
     deprecated: true
     type: string
-    description: ID of the project to which the asset belongs
-    example: 99
+    format: uuid
+    description: ID of the project to which the asset belongs. The project ID is deprecated due to the removal of projects and is broadly replaced by sites. This filter now uses siteId, which is internally represented as a UUID.
+    example: 79d7f1a0-0ec1-4211-8626-21f79491650a
+    nullable: true

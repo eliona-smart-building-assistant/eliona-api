@@ -13,7 +13,7 @@ Content-Type: application/json
   "assetType": "weather_location",
   "latitude": 47.3667,
   "longitude": 8.55,
-  "projectId": "99",
+  "siteId": "123e4567-e89b-12d3-a456-426655440000",
   "tags": ["weather", "location"],
   "resourceId": "123e4567-e89b-12d3-a456-426655440000"
 }
@@ -54,7 +54,7 @@ Content-Type: application/json
     "assetType": "weather_location",
     "latitude": 47.124,
     "longitude": 8.457,
-    "projectId": "99",
+    "siteId": "123e4567-e89b-12d3-a456-426655440000",
     "resourceId": "device-002"
   }
 ]

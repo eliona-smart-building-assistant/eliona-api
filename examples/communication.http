@@ -32,7 +32,7 @@ Content-Type: application/json
     "fr": "Ceci est en texte anglais"
   },
   "user": "90",
-  "projectId": "10"
+  "siteId": "123e4567-e89b-12d3-a456-426655440000"
 }
 
 ### [Communication] Get message receipt by message id (read-only)

@@ -1,9 +1,9 @@
 ### [Alarms] List alarms (read-only)
-GET {{api-server}}/v2/alarms?projectId=1&expansions=Alarm.assetInfo,Alarm.ruleInfo,Alarm.acknowledgeUserInfo HTTP/1.1
+GET {{api-server}}/v2/alarms?siteId=123e4567-e89b-12d3-a456-426655440000&expansions=Alarm.assetInfo,Alarm.ruleInfo,Alarm.acknowledgeUserInfo HTTP/1.1
 X-Api-Key: {{read-only-token}}
 
 ### [Alarms] Stream alarms (read-only)
-GET {{api-server}}/v2/alarms?fromDate=2025-04-20T09:00:00.000Z&toDate=2026-04-20T23:00:00.000Z&projectId=1&expansions=Alarm.assetInfo,Alarm.ruleInfo,Alarm.acknowledgeUserInfo HTTP/1.1
+GET {{api-server}}/v2/alarms?fromDate=2025-04-20T09:00:00.000Z&toDate=2026-04-20T23:00:00.000Z&siteId=123e4567-e89b-12d3-a456-426655440000&expansions=Alarm.assetInfo,Alarm.ruleInfo,Alarm.acknowledgeUserInfo HTTP/1.1
 X-Api-Key: {{read-only-token}}
 Accept: application/x-ndjson
 
@@ -31,7 +31,7 @@ X-Api-Key: {{read-only-token}}
 Accept: application/x-ndjson
 
 ### [Alarms] List alarms with tag filter and date filters (read-only)
-GET {{api-server}}/v2/alarms?projectId=99&fromDate=2025-01-01T09:00:00.000Z&toDate=2025-12-31T23:00:00.000Z&tags=critical,warning&expansions=Alarm.assetInfo HTTP/1.1
+GET {{api-server}}/v2/alarms?siteId=123e4567-e89b-12d3-a456-426655440000&fromDate=2025-01-01T09:00:00.000Z&toDate=2025-12-31T23:00:00.000Z&tags=critical,warning&expansions=Alarm.assetInfo HTTP/1.1
 X-Api-Key: {{read-only-token}}
 
 ### [Alarms] Acknowledge an alarm (using PATCH) with additional parameters (read–write)

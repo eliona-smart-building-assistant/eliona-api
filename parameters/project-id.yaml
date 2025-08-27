@@ -1,7 +1,9 @@
 name: project-id
 in: path
-description: The id of the project
+description: The id of the project.  The project ID is deprecated due to the removal of projects and is broadly replaced by sites. This filter now uses siteId, which is internally represented as a UUID.
 example: 99
 required: true
+deprecated: true
 schema:
   type: string
+  format: uuid
