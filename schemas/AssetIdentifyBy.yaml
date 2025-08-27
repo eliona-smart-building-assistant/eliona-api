@@ -3,9 +3,9 @@ enum:
   - resourceId
   - deviceId
   - id
-  - gai-projId
+  - gai-siteId
 x-enum-varnames:
   - ASSET_IDENTIFY_BY_RESOURCE_ID
   - ASSET_IDENTIFY_BY_DEVICE_ID
   - ASSET_IDENTIFY_BY_ID
-  - ASSET_IDENTIFY_BY_GAI_PROJ_ID
+  - ASSET_IDENTIFY_BY_GAI_SITE_ID

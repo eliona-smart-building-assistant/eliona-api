@@ -16,4 +16,4 @@ schema:
     - resourceId
     - deviceId
     - id
-    - gai-projId
+    - gai-siteId

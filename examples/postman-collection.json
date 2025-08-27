@@ -1473,10 +1473,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"globalAssetIdentifier\": \"asset_1\",\n        \"name\": \"Asset One\",\n        \"assetType\": \"weather_location\",\n        \"latitude\": 47.123,\n        \"longitude\": 8.456,\n        \"projectId\": \"99\",\n        \"resourceId\": \"device-001\"\n    },\n    {\n        \"globalAssetIdentifier\": \"asset_2\",\n        \"name\": \"Asset Two\",\n        \"assetType\": \"weather_location\",\n        \"latitude\": 47.124,\n        \"longitude\": 8.457,\n        \"projectId\": \"99\",\n        \"resourceId\": \"device-002\"\n    }\n]"
+							"raw": "[\n    {\n        \"globalAssetIdentifier\": \"asset_1\",\n        \"name\": \"Asset One\",\n        \"assetType\": \"weather_location\",\n        \"latitude\": 47.123,\n        \"longitude\": 8.456,\n        \"siteId\": \"123e4567-e89b-12d3-a456-426655440000\",\n        \"resourceId\": \"device-001\"\n    },\n    {\n        \"globalAssetIdentifier\": \"asset_2\",\n        \"name\": \"Asset Two\",\n        \"assetType\": \"weather_location\",\n        \"latitude\": 47.124,\n        \"longitude\": 8.457,\n        \"projectId\": \"99\",\n        \"resourceId\": \"device-002\"\n    }\n]"
 						},
 						"url": {
-							"raw": "{{api-server}}/v2/assets-bulk?identifyBy=gai-projId",
+							"raw": "{{api-server}}/v2/assets-bulk?identifyBy=gai-siteId",
 							"host": [
 								"{{api-server}}"
 							],
@@ -1487,7 +1487,7 @@
 							"query": [
 								{
 									"key": "identifyBy",
-									"value": "gai-projId"
+									"value": "gai-siteId"
 								}
 							]
 						}

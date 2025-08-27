@@ -702,7 +702,7 @@ paths:
           - resourceId
           - deviceId
           - id
-          - gai-projId
+          - gai-siteId
           type: string
       - description: "List of referenced data to load, insert or update. Each entry\
           \ defines the full qualified name of the field to be expanded as follows\
@@ -763,7 +763,7 @@ paths:
           - resourceId
           - deviceId
           - id
-          - gai-projId
+          - gai-siteId
           type: string
       - description: "List of referenced data to load, insert or update. Each entry\
           \ defines the full qualified name of the field to be expanded as follows\
@@ -920,7 +920,7 @@ paths:
           - resourceId
           - deviceId
           - id
-          - gai-projId
+          - gai-siteId
           type: string
       - description: "List of referenced data to load, insert or update. Each entry\
           \ defines the full qualified name of the field to be expanded as follows\
@@ -979,7 +979,7 @@ paths:
           - resourceId
           - deviceId
           - id
-          - gai-projId
+          - gai-siteId
           type: string
       - description: "List of referenced data to load, insert or update. Each entry\
           \ defines the full qualified name of the field to be expanded as follows\
@@ -1048,7 +1048,7 @@ paths:
           - resourceId
           - deviceId
           - id
-          - gai-projId
+          - gai-siteId
           type: string
       - description: "List of referenced data to load, insert or update. Each entry\
           \ defines the full qualified name of the field to be expanded as follows\
@@ -1117,7 +1117,7 @@ paths:
           - resourceId
           - deviceId
           - id
-          - gai-projId
+          - gai-siteId
           type: string
       - description: "List of referenced data to load, insert or update. Each entry\
           \ defines the full qualified name of the field to be expanded as follows\
@@ -1175,7 +1175,7 @@ paths:
           - resourceId
           - deviceId
           - id
-          - gai-projId
+          - gai-siteId
           type: string
       - description: "List of referenced data to load, insert or update. Each entry\
           \ defines the full qualified name of the field to be expanded as follows\
@@ -1233,7 +1233,7 @@ paths:
           - resourceId
           - deviceId
           - id
-          - gai-projId
+          - gai-siteId
           type: string
       - description: "List of referenced data to load, insert or update. Each entry\
           \ defines the full qualified name of the field to be expanded as follows\
@@ -4672,7 +4672,7 @@ components:
         - resourceId
         - deviceId
         - id
-        - gai-projId
+        - gai-siteId
         type: string
     asset-id:
       description: The id of the asset
@@ -7364,13 +7364,13 @@ components:
       - resourceId
       - deviceId
       - id
-      - gai-projId
+      - gai-siteId
       type: string
       x-enum-varnames:
       - ASSET_IDENTIFY_BY_RESOURCE_ID
       - ASSET_IDENTIFY_BY_DEVICE_ID
       - ASSET_IDENTIFY_BY_ID
-      - ASSET_IDENTIFY_BY_GAI_PROJ_ID
+      - ASSET_IDENTIFY_BY_GAI_SITE_ID
     StatusCode:
       description: "The status code expecting when actually perform the operation.\
         \ Some values are\n- 200: updated (ok) \n- 201: created\n- 204: deleted (no\
