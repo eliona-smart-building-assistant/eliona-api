@@ -240,6 +240,9 @@ paths:
   /tenants:
     $ref: './paths/tenants.yaml'
 
+  /api-keys:
+    $ref: './paths/api-keys.yaml'
+
   /project-roles:
     $ref: './paths/project-roles.yaml'
 
