@@ -1,11 +1,11 @@
-post:
+put:
   tags:
     - Eliona
-  summary: Setup a new tenant
+  summary: Setup or update a tenant
   security:
       - HttpSig: []
-  description: Creates a new tenant
-  operationId: postTenant
+  description: Create or update a tenant
+  operationId: putTenant
   parameters:
     - $ref: '../parameters/Signature-Input.yaml'
     - $ref: '../parameters/Content-Digest.yaml'
@@ -17,7 +17,7 @@ post:
           $ref: '../schemas/Tenant.yaml'
   responses:
     200:
-      description: Successfully created a new or updated an existing site
+      description: Successfully created a new or updated an existing tenant
       content:
         application/json:
           schema:
