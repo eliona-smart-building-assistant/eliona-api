@@ -627,6 +627,7 @@ paths:
         schema:
           type: string
       - description: Filter for a specific site
+        example: 69133767-7de1-4134-9130-5f5403e1ee98
         in: query
         name: siteId
         required: false
@@ -2821,6 +2822,7 @@ paths:
       operationId: getAlarms
       parameters:
       - description: Filter for a specific site
+        example: 69133767-7de1-4134-9130-5f5403e1ee98
         in: query
         name: siteId
         required: false
@@ -3021,6 +3023,7 @@ paths:
       operationId: getAlarmsHistory
       parameters:
       - description: Filter for a specific site
+        example: 69133767-7de1-4134-9130-5f5403e1ee98
         in: query
         name: siteId
         required: false
@@ -3179,6 +3182,7 @@ paths:
       operationId: getHighestAlarms
       parameters:
       - description: Filter for a specific site
+        example: 69133767-7de1-4134-9130-5f5403e1ee98
         in: query
         name: siteId
         required: false
@@ -3382,12 +3386,11 @@ paths:
       operationId: getNodeByIdent
       parameters:
       - description: The UUID identifier of the node
-        example: 4711
+        example: 69133767-7de1-4134-9130-5f5403e1ee98
         in: path
         name: node-ident
         required: true
         schema:
-          example: fef0a0d3-acad-4611-ac03-1fd842d72505
           format: uuid
           type: string
       responses:
@@ -3407,12 +3410,11 @@ paths:
       operationId: putNodeByIdent
       parameters:
       - description: The UUID identifier of the node
-        example: 4711
+        example: 69133767-7de1-4134-9130-5f5403e1ee98
         in: path
         name: node-ident
         required: true
         schema:
-          example: fef0a0d3-acad-4611-ac03-1fd842d72505
           format: uuid
           type: string
       requestBody:
@@ -4135,16 +4137,37 @@ paths:
       tags:
       - Users
   /users/{user-id}:
+    delete:
+      description: Deletes a user
+      operationId: deleteUserById
+      parameters:
+      - description: The id of the user
+        example: 69133767-7de1-4134-9130-5f5403e1ee98
+        in: path
+        name: user-id
+        required: true
+        schema:
+          format: uuid
+          type: string
+      responses:
+        "204":
+          description: Successfully deleted the user
+        "404":
+          description: User type with id not found
+      summary: Delete a user
+      tags:
+      - Users
     get:
       description: Gets information about an user.
       operationId: getUserById
       parameters:
       - description: The id of the user
-        example: 123
+        example: 69133767-7de1-4134-9130-5f5403e1ee98
         in: path
         name: user-id
         required: true
         schema:
+          format: uuid
           type: string
       responses:
         "200":
@@ -4155,7 +4178,7 @@ paths:
           description: Successfully returned the user by id.
         "404":
           description: User with id not found
-      summary: Information about an user
+      summary: Information about a user
       tags:
       - Users
   /projects:
@@ -4255,7 +4278,7 @@ paths:
         description: "The id of the project.  The project ID is deprecated due to\
           \ the removal of projects and is broadly replaced by sites. This filter\
           \ now uses siteId, which is internally represented as a UUID."
-        example: 99
+        example: 69133767-7de1-4134-9130-5f5403e1ee98
         in: path
         name: project-id
         required: true
@@ -4741,6 +4764,7 @@ components:
         type: string
     siteId:
       description: Filter for a specific site
+      example: 69133767-7de1-4134-9130-5f5403e1ee98
       in: query
       name: siteId
       required: false
@@ -5048,12 +5072,11 @@ components:
       style: form
     node-ident:
       description: The UUID identifier of the node
-      example: 4711
+      example: 69133767-7de1-4134-9130-5f5403e1ee98
       in: path
       name: node-ident
       required: true
       schema:
-        example: fef0a0d3-acad-4611-ac03-1fd842d72505
         format: uuid
         type: string
     agent-class:
@@ -5100,18 +5123,19 @@ components:
         type: string
     user-id:
       description: The id of the user
-      example: 123
+      example: 69133767-7de1-4134-9130-5f5403e1ee98
       in: path
       name: user-id
       required: true
       schema:
+        format: uuid
         type: string
     project-id:
       deprecated: true
       description: "The id of the project.  The project ID is deprecated due to the\
         \ removal of projects and is broadly replaced by sites. This filter now uses\
         \ siteId, which is internally represented as a UUID."
-      example: 99
+      example: 69133767-7de1-4134-9130-5f5403e1ee98
       in: path
       name: project-id
       required: true

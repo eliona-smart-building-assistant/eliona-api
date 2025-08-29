@@ -2,6 +2,7 @@ name: siteId
 description: Filter for a specific site
 in: query
 required: false
+example: 69133767-7de1-4134-9130-5f5403e1ee98
 schema:
   type: string
   format: uuid

@@ -1,9 +1,8 @@
 name: node-ident
 in: path
 description: The UUID identifier of the node
-example: 4711
+example: 69133767-7de1-4134-9130-5f5403e1ee98
 required: true
 schema:
   type: string
   format: uuid
-  example: fef0a0d3-acad-4611-ac03-1fd842d72505

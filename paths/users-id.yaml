@@ -1,7 +1,7 @@
 get:
   tags:
     - Users
-  summary: Information about an user
+  summary: Information about a user
   description: Gets information about an user.
   operationId: getUserById
   parameters:
@@ -15,3 +15,17 @@ get:
             $ref: '../schemas/User.yaml'
     404:
       description: User with id not found
+
+delete:
+  tags:
+    - Users
+  summary: Delete a user
+  description: Deletes a user
+  operationId: deleteUserById
+  parameters:
+    - $ref: '../parameters/user-id.yaml'
+  responses:
+    204:
+      description: Successfully deleted the user
+    404:
+      description: User type with id not found
