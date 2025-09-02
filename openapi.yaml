@@ -4183,7 +4183,6 @@ paths:
       - Users
   /roles:
     get:
-      deprecated: true
       description: Retrieves a list of roles that can be assigned to users
       operationId: getRoles
       parameters:
@@ -4223,7 +4222,6 @@ paths:
       tags:
       - Users
     put:
-      deprecated: true
       description: "Creates a new user role if none exists, or updates an existing\
         \ one by its name"
       operationId: putRole
@@ -4245,7 +4243,6 @@ paths:
       - Users
   /roles/{role-name}:
     get:
-      deprecated: true
       description: Gets information about a specific user role.
       operationId: getRoleByName
       parameters:
