@@ -8,6 +8,7 @@ properties:
     description: The unique name for this asset type
     example: weather_location
   custom:
+    deprecated: true
     type: boolean
     default: true
     description: Is this a customer created type or not
