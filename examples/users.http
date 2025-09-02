@@ -2,8 +2,6 @@
 GET {{api-server}}/v2/users HTTP/1.1
 X-Api-Key: {{read-only-token}}
 
-
-
 ### [Users] List all roles (read-only)
 GET {{api-server}}/v2/roles HTTP/1.1
 X-Api-Key: {{read-only-token}}
@@ -13,35 +11,28 @@ GET {{api-server}}/v2/roles?expansions=Role.resources HTTP/1.1
 X-Api-Key: {{read-only-token}}
 Accept: application/x-ndjson
 
-
-
-
-### [Projects] Stream all sites (read-only)
-GET {{api-server}}/v2/sites HTTP/1.1
-X-Api-Key: {{read-only-token}}
-Accept: application/x-ndjson
-
-### [Projects] Get site by ID (read-only)
-GET {{api-server}}/v2/sites/b9fdae2d-a01b-4fbf-80ff-9d4fa075a5ac HTTP/1.1
+### [Users] Select role by name (read-only)
+GET {{api-server}}/v2/roles/Test Role?expansions=Role.resources HTTP/1.1
 X-Api-Key: {{read-only-token}}
 
-### [Projects] Create a site (read–write)
-PUT {{api-server}}/v2/sites HTTP/1.1
+### [Users] Create/Update role without resources
+PUT {{api-server}}/v2/roles HTTP/1.1
 X-Api-Key: {{read-write-token}}
-Content-Type: application/json
+Accept: application/json
 
-{
-  "name": "Example Site",
-  "location": "CH, Winterthur"
-}
+  {
+    "name": "Test Role"
+  }
 
-### [Projects] Create or update a site with id (read–write)
-PUT {{api-server}}/v2/sites HTTP/1.1
+### [Users] Create/Update role with resources
+PUT {{api-server}}/v2/roles?expansions=Role.resources HTTP/1.1
 X-Api-Key: {{read-write-token}}
-Content-Type: application/json
+Accept: application/json
 
-{
-  "id": "291aedfd-f600-4eff-86ba-3dd2fecf24be",
-  "name": "Example Site",
-  "location": "DE, Berlin"
-}
+  {
+    "name": "Test Role",
+    "resources": [
+        {"path":"gui.asset.modeling","viewPermission":true,"editPermission":true,"managePermission":false},
+        {"path":"api.nodes","viewPermission":true,"editPermission":false,"managePermission":false}
+    ]
+  }

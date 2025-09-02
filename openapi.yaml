@@ -7393,7 +7393,14 @@ components:
           viewPermission: true
           managePermission: false
           editPermission: false
+        id: 4711
       properties:
+        id:
+          description: The internal Id of role
+          example: 4711
+          nullable: true
+          readOnly: true
+          type: integer
         name:
           description: Display name of the user role
           example: System user
