@@ -2,7 +2,7 @@ type: object
 description: An user
 required:
   - email
-  - role
+  - roleName
 properties:
   id:
     type: string
@@ -17,9 +17,8 @@ properties:
     example: peter.fox@example.com
   roleName:
     type: string
-    description: The name of the users role
-    example: Fox
-    nullable: true
+    description: The name of the user's role
+    example: System user
   firstname:
     type: string
     description: The user's firstname

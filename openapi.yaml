@@ -7346,7 +7346,7 @@ components:
       description: An user
       example:
         firstname: Peter
-        roleName: Fox
+        roleName: System user
         id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         email: peter.fox@example.com
         lastname: Fox
@@ -7362,9 +7362,8 @@ components:
           example: peter.fox@example.com
           type: string
         roleName:
-          description: The name of the users role
-          example: Fox
-          nullable: true
+          description: The name of the user's role
+          example: System user
           type: string
         firstname:
           description: The user's firstname
@@ -7378,7 +7377,7 @@ components:
           type: string
       required:
       - email
-      - role
+      - roleName
       type: object
     Role:
       description: A role that can assigned to users
