@@ -1,0 +1,26 @@
+#
+# Generate digest with https://www.freeformatter.com/message-digest.html and https://www.base64encode.org
+#
+# You can use https://httpsig.org/ to create Signature and Signature-Input. This side uses the following ed25519 key pair
+#
+# -----BEGIN PUBLIC KEY-----
+# MCowBQYDK2VwAyEAJrQLj5P/89iXES9+vFgrIy29clF9CC/oPPsw3c5D0bs=
+# -----END PUBLIC KEY-----
+#
+# Base64: JrQLj5P/89iXES9+vFgrIy29clF9CC/oPPsw3c5D0bs=
+#
+# -----BEGIN PRIVATE KEY-----
+# MC4CAQAwBQYDK2VwBCIEIJ+DYvh6SEqVTm50DFtMDoQikTmiCqirVv9mWG9qfSnF
+# -----END PRIVATE KEY-----
+#
+# Base64: n4Ni+HpISpVObnQMW0wOhCKROaIKqKtW/2ZYb2p9KcUmtAuPk//z2JcRL368WCsjLb1yUX0IL+g8+zDdzkPRuw==
+#
+
+### [Projects] Create new tenant
+PUT {{api-server}}/v2/tenants HTTP/1.1
+Content-Digest: sha-256=:ZohBcZuLugTsbrMw/G9r2uWgR00LJkRKAqPSsJ8t5eI=:
+Signature-Input: sig=("content-digest" "@path" "@method");keyid="a";alg="ed25519"
+Signature: sig=:dSKo5roKkJ+2FenozYZnhux3NpAgepx6C0NmxhcLMb8LFTZCatYlPhvd+SGd1jBnjrjP7wjvIuqv3OKj21G3DA==:
+Host: eliona.io
+
+{"name":"My tenat"}
