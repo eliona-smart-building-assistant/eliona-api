@@ -1,5 +1,4 @@
 get:
-  deprecated: true
   tags:
     - Users
   summary: Information about user roles
@@ -22,7 +21,6 @@ get:
             $ref: "../schemas/Role.yaml"
 
 put:
-  deprecated: true
   tags:
     - Users
   summary: Create or update a user role

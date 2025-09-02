@@ -1,5 +1,4 @@
 get:
-  deprecated: true
   tags:
     - Users
   summary: Information about a user role
