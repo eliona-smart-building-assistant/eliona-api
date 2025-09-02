@@ -1,0 +1,18 @@
+type: object
+description: A role that can assigned to users
+required:
+  - name
+properties:
+  name:
+    type: string
+    description: Display name of the user role
+    example: System user
+  resources:
+    type: array
+    description: List of user role's resources
+    nullable: true
+    items:
+      $ref: 'RoleResource.yaml'
+
+
+

@@ -1,0 +1,28 @@
+type: object
+description: Resource and resource permission for user roles
+required:
+  - name
+properties:
+  path:
+    type: string
+    description: Path name of the role resource
+    example: gui.platformCore.assetCore.modeling
+  viewPermission:
+    type: boolean
+    description: Role has view permission for this resource
+    nullable: true
+    default: false
+    example: true
+  editPermission:
+    type: boolean
+    description: Role has edit permission for this resource
+    nullable: true
+    default: false
+    example: false
+  managePermission:
+    type: boolean
+    description: Role has manage permission for this resource
+    nullable: true
+    default: false
+    example: false
+

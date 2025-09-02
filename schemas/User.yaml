@@ -2,12 +2,23 @@ type: object
 description: An user
 required:
   - email
+  - role
 properties:
   id:
     type: string
-    readOnly: true
+    format: uuid
     description: The internal ID of user
     example: 123
+    nullable: true
+    readOnly: true
+  email:
+    type: string
+    description: Address of the user
+    example: peter.fox@example.com
+  roleName:
+    type: string
+    description: The name of the users role
+    example: Fox
     nullable: true
   firstname:
     type: string
@@ -19,7 +30,4 @@ properties:
     description: The user's lastname
     example: Fox
     nullable: true
-  email:
-    type: string
-    description: Address of the user
-    example: peter.fox@example.com
+

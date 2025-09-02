@@ -1,0 +1,18 @@
+get:
+  deprecated: true
+  tags:
+    - Users
+  summary: Information about a user role
+  description: Gets information about a specific user role.
+  operationId: getProjectRoleByName
+  parameters:
+    - $ref: '../parameters/role-name.yaml'
+  responses:
+    '200':
+      description: Successfully returned the user role by name.
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Role.yaml'
+    '404':
+      description: User role with name not found

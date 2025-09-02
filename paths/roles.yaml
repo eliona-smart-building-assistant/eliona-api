@@ -1,0 +1,43 @@
+get:
+  deprecated: true
+  tags:
+    - Users
+  summary: Information about user roles
+  description: Retrieves a list of roles that can be assigned to users
+  operationId: getRoles
+  parameters:
+    - $ref: '../parameters/offset.yaml'
+    - $ref: '../parameters/size.yaml'
+  responses:
+    "200":
+      description: Successfully returned the list of user roles
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../schemas/Role.yaml"
+        application/x-ndjson:
+          schema:
+            $ref: "../schemas/Role.yaml"
+
+put:
+  deprecated: true
+  tags:
+    - Users
+  summary: Create or update a user role
+  description: Creates a new user role if none exists, or updates an existing one by its name
+  operationId: putRole
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/Role.yaml"
+  responses:
+    "200":
+      description: Successfully created or updated the user role
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Role.yaml"

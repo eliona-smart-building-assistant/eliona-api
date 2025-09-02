@@ -4181,6 +4181,93 @@ paths:
       summary: Information about a user
       tags:
       - Users
+  /roles:
+    get:
+      deprecated: true
+      description: Retrieves a list of roles that can be assigned to users
+      operationId: getRoles
+      parameters:
+      - description: |
+          Specifies the starting point for pagination by indicating the number of items to skip.
+        example: 3
+        in: query
+        name: offset
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: |
+          Specifies the number of items per page for pagination.
+        example: 10
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: "#/components/schemas/Role"
+                type: array
+            application/x-ndjson:
+              schema:
+                $ref: "#/components/schemas/Role"
+          description: Successfully returned the list of user roles
+      summary: Information about user roles
+      tags:
+      - Users
+    put:
+      deprecated: true
+      description: "Creates a new user role if none exists, or updates an existing\
+        \ one by its name"
+      operationId: putRole
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Role"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Role"
+          description: Successfully created or updated the user role
+      summary: Create or update a user role
+      tags:
+      - Users
+  /roles/{role-name}:
+    get:
+      deprecated: true
+      description: Gets information about a specific user role.
+      operationId: getProjectRoleByName
+      parameters:
+      - description: The name of the role
+        example: System user
+        in: path
+        name: role-name
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Role"
+          description: Successfully returned the user role by name.
+        "404":
+          description: User role with name not found
+      summary: Information about a user role
+      tags:
+      - Users
   /projects:
     get:
       deprecated: true
@@ -4584,7 +4671,7 @@ paths:
       operationId: getProjectRoleByName
       parameters:
       - description: The name of the role
-        example: readonly
+        example: System user
         in: path
         name: role-name
         required: true
@@ -5130,6 +5217,14 @@ components:
       schema:
         format: uuid
         type: string
+    role-name:
+      description: The name of the role
+      example: System user
+      in: path
+      name: role-name
+      required: true
+      schema:
+        type: string
     project-id:
       deprecated: true
       description: "The id of the project.  The project ID is deprecated due to the\
@@ -5169,14 +5264,6 @@ components:
       required: true
       schema:
         pattern: ^sha-256=:.+:$
-        type: string
-    role-name:
-      description: The name of the role
-      example: readonly
-      in: path
-      name: role-name
-      required: true
-      schema:
         type: string
     tag-name:
       description: The name of the tag
@@ -7225,15 +7312,25 @@ components:
       description: An user
       example:
         firstname: Peter
-        id: "123"
+        roleName: Fox
+        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         email: peter.fox@example.com
         lastname: Fox
       properties:
         id:
           description: The internal ID of user
-          example: "123"
+          format: uuid
           nullable: true
           readOnly: true
+          type: string
+        email:
+          description: Address of the user
+          example: peter.fox@example.com
+          type: string
+        roleName:
+          description: The name of the users role
+          example: Fox
+          nullable: true
           type: string
         firstname:
           description: The user's firstname
@@ -7245,12 +7342,36 @@ components:
           example: Fox
           nullable: true
           type: string
-        email:
-          description: Address of the user
-          example: peter.fox@example.com
-          type: string
       required:
       - email
+      - role
+      type: object
+    Role:
+      description: A role that can assigned to users
+      example:
+        name: System user
+        resources:
+        - path: gui.platformCore.assetCore.modeling
+          viewPermission: true
+          managePermission: false
+          editPermission: false
+        - path: gui.platformCore.assetCore.modeling
+          viewPermission: true
+          managePermission: false
+          editPermission: false
+      properties:
+        name:
+          description: Display name of the user role
+          example: System user
+          type: string
+        resources:
+          description: List of user role's resources
+          items:
+            $ref: "#/components/schemas/RoleResource"
+          nullable: true
+          type: array
+      required:
+      - name
       type: object
     Project:
       deprecated: true
@@ -7799,6 +7920,39 @@ components:
         mask:
         - 1
         - 1
+    RoleResource:
+      description: Resource and resource permission for user roles
+      example:
+        path: gui.platformCore.assetCore.modeling
+        viewPermission: true
+        managePermission: false
+        editPermission: false
+      properties:
+        path:
+          description: Path name of the role resource
+          example: gui.platformCore.assetCore.modeling
+          type: string
+        viewPermission:
+          default: false
+          description: Role has view permission for this resource
+          example: true
+          nullable: true
+          type: boolean
+        editPermission:
+          default: false
+          description: Role has edit permission for this resource
+          example: false
+          nullable: true
+          type: boolean
+        managePermission:
+          default: false
+          description: Role has manage permission for this resource
+          example: false
+          nullable: true
+          type: boolean
+      required:
+      - name
+      type: object
     ProjectUser:
       description: A project user
       example:
