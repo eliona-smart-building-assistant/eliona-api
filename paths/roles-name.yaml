@@ -4,7 +4,7 @@ get:
     - Users
   summary: Information about a user role
   description: Gets information about a specific user role.
-  operationId: getProjectRoleByName
+  operationId: getRoleByName
   parameters:
     - $ref: '../parameters/role-name.yaml'
   responses:

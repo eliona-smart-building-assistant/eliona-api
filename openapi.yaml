@@ -4247,7 +4247,7 @@ paths:
     get:
       deprecated: true
       description: Gets information about a specific user role.
-      operationId: getProjectRoleByName
+      operationId: getRoleByName
       parameters:
       - description: The name of the role
         example: System user
