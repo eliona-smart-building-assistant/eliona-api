@@ -5327,6 +5327,7 @@ components:
           type: string
         custom:
           default: true
+          deprecated: true
           description: Is this a customer created type or not
           type: boolean
         vendor:
