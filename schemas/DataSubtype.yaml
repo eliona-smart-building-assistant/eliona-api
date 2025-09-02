@@ -9,15 +9,3 @@ enum:
   - property
 example:
   input
-x-enum-descriptions:
-  - Input subtype for data values
-  - Info subtype for data values
-  - Status subtype for data values
-  - Output subtype for data values
-  - Property subtype for data values
-x-enum-varnames:
-  - SUBTYPE_INPUT
-  - SUBTYPE_INFO
-  - SUBTYPE_STATUS
-  - SUBTYPE_OUTPUT
-  - SUBTYPE_PROPERTY
