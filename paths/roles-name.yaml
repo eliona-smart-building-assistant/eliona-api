@@ -6,6 +6,7 @@ get:
   operationId: getRoleByName
   parameters:
     - $ref: '../parameters/role-name.yaml'
+    - $ref: '../parameters/expansions.yaml'
   responses:
     '200':
       description: Successfully returned the user role by name.

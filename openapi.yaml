@@ -4206,6 +4206,18 @@ paths:
           format: int64
           nullable: true
           type: integer
+      - description: "List of referenced data to load, insert or update. Each entry\
+          \ defines the full qualified name of the field to be expanded as follows\
+          \ 'ObjectName.fieldName'."
+        explode: false
+        in: query
+        name: expansions
+        required: false
+        schema:
+          items:
+            type: string
+          type: array
+        style: form
       responses:
         "200":
           content:
@@ -4225,6 +4237,19 @@ paths:
       description: "Creates a new user role if none exists, or updates an existing\
         \ one by its name"
       operationId: putRole
+      parameters:
+      - description: "List of referenced data to load, insert or update. Each entry\
+          \ defines the full qualified name of the field to be expanded as follows\
+          \ 'ObjectName.fieldName'."
+        explode: false
+        in: query
+        name: expansions
+        required: false
+        schema:
+          items:
+            type: string
+          type: array
+        style: form
       requestBody:
         content:
           application/json:
@@ -4253,6 +4278,18 @@ paths:
         required: true
         schema:
           type: string
+      - description: "List of referenced data to load, insert or update. Each entry\
+          \ defines the full qualified name of the field to be expanded as follows\
+          \ 'ObjectName.fieldName'."
+        explode: false
+        in: query
+        name: expansions
+        required: false
+        schema:
+          items:
+            type: string
+          type: array
+        style: form
       responses:
         "200":
           content:

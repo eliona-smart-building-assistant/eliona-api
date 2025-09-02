@@ -7,6 +7,7 @@ get:
   parameters:
     - $ref: '../parameters/offset.yaml'
     - $ref: '../parameters/size.yaml'
+    - $ref: '../parameters/expansions.yaml'
   responses:
     "200":
       description: Successfully returned the list of user roles
@@ -26,6 +27,8 @@ put:
   summary: Create or update a user role
   description: Creates a new user role if none exists, or updates an existing one by its name
   operationId: putRole
+  parameters:
+    - $ref: '../parameters/expansions.yaml'
   requestBody:
     required: true
     content:
