@@ -22,7 +22,7 @@ delete:
     - Users
   summary: Delete a user role
   description: Deletes a user role
-  operationId: deleteRoleById
+  operationId: deleteRoleByName
   parameters:
     - $ref: '../parameters/role-name.yaml'
   responses:

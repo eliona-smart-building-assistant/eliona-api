@@ -4279,7 +4279,7 @@ paths:
   /roles/{role-name}:
     delete:
       description: Deletes a user role
-      operationId: deleteRoleById
+      operationId: deleteRoleByName
       parameters:
       - description: The name of the role
         example: System user
