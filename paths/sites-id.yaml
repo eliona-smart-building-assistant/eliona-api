@@ -1,5 +1,4 @@
 get:
-  deprecated: true
   tags:
     - Sites
   summary: Information about a site
@@ -15,5 +14,19 @@ get:
         application/json:
           schema:
             $ref: '../schemas/Site.yaml'
+    404:
+      description: Site with id not found
+
+delete:
+  tags:
+    - Sites
+  summary: Delete a site
+  description: Deletes a site
+  operationId: deleteSiteById
+  parameters:
+    - $ref: '../parameters/site-id.yaml'
+  responses:
+    204:
+      description: Successfully deleted the site
     404:
       description: Site with id not found

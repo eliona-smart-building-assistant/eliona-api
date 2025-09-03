@@ -29,7 +29,7 @@ delete:
     204:
       description: Successfully deleted the asset
     404:
-      description: Asset type with id not found
+      description: Asset with id not found
 
 put:
   deprecated: true

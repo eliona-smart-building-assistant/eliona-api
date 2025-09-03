@@ -22,3 +22,13 @@ put:
         application/json:
           schema:
             $ref: '../schemas/Tenant.yaml'
+
+delete:
+  tags:
+    - Eliona
+  summary: Delete the current tenant
+  description: Deletes the current tenant
+  operationId: deleteTenant
+  responses:
+    204:
+      description: Successfully deleted the tenant

@@ -16,3 +16,17 @@ get:
             $ref: '../schemas/Role.yaml'
     '404':
       description: User role with name not found
+
+delete:
+  tags:
+    - Sites
+  summary: Delete a site
+  description: Deletes a site
+  operationId: deleteSiteById
+  parameters:
+    - $ref: '../parameters/site-id.yaml'
+  responses:
+    204:
+      description: Successfully deleted the site
+    404:
+      description: Site with id not found

@@ -1,5 +1,4 @@
 get:
-  deprecated: true
   tags:
     - Sites
   summary: Information about sites
@@ -23,7 +22,6 @@ get:
             $ref: "../schemas/Site.yaml"
 
 put:
-  deprecated: true
   tags:
     - Sites
   summary: Create or update a site
