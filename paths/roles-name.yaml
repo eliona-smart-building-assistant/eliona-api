@@ -19,14 +19,14 @@ get:
 
 delete:
   tags:
-    - Sites
-  summary: Delete a site
-  description: Deletes a site
-  operationId: deleteSiteById
+    - Users
+  summary: Delete a user role
+  description: Deletes a user role
+  operationId: deleteRoleById
   parameters:
-    - $ref: '../parameters/site-id.yaml'
+    - $ref: '../parameters/role-name.yaml'
   responses:
     204:
-      description: Successfully deleted the site
+      description: Successfully deleted the role
     404:
-      description: Site with id not found
+      description: User role with name not found

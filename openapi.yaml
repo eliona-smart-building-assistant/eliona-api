@@ -4278,25 +4278,24 @@ paths:
       - Users
   /roles/{role-name}:
     delete:
-      description: Deletes a site
-      operationId: deleteSiteById
+      description: Deletes a user role
+      operationId: deleteRoleById
       parameters:
-      - description: The id of the site
-        example: 69133767-7de1-4134-9130-5f5403e1ee98
+      - description: The name of the role
+        example: System user
         in: path
-        name: site-id
+        name: role-name
         required: true
         schema:
-          format: uuid
           type: string
       responses:
         "204":
-          description: Successfully deleted the site
+          description: Successfully deleted the role
         "404":
-          description: Site with id not found
-      summary: Delete a site
+          description: User role with name not found
+      summary: Delete a user role
       tags:
-      - Sites
+      - Users
     get:
       description: Gets information about a specific user role.
       operationId: getRoleByName
@@ -5315,15 +5314,6 @@ components:
       required: true
       schema:
         type: string
-    site-id:
-      description: The id of the site
-      example: 69133767-7de1-4134-9130-5f5403e1ee98
-      in: path
-      name: site-id
-      required: true
-      schema:
-        format: uuid
-        type: string
     project-id:
       deprecated: true
       description: "The id of the project.  The project ID is deprecated due to the\
@@ -5332,6 +5322,15 @@ components:
       example: 69133767-7de1-4134-9130-5f5403e1ee98
       in: path
       name: project-id
+      required: true
+      schema:
+        format: uuid
+        type: string
+    site-id:
+      description: The id of the site
+      example: 69133767-7de1-4134-9130-5f5403e1ee98
+      in: path
+      name: site-id
       required: true
       schema:
         format: uuid
