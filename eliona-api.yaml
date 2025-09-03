@@ -19,10 +19,9 @@ info:
   version: 2.10.0
   title: Eliona REST API
   description: "The Eliona REST API provides unified access to the resources and data\
-    \ within an Eliona environment.<br> <br> This documentation corresponds to Eliona\
-    \ release 15.0. For previous Eliona releases, please refer to the matching REST\
+    \ within an Eliona environment.<br> <br> This documentation corresponds to the next Eliona\
+    \ release. For previous Eliona releases, please refer to the matching REST\
     \ API version below:<br><br>\ 
-    \ Eliona v15.0: [2.10.0](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/heads/develop/openapi.yaml)<br>\
     \ Eliona v14.2: [2.9.4](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.9.4/openapi.yaml)<br>\
     \ Eliona v14.1: [2.9.4](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.9.4/openapi.yaml)<br>\
     \ Eliona v14.0: [2.8.7](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.8.7/openapi.yaml)<br>\
