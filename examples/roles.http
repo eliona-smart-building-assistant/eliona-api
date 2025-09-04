@@ -1,0 +1,38 @@
+### [Users] List all roles (read-only)
+GET {{api-server}}/v2/roles HTTP/1.1
+X-Api-Key: {{read-only-token}}
+
+### [Users] Stream all roles with resources (read-only)
+GET {{api-server}}/v2/roles?expansions=Role.resources HTTP/1.1
+X-Api-Key: {{read-only-token}}
+Accept: application/x-ndjson
+
+### [Users] Select role by name (read-only)
+GET {{api-server}}/v2/roles/Test Role?expansions=Role.resources HTTP/1.1
+X-Api-Key: {{read-only-token}}
+
+### [Users] Create/Update role without resources
+DELETE {{api-server}}/v2/roles/Test Role HTTP/1.1
+X-Api-Key: {{read-write-token}}
+
+### [Users] Create/Update role without resources
+PUT {{api-server}}/v2/roles HTTP/1.1
+X-Api-Key: {{read-write-token}}
+Accept: application/json
+
+  {
+    "name": "Test Role"
+  }
+
+### [Users] Create/Update role with resources
+PUT {{api-server}}/v2/roles?expansions=Role.resources HTTP/1.1
+X-Api-Key: {{read-write-token}}
+Accept: application/json
+
+  {
+    "name": "Test Role",
+    "resources": [
+        {"path":"gui.asset.modeling","viewPermission":true,"editPermission":true,"managePermission":false},
+        {"path":"api.nodes","viewPermission":true,"editPermission":false,"managePermission":false}
+    ]
+  }

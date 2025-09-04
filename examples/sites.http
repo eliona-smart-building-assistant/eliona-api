@@ -1,17 +1,21 @@
-### [Projects] List all sites (read-only)
+### [Sites] List all sites (read-only)
 GET {{api-server}}/v2/sites HTTP/1.1
 X-Api-Key: {{read-only-token}}
 
-### [Projects] Stream all sites (read-only)
+### [Sites] Stream all sites (read-only)
 GET {{api-server}}/v2/sites HTTP/1.1
 X-Api-Key: {{read-only-token}}
 Accept: application/x-ndjson
 
-### [Projects] Get site by ID (read-only)
-GET {{api-server}}/v2/sites/b9fdae2d-a01b-4fbf-80ff-9d4fa075a5ac HTTP/1.1
+### [Sites] Get site by ID (read-only)
+GET {{api-server}}/v2/sites/99999999-9999-9999-9999-999999999999 HTTP/1.1
 X-Api-Key: {{read-only-token}}
 
-### [Projects] Create a site (read–write)
+### [Sites] Delete site by ID (read-write)
+DELETE {{api-server}}/v2/sites/99999999-9999-9999-9999-999999999999 HTTP/1.1
+X-Api-Key: {{read-write-token}}
+
+### [Sites] Create a site (read–write)
 PUT {{api-server}}/v2/sites HTTP/1.1
 X-Api-Key: {{read-write-token}}
 Content-Type: application/json
@@ -21,7 +25,7 @@ Content-Type: application/json
   "location": "CH, Winterthur"
 }
 
-### [Projects] Create or update a site with id (read–write)
+### [Sites] Create or update a site with id (read–write)
 PUT {{api-server}}/v2/sites HTTP/1.1
 X-Api-Key: {{read-write-token}}
 Content-Type: application/json

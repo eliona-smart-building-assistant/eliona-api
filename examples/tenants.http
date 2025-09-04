@@ -16,7 +16,7 @@
 # Base64: n4Ni+HpISpVObnQMW0wOhCKROaIKqKtW/2ZYb2p9KcUmtAuPk//z2JcRL368WCsjLb1yUX0IL+g8+zDdzkPRuw==
 #
 
-### [Projects] Create new tenant
+### [Tenants] Create new tenant
 PUT {{api-server}}/v2/tenants HTTP/1.1
 Content-Digest: sha-256=:ZohBcZuLugTsbrMw/G9r2uWgR00LJkRKAqPSsJ8t5eI=:
 Signature-Input: sig=("content-digest" "@path" "@method");keyid="a";alg="ed25519"
@@ -24,3 +24,7 @@ Signature: sig=:dSKo5roKkJ+2FenozYZnhux3NpAgepx6C0NmxhcLMb8LFTZCatYlPhvd+SGd1jBn
 Host: eliona.io
 
 {"name":"My tenat"}
+
+### [Tenants] Delete current tenant
+DELETE {{api-server}}/v2/tenants HTTP/1.1
+X-Api-Key: {{read-write-token}}
