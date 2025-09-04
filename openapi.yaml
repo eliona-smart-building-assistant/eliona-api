@@ -17,7 +17,7 @@ info:
     \ Eliona v12.0: [2.6.1](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.6.1/openapi.yaml)<br>\
     \ [Preview Beta](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/heads/develop/openapi.yaml)<br> "
   license:
-    name: MIT License
+    name: MIT
   title: Eliona REST API
   version: 2.10.0
 externalDocs:

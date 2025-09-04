@@ -36,7 +36,7 @@ info:
     url: https://eliona.io
     email: hello@eliona.io
   license:
-    name: MIT License
+    name: MIT
 externalDocs:
   description: Find out more about Eliona App SDK
   url: https://github.com/eliona-smart-building-assistant
