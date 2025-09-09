@@ -7504,7 +7504,12 @@ components:
       description: A site
       example:
         name: My Project
-        location: "CH, Winterthur"
+        location:
+          city: Winterthur
+          country: CH
+          street: Harzachstrasse 5
+          apartment: "1"
+          zip: "8404"
         id: 69133767-7de1-4134-9130-5f5403e1ee98
       properties:
         id:
@@ -7519,9 +7524,14 @@ components:
           type: string
         location:
           description: The location of the site
-          example: "CH, Winterthur"
+          example:
+            city: Winterthur
+            country: CH
+            street: Harzachstrasse 5
+            apartment: "1"
+            zip: "8404"
           nullable: true
-          type: string
+          type: object
       required:
       - title
       type: object

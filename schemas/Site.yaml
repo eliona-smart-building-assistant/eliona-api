@@ -14,7 +14,13 @@ properties:
     description: The title of the site
     example: My Project
   location:
-    type: string
-    description: The location of the site
-    example: CH, Winterthur
+    type: object
     nullable: true
+    description: The location of the site
+    example: {
+      "city": "Winterthur",
+      "country": "CH",
+      "street": "Harzachstrasse 5",
+      "apartment": "1",
+      "zip": "8404"
+    }
