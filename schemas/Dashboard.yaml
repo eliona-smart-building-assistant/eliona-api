@@ -3,7 +3,6 @@ description: A frontend dashboard
 required:
   - name
   - userId
-  - siteId
 properties:
   id:
     type: integer
@@ -19,11 +18,6 @@ properties:
     type: string
     description: ID of the user who owns the dashboard
     example: 42
-  siteId:
-    type: string
-    format: uuid
-    description: ID of the site to which the dashboard belongs
-    example: 69133767-7de1-4134-9130-5f5403e1ee98
   sequence:
     type: integer
     description: The sequence of the dashboard

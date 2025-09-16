@@ -2,6 +2,10 @@
 GET {{api-server}}/v2/dashboards?expansions=Dashboard.widgets HTTP/1.1
 X-Api-Key: {{read-only-token}}
 
+### [Dashboards] List dashboard with expansion (read-only)
+GET {{api-server}}/v2/dashboards/21?expansions=Dashboard.widgets,Widget.data HTTP/1.1
+X-Api-Key: {{read-only-token}}
+
 ### [Dashboards] Create a new dashboard with public flag (read–write)
 POST {{api-server}}/v2/dashboards HTTP/1.1
 X-Api-Key: {{read-write-token}}

@@ -6620,7 +6620,6 @@ components:
         sequence: 1
         public: false
         name: Weather info
-        siteId: 69133767-7de1-4134-9130-5f5403e1ee98
         id: 4711
         widgets:
         - sequence: 1
@@ -6680,11 +6679,6 @@ components:
           description: ID of the user who owns the dashboard
           example: "42"
           type: string
-        siteId:
-          description: ID of the site to which the dashboard belongs
-          example: 69133767-7de1-4134-9130-5f5403e1ee98
-          format: uuid
-          type: string
         sequence:
           default: 0
           deprecated: true
@@ -6716,7 +6710,6 @@ components:
           type: string
       required:
       - name
-      - siteId
       - userId
       type: object
     Widget:
