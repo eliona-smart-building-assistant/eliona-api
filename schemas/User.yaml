@@ -29,4 +29,9 @@ properties:
     description: The user's lastname
     example: Fox
     nullable: true
+  password:
+    type: string
+    description: The users initial password
+    writeOnly: true
+    nullable: true
 

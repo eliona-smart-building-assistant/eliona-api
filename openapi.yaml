@@ -7360,6 +7360,7 @@ components:
       description: An user
       example:
         firstname: Peter
+        password: password
         roleName: System user
         id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         email: peter.fox@example.com
@@ -7389,6 +7390,11 @@ components:
           example: Fox
           nullable: true
           type: string
+        password:
+          description: The users initial password
+          nullable: true
+          type: string
+          writeOnly: true
       required:
       - email
       - roleName
