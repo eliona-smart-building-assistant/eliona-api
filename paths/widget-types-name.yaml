@@ -32,6 +32,7 @@ delete:
       description: Widget type with name not found
 
 put:
+  deprecated: true
   tags:
     - Widgets types
   summary: Update a widget type

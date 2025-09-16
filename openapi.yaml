@@ -2259,6 +2259,7 @@ paths:
       tags:
       - Widgets types
     put:
+      deprecated: true
       description: Update a widget type.
       operationId: putWidgetTypeByName
       parameters:

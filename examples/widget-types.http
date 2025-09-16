@@ -1,5 +1,5 @@
 ### [Widget types] List widget types (read-only)
-GET {{api-server}}/v2/widget-types HTTP/1.1
+GET {{api-server}}/v2/widget-types/test_widget_type?expansions=WidgetType.elements HTTP/1.1
 X-Api-Key: {{read-only-token}}
 
 ### [Widget types] Create or update a new widget type with multiple elements (read–write)
