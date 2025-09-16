@@ -2258,48 +2258,6 @@ paths:
       summary: Information about a widget type
       tags:
       - Widgets types
-    put:
-      deprecated: true
-      description: Update a widget type.
-      operationId: putWidgetTypeByName
-      parameters:
-      - description: The name of the widget type
-        example: weather
-        in: path
-        name: widget-type-name
-        required: true
-        schema:
-          type: string
-      - description: "List of referenced data to load, insert or update. Each entry\
-          \ defines the full qualified name of the field to be expanded as follows\
-          \ 'ObjectName.fieldName'."
-        explode: false
-        in: query
-        name: expansions
-        required: false
-        schema:
-          items:
-            type: string
-          type: array
-        style: form
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/WidgetType"
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/WidgetType"
-          description: Successfully updated widget type
-        "404":
-          description: Widget type with name not found
-      summary: Update a widget type
-      tags:
-      - Widgets types
   /dashboards:
     get:
       description: Gets a list of dashboards
