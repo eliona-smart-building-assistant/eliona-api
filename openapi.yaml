@@ -201,6 +201,12 @@ paths:
         required: false
         schema:
           type: boolean
+      - description: Sets the current version that is running and initialized
+        in: query
+        name: version
+        required: false
+        schema:
+          type: string
       responses:
         "200":
           description: Successfully updated the app
@@ -5327,31 +5333,33 @@ components:
       example:
         metadata: "{}"
         name: weather
-        active: true
         registered: true
+        active: true
         version: v3.2.1
       properties:
         name:
           description: Name of the app
           example: weather
           type: string
-        active:
-          description: Is the app active or inactive
-          nullable: true
-          type: boolean
         registered:
           description: Is the app already registered or not
           nullable: true
           type: boolean
-        metadata:
-          description: Delivers the apps metadata to handle it in the app store
-          nullable: true
-          type: object
         version:
-          description: the apps version
+          description: The current installed version of the app
           example: v3.2.1
           nullable: true
           type: string
+        active:
+          deprecated: true
+          description: Is the app active or inactive
+          nullable: true
+          type: boolean
+        metadata:
+          deprecated: true
+          description: Delivers the apps metadata to handle it in the app store
+          nullable: true
+          type: object
       required:
       - name
       type: object

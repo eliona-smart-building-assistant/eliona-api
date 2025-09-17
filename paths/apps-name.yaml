@@ -28,6 +28,12 @@ patch:
       description: "Marks that the app is now initialized and installed. Further request to get app information returns { \"registered\": true }"
       schema:
         type: boolean
+    - name: version
+      in: query
+      required: false
+      description: Sets the current version that is running and initialized
+      schema:
+        type: string
   responses:
     200:
       description: Successfully updated the app

@@ -7,20 +7,22 @@ properties:
     type: string
     description: Name of the app
     example: weather
-  active:
-    type: boolean
-    description: Is the app active or inactive
-    nullable: true
   registered:
     type: boolean
     description: Is the app already registered or not
     nullable: true
+  version:
+    type: string
+    description: The current installed version of the app
+    nullable: true
+    example: v3.2.1
+  active:
+    deprecated: true
+    type: boolean
+    description: Is the app active or inactive
+    nullable: true
   metadata:
+    deprecated: true
     type: object
     description: Delivers the apps metadata to handle it in the app store
     nullable: true
-  version:
-    type: string
-    description: the apps version
-    nullable: true
-    example: v3.2.1
