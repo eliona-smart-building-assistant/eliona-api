@@ -150,6 +150,7 @@ properties:
     items:
       type: object
   sourcePath:
+    deprecated: true
     type: array
     description: source path for attribute value
     nullable: true

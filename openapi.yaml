@@ -5704,6 +5704,7 @@ components:
           nullable: true
           type: array
         sourcePath:
+          deprecated: true
           description: source path for attribute value
           items:
             type: string
