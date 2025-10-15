@@ -7172,8 +7172,8 @@ components:
     Agent:
       description: An agent installed on an edge node
       example:
-        assetId: 4711
         enable: false
+        assetId: 4711
         description: IOSYS Agent east plant
         id: 4711
         nodeId: fef0a0d3-acad-4611-ac03-1fd842d72505
@@ -7192,11 +7192,6 @@ components:
           format: uuid
           nullable: true
           type: string
-        assetId:
-          description: ID of the corresponding asset
-          example: 4711
-          nullable: true
-          type: integer
         class:
           allOf:
           - $ref: "#/components/schemas/AgentClass"
@@ -7215,6 +7210,12 @@ components:
           example: {}
           nullable: true
           type: object
+        assetId:
+          deprecated: true
+          description: ID of the corresponding asset
+          example: 4711
+          nullable: true
+          type: integer
       type: object
     AgentDevice:
       $ref: "#/components/schemas/IosysAgentDevice"

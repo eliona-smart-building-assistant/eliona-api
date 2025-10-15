@@ -13,11 +13,6 @@ properties:
     description: Id of the node where the agent is installed
     nullable: true
     example: fef0a0d3-acad-4611-ac03-1fd842d72505
-  assetId:
-    type: integer
-    description: ID of the corresponding asset
-    example: 4711
-    nullable: true
   class:
     nullable: true
     allOf:
@@ -36,3 +31,9 @@ properties:
     nullable: true
     description: Individual configuration depending on agent class
     example: {}
+  assetId:
+    deprecated: true
+    type: integer
+    description: ID of the corresponding asset
+    example: 4711
+    nullable: true
