@@ -19,7 +19,7 @@ info:
   license:
     name: MIT
   title: Eliona REST API
-  version: 2.10.0
+  version: 2.10.1
 externalDocs:
   description: Find out more about Eliona App SDK
   url: https://github.com/eliona-smart-building-assistant
@@ -1546,6 +1546,36 @@ paths:
                 $ref: "#/components/schemas/ErrorMessage422"
           description: Issues arisen during the creation or updating
       summary: Create or update historical data
+      tags:
+      - Data
+  /data-trend-bulk:
+    put:
+      description: "This creates or updates multiple historical data. The choice between\
+        \ updating or creating depends on whether the historical \ndata for assetId,\
+        \ subtype, parameter and timestamp already exists.\n"
+      operationId: putBulkDataTrend
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: "#/components/schemas/Data"
+              type: array
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Data"
+          description: Successfully created new or updated multiple historical data
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorMessage422"
+          description: Issues arisen during the creation or updating
+      summary: Create or update multiple historical data
       tags:
       - Data
   /data-trend/{asset-id}:

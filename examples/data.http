@@ -7,15 +7,15 @@ GET {{api-server}}/v2/data?assetId=4711&parentAssetId=4700&dataSubtype=info HTTP
 X-Api-Key: {{read-only-token}}
 
 ### [Data] Create or update asset data with a client reference (read–write)
-PUT {{api-server}}/v2/data?directMode=true HTTP/1.1
+PUT {{api-server}}/v2/data HTTP/1.1
 X-Api-Key: {{read-write-token}}
 Content-Type: application/json
 
 {
-  "assetId": 64609,
+  "assetId": 552,
   "subtype": "input",
   "data": {
-    "Counter": 1234
+    "durchschnitt_alarme_Erdwärmepumpe": 1112
   },
   "clientReference": "ABC123"
 }
