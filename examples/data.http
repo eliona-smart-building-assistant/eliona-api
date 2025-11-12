@@ -43,3 +43,29 @@ Content-Type: application/json
   "timestamp": "2025-03-25T13:13:14.001Z",
   "clientReference": "ABC123"
 }
+
+### [Data] Put several historical data for an asset in bulk (bulk-data-trend)
+PUT {{api-server}}/v2/data-trend-bulk HTTP/1.1
+X-Api-Key: {{read-write-token}}
+Content-Type: application/json
+
+[
+    {
+        "assetId": 64609,
+        "subtype": "input",
+        "data": {
+        "Counter": 680
+        },
+        "timestamp": "2025-03-25T13:13:14.001Z",
+        "clientReference": "ABC123"
+    },
+    {
+        "assetId": 64609,
+        "subtype": "output",
+        "data": {
+          "Counter": 680
+        },
+        "timestamp": "2025-03-25T13:13:14.001Z",
+        "clientReference": "ABC123"
+    }
+]
