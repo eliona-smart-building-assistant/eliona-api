@@ -8,10 +8,11 @@ X-Api-Key: {{read-write-token}}
 Content-Type: application/json
 
 {
-  "ident": "fef0a0d3-acad-4611-ac03-1fd842d72505",
+  "id": "fef0a0d3-acad-4611-ac03-1fd842d72505",
   "assetId": 4711,
   "vendor": "VendorName",
   "model": "NodeModelX",
+  "siteId": "dec66ddd-7368-4725-8b79-fa20676a9bc8",
   "description": "Edge node for West Plant",
   "enable": true
 }
@@ -27,8 +28,8 @@ Content-Type: application/json
 
 {
   "ident": "fef0a0d3-acad-4611-ac03-1fd842d72505",
-  "assetId": 4711,
   "vendor": "VendorName",
+  "siteId": "dec66ddd-7368-4725-8b79-fa20676a9bc8",
   "model": "NodeModelX",
   "description": "Updated description for node at West Plant",
   "enable": true
