@@ -7148,10 +7148,11 @@ components:
       description: An edge node
       example:
         password: password
-        ident: fef0a0d3-acad-4611-ac03-1fd842d72505
-        assetId: 4711
         vendor: vendor
         enable: false
+        assetId: 4711
+        ident: fef0a0d3-acad-4611-ac03-1fd842d72505
+        siteId: 69133767-7de1-4134-9130-5f5403e1ee98
         description: Node east plant
         model: model
         id: fef0a0d3-acad-4611-ac03-1fd842d72505
@@ -7163,24 +7164,12 @@ components:
           nullable: true
           readOnly: true
           type: string
-        ident:
-          deprecated: true
-          description: UUID to identify the edge node
-          example: fef0a0d3-acad-4611-ac03-1fd842d72505
+        siteId:
+          description: ID of the site to which the node belongs
+          example: 69133767-7de1-4134-9130-5f5403e1ee98
           format: uuid
           nullable: true
-          readOnly: true
           type: string
-        password:
-          deprecated: true
-          description: Password with which the node identifies itself
-          nullable: true
-          type: string
-        assetId:
-          description: ID of the corresponding asset
-          example: 4711
-          nullable: true
-          type: integer
         vendor:
           description: Vendor name
           nullable: true
@@ -7198,6 +7187,25 @@ components:
           default: false
           description: Is the node enabled or not
           type: boolean
+        assetId:
+          deprecated: true
+          description: ID of the corresponding asset
+          example: 4711
+          nullable: true
+          type: integer
+        ident:
+          deprecated: true
+          description: UUID to identify the edge node
+          example: fef0a0d3-acad-4611-ac03-1fd842d72505
+          format: uuid
+          nullable: true
+          readOnly: true
+          type: string
+        password:
+          deprecated: true
+          description: Password with which the node identifies itself
+          nullable: true
+          type: string
       type: object
     Agent:
       description: An agent installed on an edge node

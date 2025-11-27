@@ -54,7 +54,8 @@ Content-Type: application/json
         "assetId": 64609,
         "subtype": "input",
         "data": {
-        "Counter": 680
+          "Counter": 680,
+          "Counter2": 681
         },
         "timestamp": "2025-03-25T13:13:14.001Z",
         "clientReference": "ABC123"

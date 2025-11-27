@@ -8,23 +8,11 @@ properties:
     nullable: true
     readOnly: true
     example: fef0a0d3-acad-4611-ac03-1fd842d72505
-  ident:
-    deprecated: true
+  siteId:
     type: string
     format: uuid
-    description: UUID to identify the edge node
-    nullable: true
-    readOnly: true
-    example: fef0a0d3-acad-4611-ac03-1fd842d72505
-  password:
-    type: string
-    description: Password with which the node identifies itself
-    nullable: true
-    deprecated: true
-  assetId:
-    type: integer
-    description: ID of the corresponding asset
-    example: 4711
+    description: ID of the site to which the node belongs
+    example: 69133767-7de1-4134-9130-5f5403e1ee98
     nullable: true
   vendor:
     type: string
@@ -43,3 +31,22 @@ properties:
     type: boolean
     description: Is the node enabled or not
     default: false
+  assetId:
+    deprecated: true
+    type: integer
+    description: ID of the corresponding asset
+    example: 4711
+    nullable: true
+  ident:
+    deprecated: true
+    type: string
+    format: uuid
+    description: UUID to identify the edge node
+    nullable: true
+    readOnly: true
+    example: fef0a0d3-acad-4611-ac03-1fd842d72505
+  password:
+    type: string
+    description: Password with which the node identifies itself
+    nullable: true
+    deprecated: true
