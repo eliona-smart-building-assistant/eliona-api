@@ -549,7 +549,7 @@
 					"response": []
 				},
 				{
-					"name": "[Nodes] Get node by ident (read-only)",
+					"name": "[Nodes] Get node by id (read-only)",
 					"request": {
 						"method": "GET",
 						"header": [],

@@ -4,8 +4,8 @@ get:
   summary: Information about a node
   description: Gets information about a node.
   parameters:
-    - $ref: '../parameters/node-ident.yaml'
-  operationId: getNodeByIdent
+    - $ref: '../parameters/node-id.yaml'
+  operationId: getNodeById
   responses:
     200:
       description: Successfully returned a node
@@ -14,16 +14,16 @@ get:
           schema:
             $ref: '../schemas/Node.yaml'
     404:
-      description: Node ident not found
+      description: Node id not found
 
 put:
   tags:
     - Nodes
   summary: Update a node
   description: Update a node.
-  operationId: putNodeByIdent
+  operationId: putNodeById
   parameters:
-    - $ref: '../parameters/node-ident.yaml'
+    - $ref: '../parameters/node-id.yaml'
   requestBody:
     required: true
     content:
@@ -38,4 +38,4 @@ put:
           schema:
             $ref: '../schemas/Node.yaml'
     404:
-      description: Node ident not found
+      description: Node id not found

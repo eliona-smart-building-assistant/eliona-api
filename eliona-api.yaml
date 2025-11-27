@@ -197,8 +197,8 @@ paths:
   /nodes:
     $ref: './paths/nodes.yaml'
 
-  /nodes/{node-ident}:
-    $ref: './paths/nodes-ident.yaml'
+  /nodes/{node-id}:
+    $ref: './paths/nodes-id.yaml'
 
   /agents:
     $ref: './paths/agents.yaml'

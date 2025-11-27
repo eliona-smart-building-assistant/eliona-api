@@ -16,7 +16,7 @@ Content-Type: application/json
   "enable": true
 }
 
-### [Nodes] Get node by ident (read-only)
+### [Nodes] Get node by id (read-only)
 GET {{api-server}}/v2/nodes/fef0a0d3-acad-4611-ac03-1fd842d72505 HTTP/1.1
 X-Api-Key: {{read-only-token}}
 

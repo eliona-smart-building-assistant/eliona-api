@@ -3365,9 +3365,7 @@ paths:
       tags:
       - Nodes
     put:
-      deprecated: true
-      description: "Deprecated - Use POST /nodes to create PUT /nodes/{node-ident}\
-        \ to update."
+      description: Create or update a node
       operationId: putNode
       requestBody:
         content:
@@ -3385,15 +3383,15 @@ paths:
       summary: Create or update a node
       tags:
       - Nodes
-  /nodes/{node-ident}:
+  /nodes/{node-id}:
     get:
       description: Gets information about a node.
-      operationId: getNodeByIdent
+      operationId: getNodeById
       parameters:
       - description: The UUID identifier of the node
         example: 69133767-7de1-4134-9130-5f5403e1ee98
         in: path
-        name: node-ident
+        name: node-id
         required: true
         schema:
           format: uuid
@@ -3406,18 +3404,18 @@ paths:
                 $ref: "#/components/schemas/Node"
           description: Successfully returned a node
         "404":
-          description: Node ident not found
+          description: Node id not found
       summary: Information about a node
       tags:
       - Nodes
     put:
       description: Update a node.
-      operationId: putNodeByIdent
+      operationId: putNodeById
       parameters:
       - description: The UUID identifier of the node
         example: 69133767-7de1-4134-9130-5f5403e1ee98
         in: path
-        name: node-ident
+        name: node-id
         required: true
         schema:
           format: uuid
@@ -3436,7 +3434,7 @@ paths:
                 $ref: "#/components/schemas/Node"
           description: Successfully updated an existing node
         "404":
-          description: Node ident not found
+          description: Node id not found
       summary: Update a node
       tags:
       - Nodes
@@ -5241,11 +5239,11 @@ components:
           type: string
         type: array
       style: form
-    node-ident:
+    node-id:
       description: The UUID identifier of the node
       example: 69133767-7de1-4134-9130-5f5403e1ee98
       in: path
-      name: node-ident
+      name: node-id
       required: true
       schema:
         format: uuid

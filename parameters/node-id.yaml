@@ -1,4 +1,4 @@
-name: node-ident
+name: node-id
 in: path
 description: The UUID identifier of the node
 example: 69133767-7de1-4134-9130-5f5403e1ee98
