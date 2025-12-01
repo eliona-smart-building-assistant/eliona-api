@@ -161,118 +161,6 @@ paths:
       summary: OpenAPI specification for this API version
       tags:
       - Version
-  /apps/{app-name}:
-    get:
-      description: Gets information about an app.
-      operationId: getAppByName
-      parameters:
-      - description: The name of the app
-        example: weather
-        in: path
-        name: app-name
-        required: true
-        schema:
-          type: string
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/App"
-          description: Successfully returned information about an app.
-      summary: Information about an app
-      tags:
-      - Apps
-    patch:
-      description: Update properties of an app.
-      operationId: patchAppByName
-      parameters:
-      - description: The name of the app
-        example: weather
-        in: path
-        name: app-name
-        required: true
-        schema:
-          type: string
-      - description: "Marks that the app is now initialized and installed. Further\
-          \ request to get app information returns { \"registered\": true }"
-        in: query
-        name: registered
-        required: false
-        schema:
-          type: boolean
-      - description: Sets the current version that is running and initialized
-        in: query
-        name: version
-        required: false
-        schema:
-          type: string
-      responses:
-        "200":
-          description: Successfully updated the app
-      summary: Update an app
-      tags:
-      - Apps
-  /apps/{app-name}/patches/{patch-name}:
-    get:
-      description: Gets information about a patch for an app.
-      operationId: getPatchByName
-      parameters:
-      - description: The name of the app
-        example: weather
-        in: path
-        name: app-name
-        required: true
-        schema:
-          type: string
-      - description: The name of the patch
-        example: 2.0.0
-        in: path
-        name: patch-name
-        required: true
-        schema:
-          type: string
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Patch"
-          description: Successfully returned information about a patch for an app
-      summary: Information about a patch for an app
-      tags:
-      - Apps
-    patch:
-      description: Updates properties of a patch for an app.
-      operationId: patchPatchByName
-      parameters:
-      - description: The name of the app
-        example: weather
-        in: path
-        name: app-name
-        required: true
-        schema:
-          type: string
-      - description: The name of the patch
-        example: 2.0.0
-        in: path
-        name: patch-name
-        required: true
-        schema:
-          type: string
-      - description: "Marks that the patch is now applied. Further request to get\
-          \ patch information returns { \"applied\": true }"
-        in: query
-        name: apply
-        required: false
-        schema:
-          type: boolean
-      responses:
-        "200":
-          description: Successfully updated the patch for the app
-      summary: Updates a patch
-      tags:
-      - Apps
   /asset-types:
     get:
       description: Returns a list of asset types
@@ -4855,24 +4743,124 @@ paths:
       summary: Information about a tag
       tags:
       - Tags
+  /apps/{app-name}:
+    get:
+      deprecated: true
+      description: Gets information about an app.
+      operationId: getAppByName
+      parameters:
+      - description: The name of the app
+        example: weather
+        in: path
+        name: app-name
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/App"
+          description: Successfully returned information about an app.
+      summary: "Deprecated: No longer necessary due to new internal app initialization."
+      tags:
+      - Apps
+    patch:
+      deprecated: true
+      description: Update properties of an app.
+      operationId: patchAppByName
+      parameters:
+      - description: The name of the app
+        example: weather
+        in: path
+        name: app-name
+        required: true
+        schema:
+          type: string
+      - description: "Marks that the app is now initialized and installed. Further\
+          \ request to get app information returns { \"registered\": true }"
+        in: query
+        name: registered
+        required: false
+        schema:
+          type: boolean
+      - description: Sets the current version that is running and initialized
+        in: query
+        name: version
+        required: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successfully updated the app
+      summary: "Deprecated: No longer necessary due to new internal app initialization."
+      tags:
+      - Apps
+  /apps/{app-name}/patches/{patch-name}:
+    get:
+      deprecated: true
+      description: Gets information about a patch for an app.
+      operationId: getPatchByName
+      parameters:
+      - description: The name of the app
+        example: weather
+        in: path
+        name: app-name
+        required: true
+        schema:
+          type: string
+      - description: The name of the patch
+        example: 2.0.0
+        in: path
+        name: patch-name
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Patch"
+          description: Successfully returned information about a patch for an app
+      summary: "Deprecated: No longer necessary due to new internal app initialization."
+      tags:
+      - Apps
+    patch:
+      deprecated: true
+      description: Updates properties of a patch for an app.
+      operationId: patchPatchByName
+      parameters:
+      - description: The name of the app
+        example: weather
+        in: path
+        name: app-name
+        required: true
+        schema:
+          type: string
+      - description: The name of the patch
+        example: 2.0.0
+        in: path
+        name: patch-name
+        required: true
+        schema:
+          type: string
+      - description: "Marks that the patch is now applied. Further request to get\
+          \ patch information returns { \"applied\": true }"
+        in: query
+        name: apply
+        required: false
+        schema:
+          type: boolean
+      responses:
+        "200":
+          description: Successfully updated the patch for the app
+      summary: "Deprecated: No longer necessary due to new internal app initialization."
+      tags:
+      - Apps
 components:
   parameters:
-    app-name:
-      description: The name of the app
-      example: weather
-      in: path
-      name: app-name
-      required: true
-      schema:
-        type: string
-    patch-name:
-      description: The name of the patch
-      example: 2.0.0
-      in: path
-      name: patch-name
-      required: true
-      schema:
-        type: string
     offset:
       description: |
         Specifies the starting point for pagination by indicating the number of items to skip.
@@ -5355,70 +5343,23 @@ components:
       required: true
       schema:
         type: string
+    app-name:
+      description: The name of the app
+      example: weather
+      in: path
+      name: app-name
+      required: true
+      schema:
+        type: string
+    patch-name:
+      description: The name of the patch
+      example: 2.0.0
+      in: path
+      name: patch-name
+      required: true
+      schema:
+        type: string
   schemas:
-    App:
-      description: An app
-      example:
-        metadata: "{}"
-        name: weather
-        registered: true
-        active: true
-        version: v3.2.1
-      properties:
-        name:
-          description: Name of the app
-          example: weather
-          type: string
-        registered:
-          description: Is the app already registered or not
-          nullable: true
-          type: boolean
-        version:
-          description: The current installed version of the app
-          example: v3.2.1
-          nullable: true
-          type: string
-        active:
-          deprecated: true
-          description: Is the app active or inactive
-          nullable: true
-          type: boolean
-        metadata:
-          deprecated: true
-          description: Delivers the apps metadata to handle it in the app store
-          nullable: true
-          type: object
-      required:
-      - name
-      type: object
-    Patch:
-      description: A patch for an app
-      example:
-        applied: true
-        appName: weather
-        name: 2.0.0
-        active: true
-      properties:
-        appName:
-          description: Name of the app
-          example: weather
-          type: string
-        name:
-          description: Name of the patch
-          example: 2.0.0
-          type: string
-        active:
-          description: Is the app active or inactive
-          nullable: true
-          type: boolean
-        applied:
-          description: Is the app already applied or not
-          nullable: true
-          type: boolean
-      required:
-      - appName
-      - name
-      type: object
     AssetType:
       description: A type of assets
       example:
@@ -7644,6 +7585,69 @@ components:
           nullable: true
           type: boolean
       required:
+      - name
+      type: object
+    App:
+      description: An app
+      example:
+        metadata: "{}"
+        name: weather
+        registered: true
+        active: true
+        version: v3.2.1
+      properties:
+        name:
+          description: Name of the app
+          example: weather
+          type: string
+        registered:
+          description: Is the app already registered or not
+          nullable: true
+          type: boolean
+        version:
+          description: The current installed version of the app
+          example: v3.2.1
+          nullable: true
+          type: string
+        active:
+          deprecated: true
+          description: Is the app active or inactive
+          nullable: true
+          type: boolean
+        metadata:
+          deprecated: true
+          description: Delivers the apps metadata to handle it in the app store
+          nullable: true
+          type: object
+      required:
+      - name
+      type: object
+    Patch:
+      description: A patch for an app
+      example:
+        applied: true
+        appName: weather
+        name: 2.0.0
+        active: true
+      properties:
+        appName:
+          description: Name of the app
+          example: weather
+          type: string
+        name:
+          description: Name of the patch
+          example: 2.0.0
+          type: string
+        active:
+          description: Is the app active or inactive
+          nullable: true
+          type: boolean
+        applied:
+          description: Is the app already applied or not
+          nullable: true
+          type: boolean
+      required:
+      - appName
       - name
       type: object
     Translation:

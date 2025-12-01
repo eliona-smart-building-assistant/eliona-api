@@ -73,12 +73,6 @@ paths:
   /version/openapi.json:
     $ref: './paths/version-openapi.yaml'
 
-  /apps/{app-name}:
-    $ref: './paths/apps-name.yaml'
-
-  /apps/{app-name}/patches/{patch-name}:
-    $ref: './paths/apps-name-patches-name.yaml'
-
   /asset-types:
     $ref: './paths/asset-types.yaml'
 
@@ -274,6 +268,12 @@ paths:
 
   /tags/{tag-name}:
     $ref: './paths/tags-name.yaml'
+
+  /apps/{app-name}:
+    $ref: './paths/apps-name.yaml'
+
+  /apps/{app-name}/patches/{patch-name}:
+    $ref: './paths/apps-name-patches-name.yaml'
 
 tags:
   - name: Version
