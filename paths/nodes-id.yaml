@@ -39,3 +39,17 @@ put:
             $ref: '../schemas/Node.yaml'
     404:
       description: Node id not found
+
+delete:
+  tags:
+    - Nodes
+  summary: Delete a node
+  description: Deletes a node
+  operationId: deleteNodeById
+  parameters:
+    - $ref: '../parameters/node-id.yaml'
+  responses:
+    204:
+      description: Successfully deleted the node
+    404:
+      description: Node id not found
