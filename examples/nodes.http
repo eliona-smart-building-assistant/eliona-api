@@ -18,7 +18,7 @@ Content-Type: application/json
 }
 
 ### [Nodes] Get node by id (read-only)
-GET {{api-server}}/v2/nodes/fef0a0d3-acad-4611-ac03-1fd842d72505 HTTP/1.1
+GET {{api-server}}/v2/nodes/01f8c5b3-8047-4876-a161-da0e147406e5 HTTP/1.1
 X-Api-Key: {{read-only-token}}
 
 ### [Nodes] Update node with additional optional fields (read–write)
@@ -34,3 +34,7 @@ Content-Type: application/json
   "description": "Updated description for node at West Plant",
   "enable": true
 }
+
+### [Nodes] Delete node by id
+DELETE {{api-server}}/v2/nodes/01f8c5b3-8047-4876-a161-da0e147406e5 HTTP/1.1
+X-Api-Key: {{read-write-token}}
