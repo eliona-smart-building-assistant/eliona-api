@@ -3272,6 +3272,26 @@ paths:
       tags:
       - Nodes
   /nodes/{node-id}:
+    delete:
+      description: Deletes a node
+      operationId: deleteNodeById
+      parameters:
+      - description: The UUID identifier of the node
+        example: 69133767-7de1-4134-9130-5f5403e1ee98
+        in: path
+        name: node-id
+        required: true
+        schema:
+          format: uuid
+          type: string
+      responses:
+        "204":
+          description: Successfully deleted the node
+        "404":
+          description: Node id not found
+      summary: Delete a node
+      tags:
+      - Nodes
     get:
       description: Gets information about a node.
       operationId: getNodeById
