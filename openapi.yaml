@@ -19,7 +19,7 @@ info:
   license:
     name: MIT
   title: Eliona REST API
-  version: 2.10.1
+  version: 2.10.2
 externalDocs:
   description: Find out more about Eliona App SDK
   url: https://github.com/eliona-smart-building-assistant
@@ -5451,7 +5451,6 @@ components:
           - sourcePath
           - sourcePath
         payloadFunction: PLS
-        isTracker: false
       properties:
         name:
           description: The unique name for this asset type
@@ -5496,11 +5495,6 @@ components:
           format: duration
           nullable: true
           type: string
-        isTracker:
-          default: false
-          description: Function as a tracker
-          nullable: true
-          type: boolean
         attributes:
           description: List of named attributes
           items:
@@ -5778,12 +5772,10 @@ components:
         locationalAssetIdPath:
         - 6
         - 6
-        trackerId: 4711
         name: Station Zurich
         siteId: 69133767-7de1-4134-9130-5f5403e1ee98
         parentFunctionalAssetId: 4712
         id: 4711
-        isTracker: false
         projectId: 79d7f1a0-0ec1-4211-8626-21f79491650a
         longitude: 8.55
       properties:
@@ -5841,18 +5833,6 @@ components:
           format: double
           nullable: true
           type: number
-        isTracker:
-          default: false
-          deprecated: true
-          description: Does the asset function as a tracker and capture its position
-            by itself
-          nullable: true
-          type: boolean
-        trackerId:
-          description: Tracker Asset Id
-          example: 4711
-          nullable: true
-          type: integer
         description:
           description: Textual description for this asset
           example: "Weather station Zurich, Swiss"
@@ -6037,12 +6017,10 @@ components:
           locationalAssetIdPath:
           - 6
           - 6
-          trackerId: 4711
           name: Station Zurich
           siteId: 69133767-7de1-4134-9130-5f5403e1ee98
           parentFunctionalAssetId: 4712
           id: 4711
-          isTracker: false
           projectId: 79d7f1a0-0ec1-4211-8626-21f79491650a
           longitude: 8.55
         - globalAssetIdentifier: zurich_swiss
@@ -6078,12 +6056,10 @@ components:
           locationalAssetIdPath:
           - 6
           - 6
-          trackerId: 4711
           name: Station Zurich
           siteId: 69133767-7de1-4134-9130-5f5403e1ee98
           parentFunctionalAssetId: 4712
           id: 4711
-          isTracker: false
           projectId: 79d7f1a0-0ec1-4211-8626-21f79491650a
           longitude: 8.55
         assetType: assetType
@@ -6094,12 +6070,10 @@ components:
         locationalAssetIdPath:
         - 6
         - 6
-        trackerId: 4711
         name: Station Zurich
         siteId: 69133767-7de1-4134-9130-5f5403e1ee98
         parentFunctionalAssetId: 4712
         id: 4711
-        isTracker: false
         projectId: 79d7f1a0-0ec1-4211-8626-21f79491650a
         statusCode: 200
         longitude: 8.55

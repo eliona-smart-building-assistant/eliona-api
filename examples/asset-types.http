@@ -20,7 +20,6 @@ Content-Type: application/json
   "icon": "weather",
   "payloadFunction": "PLS",
   "allowedInactivity": "0 hours 5 mins",
-  "isTracker": false,
   "attributes": [
     {
       "name": "temperature",
