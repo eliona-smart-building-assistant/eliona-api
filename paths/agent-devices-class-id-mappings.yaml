@@ -2,7 +2,7 @@ get:
   tags:
     - Agents
   summary: Information about agent device mappings
-  description: Gets information about mappings between agent and eliona.
+  description: Gets information about mappings between agent and BuildingPro Suites.
   parameters:
     - $ref: '../parameters/agent-class.yaml'
     - $ref: '../parameters/agent-device-id.yaml'

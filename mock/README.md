@@ -1,3 +1,3 @@
-# Eliona mock #
+# BuildingPro Suites mock #
 
-The Eliona mock has been moved to the dedicated project [Eliona mock](https://github.com/eliona-smart-building-assistant/eliona-mock) 
+The BuildingPro Suites mock has been moved to the dedicated project [BuildingPro Suites mock](https://github.com/eliona-smart-building-assistant/eliona-mock) 

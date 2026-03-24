@@ -6,7 +6,7 @@ required:
 properties:
   user:
     type: string
-    description: E-Mail address or internal ID of the Eliona user
+    description: E-Mail address or internal ID of the BuildingPro Suites user
     example: peter.fox@example.com
   siteId:
     type: string

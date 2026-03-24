@@ -1,6 +1,6 @@
 put:
   tags:
-    - Eliona
+    - BuildingPro Suites
   summary: Setup or update a tenant
   security:
       - HttpSig: []
@@ -25,7 +25,7 @@ put:
 
 delete:
   tags:
-    - Eliona
+    - BuildingPro Suites
   summary: Delete the current tenant
   description: Deletes the current tenant
   operationId: deleteTenant

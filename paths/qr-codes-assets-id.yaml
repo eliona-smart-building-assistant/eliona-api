@@ -2,7 +2,7 @@ get:
   tags:
     - QR codes
   summary: QR code for assets
-  description: Generates QR code linking to an asset in the Eliona frontend.
+  description: Generates QR code linking to an asset in the BuildingPro Suites frontend.
   operationId: getQrCodeByAssetId
   parameters:
     - $ref: '../parameters/asset-id.yaml'

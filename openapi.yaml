@@ -2,26 +2,27 @@ openapi: 3.0.3
 info:
   contact:
     email: hello@eliona.io
-    name: Eliona by IoTEC AG
+    name: BuildingPro Suites by ABB
     url: https://eliona.io
-  description: "The Eliona REST API provides unified access to the resources and data\
-    \ within an Eliona environment.<br> <br> This documentation corresponds to the\
-    \ next Eliona release. For previous Eliona releases, please refer to the matching\
-    \ REST API version below:<br><br>   Eliona v14.2: [2.9.4](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.9.4/openapi.yaml)<br>\
-    \ Eliona v14.1: [2.9.4](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.9.4/openapi.yaml)<br>\
-    \ Eliona v14.0: [2.8.7](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.8.7/openapi.yaml)<br>\
-    \ Eliona v13.2: [2.7.0](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.7.0/openapi.yaml)<br>\
-    \ Eliona v13.1: [2.6.12](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.6.12/openapi.yaml)<br>\
-    \ Eliona v13.0: [2.6.12](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.6.12/openapi.yaml)<br>\
-    \ Eliona v12.1: [2.6.1](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.6.1/openapi.yaml)<br>\
-    \ Eliona v12.0: [2.6.1](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.6.1/openapi.yaml)<br>\
+  description: "The BuildingPro Suites REST API provides unified access to the resources\
+    \ and data within a BuildingPro Suites environment.<br> <br> This documentation\
+    \ corresponds to the next BuildingPro Suites release. For previous BuildingPro\
+    \ Suites releases, please refer to the matching REST API version below:<br><br>\
+    \   BuildingPro Suites v14.2: [2.9.4](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.9.4/openapi.yaml)<br>\
+    \ BuildingPro Suites v14.1: [2.9.4](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.9.4/openapi.yaml)<br>\
+    \ BuildingPro Suites v14.0: [2.8.7](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.8.7/openapi.yaml)<br>\
+    \ BuildingPro Suites v13.2: [2.7.0](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.7.0/openapi.yaml)<br>\
+    \ BuildingPro Suites v13.1: [2.6.12](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.6.12/openapi.yaml)<br>\
+    \ BuildingPro Suites v13.0: [2.6.12](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.6.12/openapi.yaml)<br>\
+    \ BuildingPro Suites v12.1: [2.6.1](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.6.1/openapi.yaml)<br>\
+    \ BuildingPro Suites v12.0: [2.6.1](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.6.1/openapi.yaml)<br>\
     \ [Preview Beta](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/heads/develop/openapi.yaml)<br> "
   license:
     name: MIT
-  title: Eliona REST API
+  title: BuildingPro Suites REST API
   version: 2.10.4
 externalDocs:
-  description: Find out more about Eliona App SDK
+  description: Find out more about BuildingPro Suites App SDK
   url: https://github.com/eliona-smart-building-assistant
 servers:
 - url: "https://{environment}.eliona.io/v2"
@@ -52,10 +53,10 @@ tags:
   externalDocs:
     url: https://www.eliona.io
   name: Version
-- description: Handle Eliona setup
+- description: Handle BuildingPro Suites setup
   externalDocs:
     url: https://www.eliona.io
-  name: Eliona
+  name: BuildingPro Suites
 - description: User information
   externalDocs:
     url: https://www.eliona.io
@@ -3722,7 +3723,7 @@ paths:
       - Agents
   /agent-devices/{agent-class}/{agent-device-id}/mappings:
     get:
-      description: Gets information about mappings between agent and eliona.
+      description: Gets information about mappings between agent and BuildingPro Suites.
       operationId: getAgentDeviceMappingsByDeviceId
       parameters:
       - description: The class of an agent
@@ -3920,7 +3921,7 @@ paths:
       - Communication
   /send-notification:
     post:
-      description: Sends a notification to Eliona users
+      description: Sends a notification to BuildingPro Suites users
       operationId: postNotification
       requestBody:
         content:
@@ -3964,7 +3965,8 @@ paths:
       - Communication
   /qr-codes/assets/{asset-id}:
     get:
-      description: Generates QR code linking to an asset in the Eliona frontend.
+      description: Generates QR code linking to an asset in the BuildingPro Suites
+        frontend.
       operationId: getQrCodeByAssetId
       parameters:
       - description: The id of the asset
@@ -4511,7 +4513,7 @@ paths:
           description: Successfully deleted the tenant
       summary: Delete the current tenant
       tags:
-      - Eliona
+      - BuildingPro Suites
     put:
       description: Create or update a tenant
       operationId: putTenant
@@ -4550,7 +4552,7 @@ paths:
       - HttpSig: []
       summary: Setup or update a tenant
       tags:
-      - Eliona
+      - BuildingPro Suites
   /api-keys:
     get:
       description: Gets a list of API keys
@@ -4590,7 +4592,7 @@ paths:
           description: Successfully returned the list of API keys
       summary: Information about API keys
       tags:
-      - Eliona
+      - BuildingPro Suites
   /project-roles:
     get:
       deprecated: true
@@ -7305,7 +7307,7 @@ components:
         projectId: "99"
       properties:
         user:
-          description: E-Mail address or internal ID of the Eliona user
+          description: E-Mail address or internal ID of the BuildingPro Suites user
           example: peter.fox@example.com
           type: string
         siteId:

@@ -2,7 +2,7 @@ post:
   tags:
     - Communication
   summary: Send notification
-  description: Sends a notification to Eliona users
+  description: Sends a notification to BuildingPro Suites users
   operationId: postNotification
   requestBody:
     required: true

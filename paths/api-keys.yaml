@@ -1,6 +1,6 @@
 get:
   tags:
-    - Eliona
+    - BuildingPro Suites
   summary: Information about API keys
   description: Gets a list of API keys
   operationId: getApiKeys
