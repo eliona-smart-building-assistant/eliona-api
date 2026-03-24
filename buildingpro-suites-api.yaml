@@ -33,7 +33,7 @@ info:
     \ [Preview Beta](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/heads/develop/openapi.yaml)<br> "
   contact:
     name: BuildingPro Suites by ABB
-    url: https://eliona.io
+    url: https://new.abb.com/low-voltage/products/building-automation/product-range/abb-ability-buildingpro/buildingpro-suites
     email: hello@eliona.io
   license:
     name: MIT
