@@ -32,7 +32,7 @@ info:
     \ BuildingPro Suites v12.0: [2.6.1](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.6.1/openapi.yaml)<br>\
     \ [Preview Beta](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/heads/develop/openapi.yaml)<br> "
   contact:
-    name: BuildingPro Suites by ABB
+    name: ABB BuildingPro Suites (powered by Eliona)
     url: https://new.abb.com/low-voltage/products/building-automation/product-range/abb-ability-buildingpro/buildingpro-suites
     email: hello@eliona.io
   license:
