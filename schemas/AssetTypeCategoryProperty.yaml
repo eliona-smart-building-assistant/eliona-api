@@ -11,8 +11,8 @@ properties:
     nullable: true
     allOf:
       - $ref: 'Translation.yaml'
-  unit:
-    type: string
-    description: Unit of data
-    example: °C
+  unitId:
+    type: integer
+    description: ID of measurement unit
+    example: 1231
     nullable: true

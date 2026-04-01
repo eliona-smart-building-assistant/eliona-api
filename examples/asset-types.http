@@ -27,7 +27,7 @@ Content-Type: application/json
       "type": "temperature",
       "enable": true,
       "virtual": false,
-      "unit": "°C",
+      "unitId": 1231,
       "precision": 1,
       "min": 0.0,
       "max": 50.0,
@@ -43,7 +43,7 @@ Content-Type: application/json
       "type": "humidity",
       "enable": true,
       "virtual": false,
-      "unit": "%",
+      "unitId": 1231,
       "precision": 0,
       "min": 0,
       "max": 100,
@@ -74,7 +74,7 @@ Content-Type: application/json
   "type": "pressure",
   "enable": true,
   "virtual": false,
-  "unit": "hPa",
+  "unitId": 1231,
   "precision": 0,
   "min": 950,
   "max": 1050,
@@ -96,7 +96,7 @@ Content-Type: application/json
   "type": "pressure",
   "enable": true,
   "virtual": false,
-  "unit": "hPa",
+  "unitId": 1231,
   "precision": 0,
   "min": 960,
   "max": 1040,
@@ -129,7 +129,7 @@ Content-Type: application/json
           "de": "Test P1 de",
           "en": "Test P1 en"
         },
-        "unit": "p1"
+        "unitId": 1231
       },
       {
         "name": "test_p2",
@@ -137,7 +137,7 @@ Content-Type: application/json
           "de": "Test P2 de",
           "en": "Test P2 en"
         },
-        "unit": "p2"
+        "unitId": 1231
       },
       {
         "name": "test_p3"
