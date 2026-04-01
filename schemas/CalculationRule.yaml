@@ -30,10 +30,10 @@ properties:
     description: calculation rule to calculate the value for the attribute
     example: "{seconds} * 60"
     nullable: true
-  unit:
-    type: string
-    description: Physical unit of calculated data
-    example: °C
+  unitId:
+    type: integer
+    description: ID of measurement unit
+    example: 1231
     nullable: true
   filter:
     type: object

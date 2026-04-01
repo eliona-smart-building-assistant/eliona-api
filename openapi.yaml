@@ -5406,12 +5406,12 @@ components:
           zero: 5.637376656633329
           ar: false
           sequence: 1
-          unit: °C
           min: 0.8008281904610115
           subtype: input
           enable: false
           name: temperature
           translation: ""
+          unitId: 1321
           formula: "{seconds} * 60"
           map:
           - "{}"
@@ -5435,12 +5435,12 @@ components:
           zero: 5.637376656633329
           ar: false
           sequence: 1
-          unit: °C
           min: 0.8008281904610115
           subtype: input
           enable: false
           name: temperature
           translation: ""
+          unitId: 1321
           formula: "{seconds} * 60"
           map:
           - "{}"
@@ -5521,12 +5521,12 @@ components:
         zero: 5.637376656633329
         ar: false
         sequence: 1
-        unit: °C
         min: 0.8008281904610115
         subtype: input
         enable: false
         name: temperature
         translation: ""
+        unitId: 1321
         formula: "{seconds} * 60"
         map:
         - "{}"
@@ -5567,11 +5567,11 @@ components:
           allOf:
           - $ref: "#/components/schemas/Translation"
           nullable: true
-        unit:
-          description: Physical unit of numeric data
-          example: °C
+        unitId:
+          description: ID of measurement unit
+          example: 1321
           nullable: true
-          type: string
+          type: integer
         precision:
           description: Number of decimal places
           example: 1
@@ -5714,12 +5714,12 @@ components:
         name: location
         translation: ""
         properties:
-        - unit: °C
-          name: longitude
+        - name: longitude
           translation: ""
-        - unit: °C
-          name: longitude
+          unitId: 1231
+        - name: longitude
           translation: ""
+          unitId: 1231
       properties:
         name:
           description: The unique name for this asset type category
@@ -6085,12 +6085,12 @@ components:
         viewer: false
         ar: false
         sequence: 1
-        unit: °C
         min: 0.8008281904610115
         subtype: input
         max: 6.027456183070403
         assetId: 4711
         precision: 1
+        unitId: 1321
         attribute: temperature
         map:
         - "{}"
@@ -6106,11 +6106,11 @@ components:
           description: Name of the attribute of the asset type
           example: temperature
           type: string
-        unit:
-          description: Physical unit of numeric data
-          example: °C
+        unitId:
+          description: ID of measurement unit
+          example: 1321
           nullable: true
-          type: string
+          type: integer
         precision:
           description: Number of decimal places
           example: 1
@@ -6885,10 +6885,10 @@ components:
             value_min: 1
             value_max: 2
         virtual: true
-        unit: °C
         subtype: input
         assetId: 4711
         formula: "{seconds} * 60"
+        unitId: 1231
         id: 123
         attribute: temperature
       properties:
@@ -6917,11 +6917,11 @@ components:
           example: "{seconds} * 60"
           nullable: true
           type: string
-        unit:
-          description: Physical unit of calculated data
-          example: °C
+        unitId:
+          description: ID of measurement unit
+          example: 1231
           nullable: true
-          type: string
+          type: integer
         filter:
           description: Filter definition for calculation rule
           example:
@@ -7680,9 +7680,9 @@ components:
     AssetTypeCategoryProperty:
       description: A property for asset type categories
       example:
-        unit: °C
         name: longitude
         translation: ""
+        unitId: 1231
       properties:
         name:
           description: The unique name for this asset type category property
@@ -7692,11 +7692,11 @@ components:
           allOf:
           - $ref: "#/components/schemas/Translation"
           nullable: true
-        unit:
-          description: Unit of data
-          example: °C
+        unitId:
+          description: ID of measurement unit
+          example: 1231
           nullable: true
-          type: string
+          type: integer
       required:
       - name
       type: object
