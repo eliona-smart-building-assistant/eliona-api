@@ -1,0 +1,55 @@
+get:
+  tags:
+    - Tickets
+  summary: Information about a ticket
+  description: Gets information about a ticket.
+  operationId: getTicketById
+  parameters:
+    - $ref: '../parameters/ticket-id.yaml'
+  responses:
+    200:
+      description: Successfully returned the ticket by id.
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Ticket.yaml'
+    404:
+      description: Ticket with id not found
+
+put:
+  tags:
+    - Tickets
+  summary: Update a ticket
+  description: Update a ticket.
+  operationId: putTicketById
+  parameters:
+    - $ref: '../parameters/ticket-id.yaml'
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/Ticket.yaml'
+  responses:
+    200:
+      description: Successfully updated an existing ticket
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Ticket.yaml'
+    404:
+      description: Ticket with id not found
+
+delete:
+  tags:
+    - Tickets
+  summary: Delete a ticket
+  description: Deletes a ticket.
+  operationId: deleteTicketById
+  parameters:
+    - $ref: '../parameters/ticket-id.yaml'
+  responses:
+    204:
+      description: Successfully deleted the ticket
+    404:
+      description: Ticket with id not found

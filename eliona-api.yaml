@@ -257,6 +257,12 @@ paths:
   /tags/{tag-name}:
     $ref: './paths/tags-name.yaml'
 
+  /tickets:
+    $ref: './paths/tickets.yaml'
+
+  /tickets/{ticket-id}:
+    $ref: './paths/tickets-id.yaml'
+
 tags:
   - name: Version
     description: API version
@@ -275,6 +281,11 @@ tags:
 
   - name: Tags
     description: Tag information
+    externalDocs:
+      url: https://www.eliona.io
+
+  - name: Tickets
+    description: Handle tickets
     externalDocs:
       url: https://www.eliona.io
 

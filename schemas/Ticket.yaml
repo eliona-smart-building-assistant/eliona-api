@@ -1,0 +1,137 @@
+type: object
+description: A ticket and task record
+properties:
+  ticketId:
+    description: The id of the ticket
+    example: 4711
+    format: int64
+    nullable: true
+    readOnly: true
+    type: integer
+  parentId:
+    description: The id of the parent ticket
+    example: 4700
+    format: int64
+    nullable: true
+    type: integer
+  title:
+    description: Title of the ticket
+    example: Broken fan in building A
+    nullable: true
+    type: string
+  description:
+    description: Description of the ticket
+    example: The ventilation fan on floor 2 is not working.
+    nullable: true
+    type: string
+  priority:
+    description: Priority of the ticket
+    example: 2
+    nullable: true
+    type: integer
+  reason:
+    description: Reason or type of the ticket
+    enum:
+      - maintenance
+      - error
+      - service
+      - cleaning
+      - other
+    nullable: true
+    type: string
+  state:
+    description: Current state of the ticket
+    enum:
+      - staged
+      - assigned
+      - in-progress
+      - completed
+      - closed
+      - canceled
+      - delayed
+    nullable: true
+    type: string
+  contact:
+    description: Contact information as JSON object
+    nullable: true
+    type: object
+  tags:
+    description: List of associated tags
+    items:
+      type: string
+    nullable: true
+    type: array
+  createdBy:
+    description: User who created the ticket
+    example: john.doe@example.com
+    nullable: true
+    type: string
+  createdAt:
+    description: Timestamp when the ticket was created
+    format: date-time
+    nullable: true
+    type: string
+  assignedTo:
+    description: User the ticket is assigned to
+    example: jane.doe@example.com
+    nullable: true
+    type: string
+  assignedAt:
+    description: Timestamp when the ticket was assigned
+    format: date-time
+    nullable: true
+    type: string
+  closedAt:
+    description: Timestamp when the ticket was closed
+    format: date-time
+    nullable: true
+    type: string
+  projectId:
+    description: ID of the project to which the ticket belongs
+    example: "99"
+    nullable: true
+    type: string
+  assetId:
+    description: ID of the associated asset
+    example: 4711
+    nullable: true
+    type: integer
+  alarmId:
+    description: ID of the associated alarm
+    example: 123
+    nullable: true
+    type: integer
+  alarm:
+    description: Alarm data snapshot as JSON object
+    nullable: true
+    type: object
+  startAt:
+    description: Scheduled start time
+    format: date-time
+    nullable: true
+    type: string
+  endAt:
+    description: Scheduled end time
+    format: date-time
+    nullable: true
+    type: string
+  timeSpent:
+    description: Time spent on the ticket
+    example: 2 hours
+    nullable: true
+    type: string
+  reference:
+    description: External reference
+    example: REF-1234
+    nullable: true
+    type: string
+  modifiedBy:
+    description: User who last modified the ticket
+    example: jane.doe@example.com
+    nullable: true
+    type: string
+  modifiedAt:
+    description: Timestamp of last modification
+    format: date-time
+    nullable: true
+    type: string
