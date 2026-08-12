@@ -7,7 +7,7 @@ info:
   description: "The Eliona REST API provides unified access to the resources and data\
     \ within an Eliona environment.<br> <br> This documentation corresponds to Eliona\
     \ release 14.2. For previous Eliona releases, please refer to the matching REST\
-    \ API version below:<br> <br> Eliona v14.2: [2.9.4](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.9.4/openapi.yaml)<br>\
+    \ API version below:<br> <br> Eliona v14.2: [2.10.5](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.10.5/openapi.yaml)<br>\
     \ Eliona v14.1: [2.9.4](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.9.4/openapi.yaml)<br>\
     \ Eliona v14.0: [2.8.7](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.8.7/openapi.yaml)<br>\
     \ Eliona v13.2: [2.7.0](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.7.0/openapi.yaml)<br>\
@@ -64,6 +64,10 @@ tags:
   externalDocs:
     url: https://www.eliona.io
   name: Tags
+- description: Handle tickets
+  externalDocs:
+    url: https://www.eliona.io
+  name: Tickets
 - description: Handle asset types
   externalDocs:
     url: https://www.eliona.io
@@ -4400,6 +4404,146 @@ paths:
       summary: Information about a tag
       tags:
       - Tags
+  /tickets:
+    get:
+      description: Gets a list of tickets
+      operationId: getTickets
+      parameters:
+      - description: Filter for a specific project
+        in: query
+        name: projectId
+        required: false
+        schema:
+          type: string
+      - description: |
+          Specifies the starting point for pagination by indicating the number of items to skip.
+        example: 3
+        in: query
+        name: offset
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      - description: |
+          Specifies the number of items per page for pagination.
+        example: 10
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int64
+          nullable: true
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: "#/components/schemas/Ticket"
+                type: array
+            application/x-ndjson:
+              schema:
+                $ref: "#/components/schemas/Ticket"
+          description: Successfully returned the list of tickets
+      summary: Information about tickets
+      tags:
+      - Tickets
+    post:
+      description: Creates a new ticket.
+      operationId: postTicket
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Ticket"
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Ticket"
+          description: Successfully created a new ticket
+      summary: Create a ticket
+      tags:
+      - Tickets
+  /tickets/{ticket-id}:
+    delete:
+      description: Deletes a ticket.
+      operationId: deleteTicketById
+      parameters:
+      - description: The id of the ticket
+        example: 4711
+        in: path
+        name: ticket-id
+        required: true
+        schema:
+          format: int64
+          type: integer
+      responses:
+        "204":
+          description: Successfully deleted the ticket
+        "404":
+          description: Ticket with id not found
+      summary: Delete a ticket
+      tags:
+      - Tickets
+    get:
+      description: Gets information about a ticket.
+      operationId: getTicketById
+      parameters:
+      - description: The id of the ticket
+        example: 4711
+        in: path
+        name: ticket-id
+        required: true
+        schema:
+          format: int64
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Ticket"
+          description: Successfully returned the ticket by id.
+        "404":
+          description: Ticket with id not found
+      summary: Information about a ticket
+      tags:
+      - Tickets
+    put:
+      description: Update a ticket.
+      operationId: putTicketById
+      parameters:
+      - description: The id of the ticket
+        example: 4711
+        in: path
+        name: ticket-id
+        required: true
+        schema:
+          format: int64
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Ticket"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Ticket"
+          description: Successfully updated an existing ticket
+        "404":
+          description: Ticket with id not found
+      summary: Update a ticket
+      tags:
+      - Tickets
 components:
   parameters:
     app-name:
@@ -4853,6 +4997,15 @@ components:
       required: true
       schema:
         type: string
+    ticket-id:
+      description: The id of the ticket
+      example: 4711
+      in: path
+      name: ticket-id
+      required: true
+      schema:
+        format: int64
+        type: integer
   schemas:
     App:
       description: An app
@@ -6950,6 +7103,171 @@ components:
           type: boolean
       required:
       - name
+      type: object
+    Ticket:
+      description: A ticket and task record
+      example:
+        reason: maintenance
+        timeSpent: 2 hours
+        assignedAt: 2000-01-23T04:56:07.000+00:00
+        modifiedAt: 2000-01-23T04:56:07.000+00:00
+        description: The ventilation fan on floor 2 is not working.
+        title: Broken fan in building A
+        priority: 2
+        endAt: 2000-01-23T04:56:07.000+00:00
+        parentId: 4700
+        assignedTo: jane.doe@example.com
+        tags:
+        - tags
+        - tags
+        reference: REF-1234
+        createdAt: 2000-01-23T04:56:07.000+00:00
+        createdBy: john.doe@example.com
+        assetId: 4711
+        contact: "{}"
+        alarmId: 123
+        alarm: "{}"
+        modifiedBy: jane.doe@example.com
+        state: staged
+        closedAt: 2000-01-23T04:56:07.000+00:00
+        projectId: "99"
+        ticketId: 4711
+        startAt: 2000-01-23T04:56:07.000+00:00
+      properties:
+        ticketId:
+          description: The id of the ticket
+          example: 4711
+          format: int64
+          nullable: true
+          readOnly: true
+          type: integer
+        parentId:
+          description: The id of the parent ticket
+          example: 4700
+          format: int64
+          nullable: true
+          type: integer
+        title:
+          description: Title of the ticket
+          example: Broken fan in building A
+          nullable: true
+          type: string
+        description:
+          description: Description of the ticket
+          example: The ventilation fan on floor 2 is not working.
+          nullable: true
+          type: string
+        priority:
+          description: Priority of the ticket
+          example: 2
+          nullable: true
+          type: integer
+        reason:
+          description: Reason or type of the ticket
+          enum:
+          - maintenance
+          - error
+          - service
+          - cleaning
+          - other
+          nullable: true
+          type: string
+        state:
+          description: Current state of the ticket
+          enum:
+          - staged
+          - assigned
+          - in-progress
+          - completed
+          - closed
+          - canceled
+          - delayed
+          nullable: true
+          type: string
+        contact:
+          description: Contact information as JSON object
+          nullable: true
+          type: object
+        tags:
+          description: List of associated tags
+          items:
+            type: string
+          nullable: true
+          type: array
+        createdBy:
+          description: User who created the ticket
+          example: john.doe@example.com
+          nullable: true
+          type: string
+        createdAt:
+          description: Timestamp when the ticket was created
+          format: date-time
+          nullable: true
+          type: string
+        assignedTo:
+          description: User the ticket is assigned to
+          example: jane.doe@example.com
+          nullable: true
+          type: string
+        assignedAt:
+          description: Timestamp when the ticket was assigned
+          format: date-time
+          nullable: true
+          type: string
+        closedAt:
+          description: Timestamp when the ticket was closed
+          format: date-time
+          nullable: true
+          type: string
+        projectId:
+          description: ID of the project to which the ticket belongs
+          example: "99"
+          nullable: true
+          type: string
+        assetId:
+          description: ID of the associated asset
+          example: 4711
+          nullable: true
+          type: integer
+        alarmId:
+          description: ID of the associated alarm
+          example: 123
+          nullable: true
+          type: integer
+        alarm:
+          description: Alarm data snapshot as JSON object
+          nullable: true
+          type: object
+        startAt:
+          description: Scheduled start time
+          format: date-time
+          nullable: true
+          type: string
+        endAt:
+          description: Scheduled end time
+          format: date-time
+          nullable: true
+          type: string
+        timeSpent:
+          description: Time spent on the ticket
+          example: 2 hours
+          nullable: true
+          type: string
+        reference:
+          description: External reference
+          example: REF-1234
+          nullable: true
+          type: string
+        modifiedBy:
+          description: User who last modified the ticket
+          example: jane.doe@example.com
+          nullable: true
+          type: string
+        modifiedAt:
+          description: Timestamp of last modification
+          format: date-time
+          nullable: true
+          type: string
       type: object
     Translation:
       description: Readable text to display in frontend
